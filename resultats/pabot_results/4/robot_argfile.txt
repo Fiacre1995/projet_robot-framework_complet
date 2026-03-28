@@ -1,0 +1,17 @@
+--test Tests.Ui.Test.Open Google
+--variable ENV:dev
+--variable CALLER_ID:60dfecc5a0b949139c712e32dc85d8eb
+--variable PABOTLIBURI:127.0.0.1:8270
+--variable PABOTEXECUTIONPOOLID:1
+--variable PABOTISLASTEXECUTIONINPOOL:1
+--variable PABOTNUMBEROFPROCESSES:4
+--variable PABOTQUEUEINDEX:4
+--variable PABOTLASTLEVEL:
+--outputdir resultats\pabot_results\4
+--listener allure_robotframework
+--log NONE
+--report NONE
+--xunit NONE
+--consolecolors off
+--consolemarkers off
+tests/

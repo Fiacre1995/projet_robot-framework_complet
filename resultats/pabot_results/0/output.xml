@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.13.5 on win32)" generated="2026-03-28T04:32:38.707816" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="C:\Users\afiac\PycharmProjects\Projet_entreprise2\tests">
+<suite id="s1-s1" name="Ui" source="C:\Users\afiac\PycharmProjects\Projet_entreprise2\tests\ui">
+<suite id="s1-s1-s1" name="Connexion Bd" source="C:\Users\afiac\PycharmProjects\Projet_entreprise2\tests\ui\connexion_bd.robot">
+<test id="s1-s1-s1-t1" name="Connexion bd valide" line="6">
+<kw name="Connect To Database" owner="postgres_bd">
+<kw name="Connect Bd" owner="Bd">
+<arg>${DB_HOST}</arg>
+<arg>${DB_NAME}</arg>
+<arg>${DB_USER}</arg>
+<arg>${DB_PASS}</arg>
+<status status="PASS" start="2026-03-28T04:32:39.324455" elapsed="0.067146"/>
+</kw>
+<status status="PASS" start="2026-03-28T04:32:39.323967" elapsed="0.068069"/>
+</kw>
+<msg time="2026-03-28T04:32:39.434236" level="INFO">Starting Browser process C:\Users\afiac\PycharmProjects\Projet_entreprise2\.venv\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:57260</msg>
+<tag>api</tag>
+<tag>connexion_bd</tag>
+<tag>critique</tag>
+<status status="PASS" start="2026-03-28T04:32:39.322793" elapsed="0.069588"/>
+</test>
+<status status="PASS" start="2026-03-28T04:32:38.815037" elapsed="2.201272"/>
+</suite>
+<status status="PASS" start="2026-03-28T04:32:38.813682" elapsed="2.212064"/>
+</suite>
+<status status="PASS" start="2026-03-28T04:32:38.790175" elapsed="2.236114"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">api</stat>
+<stat pass="1" fail="0" skip="0">connexion_bd</stat>
+<stat pass="1" fail="0" skip="0">critique</stat>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="1" fail="0" skip="0">Tests</stat>
+<stat name="Ui" id="s1-s1" pass="1" fail="0" skip="0">Tests.Ui</stat>
+<stat name="Connexion Bd" id="s1-s1-s1" pass="1" fail="0" skip="0">Tests.Ui.Connexion Bd</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

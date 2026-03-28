@@ -1,0 +1,9 @@
+datasources:d763b28a26465fb7c11e81d1a2a3f5aaa6afdf5b
+commandlineoptions:975d77ebdf67e3d943d531aee479515583659eeb
+suitesfrom:no-suites-from-option
+file:54c083a2ca88f78618fd86fee4c8e6c7a734fcaa
+--test Tests.Ui.Connexion Bd.Connexion bd valide
+--test Tests.Ui.Login.Connexion avec des identifiants valident
+--test Tests.Ui.Login.Connexion avec des identifiants invalident
+--test Tests.Ui.Login.Connexion avec des identifiants vident
+--test Tests.Ui.Test.Open Google

@@ -1,0 +1,17 @@
+--test Tests.Ui.Login.Connexion avec des identifiants valident
+--variable ENV:dev
+--variable CALLER_ID:a228f659b7194340905e7b304b4bebf5
+--variable PABOTLIBURI:127.0.0.1:8270
+--variable PABOTEXECUTIONPOOLID:2
+--variable PABOTISLASTEXECUTIONINPOOL:0
+--variable PABOTNUMBEROFPROCESSES:4
+--variable PABOTQUEUEINDEX:1
+--variable PABOTLASTLEVEL:Tests.Ui.Login.Connexion avec des identifiants valident
+--outputdir resultats\pabot_results\1
+--listener allure_robotframework
+--log NONE
+--report NONE
+--xunit NONE
+--consolecolors off
+--consolemarkers off
+tests/

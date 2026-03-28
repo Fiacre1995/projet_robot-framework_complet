@@ -1,0 +1,8 @@
+#Comptes utilisateurs dev
+VALID_USER: Admin
+VALID_PASSWORD: admin123
+
+INVALID_USER: wrong
+INVALID_PASSWORD: wrong123
+
+CHAMP_VIDE: ""

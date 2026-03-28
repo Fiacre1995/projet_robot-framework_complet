@@ -1,0 +1,5 @@
+#Credentials de la base de donnée
+DB_HOST: localhost
+DB_NAME: demo_bd
+DB_USER: postgres
+DB_PASS: postgres
