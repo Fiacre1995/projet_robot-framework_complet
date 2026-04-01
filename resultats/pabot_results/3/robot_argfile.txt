@@ -1,6 +1,6 @@
 --test Tests.Ui.Login.Connexion avec des identifiants vident
 --variable ENV:dev
---variable CALLER_ID:7247c464d14b4297951a9bed9cf94ea7
+--variable CALLER_ID:6950e109b49d424e96ec277cd0f2f9af
 --variable PABOTLIBURI:127.0.0.1:8270
 --variable PABOTEXECUTIONPOOLID:3
 --variable PABOTISLASTEXECUTIONINPOOL:0
@@ -9,6 +9,7 @@
 --variable PABOTLASTLEVEL:Tests.Ui.Login
 --outputdir resultats\pabot_results\3
 --listener allure_robotframework
+--output output.xml
 --log NONE
 --report NONE
 --xunit NONE

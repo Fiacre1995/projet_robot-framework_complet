@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.2 (Python 3.13.5 on win32)" generated="2026-03-28T04:32:38.615063" rpa="false" schemaversion="5">
+<robot generator="Robot 7.4.2 (Python 3.13.5 on win32)" generated="2026-04-01T15:13:06.645563" rpa="false" schemaversion="5">
 <suite id="s1" name="Tests" source="C:\Users\afiac\PycharmProjects\Projet_entreprise2\tests">
 <suite id="s1-s1" name="Ui" source="C:\Users\afiac\PycharmProjects\Projet_entreprise2\tests\ui">
 <suite id="s1-s1-s1" name="Login" source="C:\Users\afiac\PycharmProjects\Projet_entreprise2\tests\ui\login.robot">
 <test id="s1-s1-s1-t1" name="Connexion avec des identifiants vident" line="19">
 <kw name="Ouvrir le navigateur" owner="navigation" type="SETUP">
 <kw name="New Browser" owner="Browser">
-<msg time="2026-03-28T04:32:39.304951" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\afiac\\PycharmProjects\\Projet_entreprise2\\resultats\\pabot_results\\3\\browser\\traces\\temp\\1e8a8767-7b0f-48f7-99a6-173594f83df9"}</msg>
-<msg time="2026-03-28T04:32:39.347797" level="INFO">Starting Browser process C:\Users\afiac\PycharmProjects\Projet_entreprise2\.venv\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:57256</msg>
-<msg time="2026-03-28T04:32:41.212492" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\afiac\\PycharmProjects\\Projet_entreprise2\\resultats\\pabot_results\\3\\browser\\traces\\temp\\1e8a8767-7b0f-48f7-99a6-173594f83df9"}</msg>
+<msg time="2026-04-01T15:13:07.356826" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\afiac\\PycharmProjects\\Projet_entreprise2\\resultats\\pabot_results\\3\\browser\\traces\\temp\\c3266e5b-3f60-4a37-a4fa-11ddab5b87e6"}</msg>
+<msg time="2026-04-01T15:13:07.430858" level="INFO">Starting Browser process C:\Users\afiac\PycharmProjects\Projet_entreprise2\.venv\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:54512</msg>
+<msg time="2026-04-01T15:13:09.440477" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\afiac\\PycharmProjects\\Projet_entreprise2\\resultats\\pabot_results\\3\\browser\\traces\\temp\\c3266e5b-3f60-4a37-a4fa-11ddab5b87e6"}</msg>
 <arg>${BROWSER}</arg>
 <arg>headless=${HEADLESS}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2026-03-28T04:32:39.303644" elapsed="1.909102"/>
+<status status="PASS" start="2026-04-01T15:13:07.355687" elapsed="2.085226"/>
 </kw>
 <kw name="New Context" owner="Browser">
-<msg time="2026-03-28T04:32:41.217998" level="INFO">{
+<msg time="2026-04-01T15:13:09.445603" level="INFO">{
   "acceptDownloads": true,
   "bypassCSP": false,
   "forcedColors": "none",
@@ -31,152 +31,152 @@
     "height": 720
   }
 }</msg>
-<msg time="2026-03-28T04:32:41.272179" level="INFO">Successfully created context. </msg>
-<msg time="2026-03-28T04:32:41.272318" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<msg time="2026-04-01T15:13:09.466918" level="INFO">Successfully created context. </msg>
+<msg time="2026-04-01T15:13:09.467043" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new BrowserContext with specified options.</doc>
-<status status="PASS" start="2026-03-28T04:32:41.214862" elapsed="0.057630"/>
+<status status="PASS" start="2026-04-01T15:13:09.443018" elapsed="0.024153"/>
 </kw>
 <kw name="New Page" owner="Browser">
-<msg time="2026-03-28T04:32:44.863998" level="INFO">Successfully initialized new page object and opened url: https://opensource-demo.orangehrmlive.com</msg>
+<msg time="2026-04-01T15:13:13.958170" level="INFO">Successfully initialized new page object and opened url: https://opensource-demo.orangehrmlive.com</msg>
 <arg>${BASE_URL}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="PASS" start="2026-03-28T04:32:41.276102" elapsed="3.588209"/>
+<status status="PASS" start="2026-04-01T15:13:09.471317" elapsed="4.487513"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2026-03-28T04:32:44.866586" level="INFO">Ouverture du navigateur</msg>
+<msg time="2026-04-01T15:13:13.964242" level="INFO">Ouverture du navigateur</msg>
 <arg>Ouverture du navigateur</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2026-03-28T04:32:44.866011" elapsed="0.000661"/>
+<status status="PASS" start="2026-04-01T15:13:13.962306" elapsed="0.002157"/>
 </kw>
-<status status="PASS" start="2026-03-28T04:32:39.302241" elapsed="5.565851"/>
+<status status="PASS" start="2026-04-01T15:13:07.354167" elapsed="6.612590"/>
 </kw>
 <kw name="Authentification avec coordonnées vident" owner="loginBusiness">
 <kw name="Vérifier l'url de la page de login" owner="loginPage">
 <kw name="Get Url" owner="Browser">
-<msg time="2026-03-28T04:32:44.874226" level="INFO">${url} = https://opensource-demo.orangehrmlive.com/web/index.php/auth/login</msg>
+<msg time="2026-04-01T15:13:13.979484" level="INFO">${url} = https://opensource-demo.orangehrmlive.com/web/index.php/auth/login</msg>
 <var>${url}</var>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns the current URL.</doc>
-<status status="PASS" start="2026-03-28T04:32:44.869843" elapsed="0.004521"/>
+<status status="PASS" start="2026-04-01T15:13:13.971191" elapsed="0.008393"/>
 </kw>
 <kw name="Should Contain" owner="BuiltIn">
 <arg>${url}</arg>
 <arg>/auth/login</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2026-03-28T04:32:44.876235" elapsed="0.000780"/>
+<status status="PASS" start="2026-04-01T15:13:13.982720" elapsed="0.001679"/>
 </kw>
-<status status="PASS" start="2026-03-28T04:32:44.869398" elapsed="0.007989"/>
+<status status="PASS" start="2026-04-01T15:13:13.969404" elapsed="0.016223"/>
 </kw>
 <kw name="Authentification avec les identifiants" owner="loginUi">
 <kw name="Saisir le nom utilisateur" owner="loginPage">
 <kw name="Fill Text" owner="Browser">
-<msg time="2026-03-28T04:32:44.880456" level="INFO">Fills the text '' in the given field.</msg>
+<msg time="2026-04-01T15:13:13.991896" level="INFO">Fills the text '' in the given field.</msg>
 <arg>${champ_nom_utilisateur}</arg>
 <arg>${username}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2026-03-28T04:32:44.879435" elapsed="0.907432"/>
+<status status="PASS" start="2026-04-01T15:13:13.990160" elapsed="0.906128"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2026-03-28T04:32:45.788682" level="INFO">le nom utilisateur saisir est </msg>
+<msg time="2026-04-01T15:13:14.900594" level="INFO">le nom utilisateur saisir est </msg>
 <arg>le nom utilisateur saisir est ${username}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2026-03-28T04:32:45.788160" elapsed="0.000588"/>
+<status status="PASS" start="2026-04-01T15:13:14.899676" elapsed="0.001037"/>
 </kw>
 <arg>${username}</arg>
-<status status="PASS" start="2026-03-28T04:32:44.878682" elapsed="0.911076"/>
+<status status="PASS" start="2026-04-01T15:13:13.988843" elapsed="0.914101"/>
 </kw>
 <kw name="Saisir le mot de passe" owner="loginPage">
 <kw name="Fill Text" owner="Browser">
-<msg time="2026-03-28T04:32:45.791352" level="INFO">Fills the text '' in the given field.</msg>
+<msg time="2026-04-01T15:13:14.906898" level="INFO">Fills the text '' in the given field.</msg>
 <arg>${champ_mot_de_passe}</arg>
 <arg>${password}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2026-03-28T04:32:45.790604" elapsed="0.029023"/>
+<status status="PASS" start="2026-04-01T15:13:14.905389" elapsed="0.036069"/>
 </kw>
 <arg>${password}</arg>
-<status status="PASS" start="2026-03-28T04:32:45.790116" elapsed="0.031277"/>
+<status status="PASS" start="2026-04-01T15:13:14.903715" elapsed="0.040100"/>
 </kw>
 <kw name="Cliquer sur le bouton Login" owner="loginPage">
 <kw name="Click" owner="Browser">
-<msg time="2026-03-28T04:32:45.823617" level="INFO">Clicks the element 'css=button.orangehrm-login-button'.</msg>
+<msg time="2026-04-01T15:13:14.946286" level="INFO">Clicks the element 'css=button.orangehrm-login-button'.</msg>
 <arg>${bouton_login}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2026-03-28T04:32:45.822669" elapsed="0.070461"/>
+<status status="PASS" start="2026-04-01T15:13:14.945201" elapsed="0.121616"/>
 </kw>
-<status status="PASS" start="2026-03-28T04:32:45.821850" elapsed="0.072742"/>
+<status status="PASS" start="2026-04-01T15:13:14.944413" elapsed="0.124387"/>
 </kw>
 <arg>${username}</arg>
 <arg>${password}</arg>
-<status status="PASS" start="2026-03-28T04:32:44.877866" elapsed="1.017057"/>
+<status status="PASS" start="2026-04-01T15:13:13.987041" elapsed="1.082159"/>
 </kw>
 <kw name="Vérifier le message d'erreur required pour le champ username" owner="loginPage">
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-03-28T04:32:45.937359" level="INFO">Waited for Element with selector css=span.oxd-input-field-error-message.oxd-input-group__message &gt;&gt; nth=0 at state visible</msg>
+<msg time="2026-04-01T15:13:15.135005" level="INFO">Waited for Element with selector css=span.oxd-input-field-error-message.oxd-input-group__message &gt;&gt; nth=0 at state visible</msg>
 <arg>${message_required_username}</arg>
 <arg>visible</arg>
 <arg>timeout=10s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-03-28T04:32:45.896446" elapsed="0.041414"/>
+<status status="PASS" start="2026-04-01T15:13:15.070845" elapsed="0.064531"/>
 </kw>
-<status status="PASS" start="2026-03-28T04:32:45.895468" elapsed="0.045346"/>
+<status status="PASS" start="2026-04-01T15:13:15.069906" elapsed="0.067838"/>
 </kw>
 <kw name="Vérifier le message d'erreur required pour le champ password" owner="loginPage">
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-03-28T04:32:45.963897" level="INFO">Waited for Element with selector css=span.oxd-input-field-error-message.oxd-input-group__message &gt;&gt; nth=1 at state visible</msg>
+<msg time="2026-04-01T15:13:15.165723" level="INFO">Waited for Element with selector css=span.oxd-input-field-error-message.oxd-input-group__message &gt;&gt; nth=1 at state visible</msg>
 <arg>${message_required_password}</arg>
 <arg>visible</arg>
 <arg>timeout=10s</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-03-28T04:32:45.942119" elapsed="0.022036"/>
+<status status="PASS" start="2026-04-01T15:13:15.139511" elapsed="0.026566"/>
 </kw>
-<status status="PASS" start="2026-03-28T04:32:45.941396" elapsed="0.024391"/>
+<status status="PASS" start="2026-04-01T15:13:15.138510" elapsed="0.029438"/>
 </kw>
 <arg>${CHAMP_VIDE}</arg>
 <arg>${CHAMP_VIDE}</arg>
-<status status="PASS" start="2026-03-28T04:32:44.868586" elapsed="1.098185"/>
+<status status="PASS" start="2026-04-01T15:13:13.967623" elapsed="1.201075"/>
 </kw>
 <kw name="Fermer le navigateur" owner="navigation" type="TEARDOWN">
 <kw name="Close Browser" owner="Browser">
-<msg time="2026-03-28T04:32:46.278633" level="INFO">Closed browser</msg>
+<msg time="2026-04-01T15:13:15.981128" level="INFO">Closed browser</msg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-03-28T04:32:45.968476" elapsed="0.310470"/>
+<status status="PASS" start="2026-04-01T15:13:15.170640" elapsed="0.810832"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2026-03-28T04:32:46.281637" level="INFO">Fermeture du navigateur</msg>
+<msg time="2026-04-01T15:13:15.984243" level="INFO">Fermeture du navigateur</msg>
 <arg>Fermeture du navigateur</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2026-03-28T04:32:46.280902" elapsed="0.000858"/>
+<status status="PASS" start="2026-04-01T15:13:15.983533" elapsed="0.000817"/>
 </kw>
-<status status="PASS" start="2026-03-28T04:32:45.967595" elapsed="0.316106"/>
+<status status="PASS" start="2026-04-01T15:13:15.169595" elapsed="0.816608"/>
 </kw>
 <tag>faible</tag>
 <tag>login</tag>
 <tag>regression</tag>
-<status status="PASS" start="2026-03-28T04:32:39.300584" elapsed="6.983488"/>
+<status status="PASS" start="2026-04-01T15:13:07.352890" elapsed="8.633746"/>
 </test>
-<status status="PASS" start="2026-03-28T04:32:38.734636" elapsed="7.567535"/>
+<status status="PASS" start="2026-04-01T15:13:06.749002" elapsed="9.260079"/>
 </suite>
-<status status="PASS" start="2026-03-28T04:32:38.733449" elapsed="7.581630"/>
+<status status="PASS" start="2026-04-01T15:13:06.747802" elapsed="9.278068"/>
 </suite>
-<status status="PASS" start="2026-03-28T04:32:38.698130" elapsed="7.618048"/>
+<status status="PASS" start="2026-04-01T15:13:06.717142" elapsed="9.309983"/>
 </suite>
 <statistics>
 <total>

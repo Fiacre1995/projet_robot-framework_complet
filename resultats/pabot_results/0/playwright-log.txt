@@ -1,4 +1,4 @@
-{"level":30,"time":"2026-03-28T03:32:40.521Z","pid":29100,"hostname":"Fiacre_DION","msg":"Listening on 127.0.0.1:57260"}
+{"level":30,"time":"2026-04-01T13:13:08.805Z","pid":36140,"hostname":"Fiacre_DION","msg":"Listening on 127.0.0.1:54515"}
 ================= Original suppressed error =================
 Error: Browser has been closed.
     at PlaywrightState.getActiveBrowser (C:\Users\afiac\PycharmProjects\Projet_entreprise2\.venv\Lib\site-packages\Browser\wrapper\index.js:12757:15)
@@ -12,8 +12,8 @@ Error: Browser has been closed.
     at endReadableNT (node:internal/streams/readable:1400:12)
     at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
 =============================================================
-{"level":30,"time":"2026-03-28T03:32:41.008Z","pid":29100,"hostname":"Fiacre_DION","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-03-28T03:32:41.009Z","pid":29100,"hostname":"Fiacre_DION","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-04-01T13:13:09.072Z","pid":36140,"hostname":"Fiacre_DION","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-04-01T13:13:09.073Z","pid":36140,"hostname":"Fiacre_DION","msg":"End of node method getBrowserCatalog"}
 ================= Original suppressed error =================
 Error: Browser has been closed.
     at PlaywrightState.getActiveBrowser (C:\Users\afiac\PycharmProjects\Projet_entreprise2\.venv\Lib\site-packages\Browser\wrapper\index.js:12757:15)
@@ -27,7 +27,7 @@ Error: Browser has been closed.
     at endReadableNT (node:internal/streams/readable:1400:12)
     at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
 =============================================================
-{"level":30,"time":"2026-03-28T03:32:41.018Z","pid":29100,"hostname":"Fiacre_DION","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-03-28T03:32:41.018Z","pid":29100,"hostname":"Fiacre_DION","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-03-28T03:32:41.024Z","pid":29100,"hostname":"Fiacre_DION","msg":"Start of node method closeAllBrowsers"}
-{"level":30,"time":"2026-03-28T03:32:41.024Z","pid":29100,"hostname":"Fiacre_DION","msg":"End of node method closeAllBrowsers"}
+{"level":30,"time":"2026-04-01T13:13:09.079Z","pid":36140,"hostname":"Fiacre_DION","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-04-01T13:13:09.079Z","pid":36140,"hostname":"Fiacre_DION","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-04-01T13:13:09.083Z","pid":36140,"hostname":"Fiacre_DION","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2026-04-01T13:13:09.084Z","pid":36140,"hostname":"Fiacre_DION","msg":"End of node method closeAllBrowsers"}
