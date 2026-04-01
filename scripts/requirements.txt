@@ -2,3 +2,4 @@ robotframework
 robotframework-browser
 allure-robotframework
 robotframework-pabot
+psycopg2-binary
