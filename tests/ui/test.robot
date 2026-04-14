@@ -26,4 +26,4 @@ Test sur les alertes
     # Handle Future Dialogs    action=accept
     Click    text=Click me >> nth=1
     # Click    text=Alerts, Frame & Windows
-    Sleep    5S
+    # Commentaire
