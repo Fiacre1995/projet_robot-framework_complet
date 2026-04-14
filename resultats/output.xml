@@ -1,577 +1,142 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Rebot 7.3.2 (Python 3.13.5 on win32)" generated="2026-04-01T15:13:19.014156" rpa="false" schemaversion="5">
-<suite id="s1" name="Tests" source="C:\Users\afiac\PycharmProjects\Projet_entreprise2\tests">
-<suite id="s1-s1" name="Ui" source="C:\Users\afiac\PycharmProjects\Projet_entreprise2\tests\ui">
-<suite id="s1-s1-s1" name="Connexion Bd" source="C:\Users\afiac\PycharmProjects\Projet_entreprise2\tests\ui\connexion_bd.robot">
-<test id="s1-s1-s1-t1" name="Connexion bd valide" line="6">
-<kw name="Connect To Database" owner="postgres_bd">
-<kw name="Connect Bd" owner="Bd">
-<arg>${DB_HOST}</arg>
-<arg>${DB_NAME}</arg>
-<arg>${DB_USER}</arg>
-<arg>${DB_PASS}</arg>
-<status status="PASS" start="2026-04-01T15:13:07.315769" elapsed="0.076828"/>
+<robot generator="Robot 7.4.2 (Python 3.13.5 on win32)" generated="2026-04-10T01:43:43.164364" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Api Auth" source="C:\Users\afiac\PycharmProjects\Projet_entreprise2\tests\api\test_api_auth.robot">
+<test id="s1-t1" name="Authentification Api" line="6">
+<kw name="Get Auth Token" owner="baseApi">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2026-04-10T01:43:43.598750" level="INFO">Creating Session using : alias=auth, url=https://dummyjson.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>auth</arg>
+<arg>${BASE_API_URL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2026-04-10T01:43:43.598604" elapsed="0.000274"/>
 </kw>
-<status status="PASS" start="2026-04-01T15:13:07.315158" elapsed="0.077757"/>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2026-04-10T01:43:43.599327" level="INFO">${body} = {'username': 'emilys', 'password': 'emilyspass'}</msg>
+<var>${body}</var>
+<arg>username=${username}</arg>
+<arg>password=${password}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2026-04-10T01:43:43.598984" elapsed="0.000364"/>
 </kw>
-<msg time="2026-04-01T15:13:07.472508" level="INFO">Starting Browser process C:\Users\afiac\PycharmProjects\Projet_entreprise2\.venv\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:54515</msg>
-<tag>api</tag>
-<tag>connexion_bd</tag>
-<tag>critique</tag>
-<status status="PASS" start="2026-04-01T15:13:07.314296" elapsed="0.078827"/>
-</test>
-<status status="PASS" start="2026-04-01T15:13:06.729000" elapsed="0.079000"/>
-</suite>
-<suite id="s1-s1-s2" name="Login" source="C:\Users\afiac\PycharmProjects\Projet_entreprise2\tests\ui\login.robot">
-<test id="s1-s1-s2-t1" name="Connexion avec des identifiants valident" line="11">
-<kw name="Ouvrir le navigateur" owner="navigation" type="SETUP">
-<kw name="New Browser" owner="Browser">
-<msg time="2026-04-01T15:13:07.390174" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\afiac\\PycharmProjects\\Projet_entreprise2\\resultats\\pabot_results\\1\\browser\\traces\\temp\\2477e598-1853-47e0-8518-a74b5909fdce"}</msg>
-<msg time="2026-04-01T15:13:07.462616" level="INFO">Starting Browser process C:\Users\afiac\PycharmProjects\Projet_entreprise2\.venv\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:54514</msg>
-<msg time="2026-04-01T15:13:09.509510" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\afiac\\PycharmProjects\\Projet_entreprise2\\resultats\\pabot_results\\1\\browser\\traces\\temp\\2477e598-1853-47e0-8518-a74b5909fdce"}</msg>
-<arg>${BROWSER}</arg>
-<arg>headless=${HEADLESS}</arg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2026-04-01T15:13:07.389051" elapsed="2.120704"/>
-</kw>
-<kw name="New Context" owner="Browser">
-<msg time="2026-04-01T15:13:09.515752" level="INFO">{
-  "acceptDownloads": true,
-  "bypassCSP": false,
-  "forcedColors": "none",
-  "ignoreHTTPSErrors": false,
-  "javaScriptEnabled": true,
-  "offline": false,
-  "reducedMotion": "no-preference",
-  "serviceWorkers": "allow",
-  "viewport": {
-    "width": 1280,
-    "height": 720
-  }
-}</msg>
-<msg time="2026-04-01T15:13:09.543599" level="INFO">Successfully created context. </msg>
-<msg time="2026-04-01T15:13:09.543722" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Create a new BrowserContext with specified options.</doc>
-<status status="PASS" start="2026-04-01T15:13:09.513206" elapsed="0.030646"/>
-</kw>
-<kw name="New Page" owner="Browser">
-<msg time="2026-04-01T15:13:13.713679" level="INFO">Successfully initialized new page object and opened url: https://opensource-demo.orangehrmlive.com</msg>
-<arg>${BASE_URL}</arg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Open a new Page.</doc>
-<status status="PASS" start="2026-04-01T15:13:09.545263" elapsed="4.168751"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2026-04-01T15:13:13.717074" level="INFO">Ouverture du navigateur</msg>
-<arg>Ouverture du navigateur</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2026-04-01T15:13:13.716266" elapsed="0.000927"/>
-</kw>
-<status status="PASS" start="2026-04-01T15:13:07.387752" elapsed="6.331416"/>
-</kw>
-<kw name="Authentification Valide" owner="loginBusiness">
-<kw name="Vérifier l'url de la page de login" owner="loginPage">
-<kw name="Get Url" owner="Browser">
-<msg time="2026-04-01T15:13:13.734354" level="INFO">${url} = https://opensource-demo.orangehrmlive.com/web/index.php/auth/login</msg>
-<var>${url}</var>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns the current URL.</doc>
-<status status="PASS" start="2026-04-01T15:13:13.723837" elapsed="0.010683"/>
-</kw>
-<kw name="Should Contain" owner="BuiltIn">
-<arg>${url}</arg>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2026-04-10T01:43:43.893345" level="INFO">POST Request : url=https://dummyjson.com/auth/login 
+ path_url=/auth/login 
+ headers={'User-Agent': 'python-requests/2.33.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '48', 'Content-Type': 'application/json'} 
+ body=b'{"username": "emilys", "password": "emilyspass"}' 
+ </msg>
+<msg time="2026-04-10T01:43:43.893624" level="INFO">POST Response : url=https://dummyjson.com/auth/login 
+ status=200, reason=OK 
+ headers={'Date': 'Thu, 09 Apr 2026 23:43:44 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'access-control-allow-origin': '*', 'etag': 'W/"3a2-mpFWquMVUcHEwVe6eL5Bgl1VmAY"', 'Set-Cookie': 'accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3NzU3NzgyMjQsImV4cCI6MTc3NTc4MTgyNH0.UI7bnwdOyV4FE2DIhVg6_sjXtSZF60U94QxwrP0oHJU; Max-Age=3600; Path=/; Expires=Fri, 10 Apr 2026 00:43:44 GMT; HttpOnly; Secure, refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3NzU3NzgyMjQsImV4cCI6MTc3ODM3MDIyNH0.sm1w2Hf9Dywu0WLh1B8HmrPh2NtiRy9JO32el30xEUk; Max-Age=3600; Path=/; Expires=Fri, 10 Apr 2026 00:43:44 GMT; HttpOnly; Secure', 'strict-transport-security': 'max-age=15552000; includeSubDomains', 'vary': 'Accept-Encoding', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-ratelimit-limit': '100', 'x-ratelimit-remaining': '99', 'x-ratelimit-reset': '1775778233', 'x-xss-protection': '1; mode=block', 'cf-cache-status': 'DYNAMIC', 'Nel': '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}', 'Report-To': '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=3aCX44iltrzc3fBBjrYEyysRenuQFBg0MHZFkZyhHqMbGCA%2BePi3yGrTwOl3n0XGR%2FPLh8swifaYk7OxDqaG2Jlwdhi%2Fmn%2FF8RtlRc4UFAFHwQUL1bDzjLIzOlytPElNRC2ra22ajIrgkG2e"}]}', 'Content-Encoding': 'gzip', 'Server': 'cloudflare', 'CF-RAY': '9e9d602d3d70d096-CDG'} 
+ body={"accessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3NzU3NzgyMjQsImV4cCI6MTc3NTc4MTgyNH0.UI7bnwdOyV4FE2DIhVg6_sjXtSZF60U94QxwrP0oHJU","refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3NzU3NzgyMjQsImV4cCI6MTc3ODM3MDIyNH0.sm1w2Hf9Dywu0WLh1B8HmrPh2NtiRy9JO32el30xEUk","id":1,"username":"emilys","email":"emily.johnson@x.dummyjson.com","firstName":"Emily","lastName":"Johnson","gender":"female","image":"https://dummyjson.com/icon/emilys/128"} 
+ </msg>
+<msg time="2026-04-10T01:43:43.893786" level="INFO">C:\Users\afiac\PycharmProjects\Projet_entreprise2\.venv\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'dummyjson.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2026-04-10T01:43:43.894556" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>auth</arg>
 <arg>/auth/login</arg>
-<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2026-04-01T15:13:13.739815" elapsed="0.002122"/>
+<arg>json=${body}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2026-04-10T01:43:43.599439" elapsed="0.295210"/>
 </kw>
-<status status="PASS" start="2026-04-01T15:13:13.722530" elapsed="0.020353"/>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2026-04-10T01:43:43.896853" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${response.status_code}</arg>
+<arg>200</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2026-04-10T01:43:43.895051" elapsed="0.001928"/>
 </kw>
-<kw name="Authentification avec les identifiants" owner="loginUi">
-<kw name="Saisir le nom utilisateur" owner="loginPage">
-<kw name="Fill Text" owner="Browser">
-<msg time="2026-04-01T15:13:13.748159" level="INFO">Fills the text 'Admin' in the given field.</msg>
-<arg>${champ_nom_utilisateur}</arg>
-<arg>${username}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2026-04-01T15:13:13.746285" elapsed="0.963839"/>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-04-10T01:43:43.899455" level="INFO">${token} = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1...</msg>
+<var>${token}</var>
+<arg>${response.json()["${key_token}"]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-04-10T01:43:43.897221" elapsed="0.002290"/>
 </kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2026-04-01T15:13:14.713784" level="INFO">le nom utilisateur saisir est Admin</msg>
-<arg>le nom utilisateur saisir est ${username}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2026-04-01T15:13:14.712605" elapsed="0.001341"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Token: ${token}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-04-10T01:43:43.899716" elapsed="0.000774"/>
 </kw>
-<arg>${username}</arg>
-<status status="PASS" start="2026-04-01T15:13:13.745235" elapsed="0.971441"/>
+<return>
+<value>${token}</value>
+<status status="PASS" start="2026-04-10T01:43:43.900598" elapsed="0.000159"/>
+</return>
+<msg time="2026-04-10T01:43:43.900963" level="INFO">${token_generer} = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1...</msg>
+<var>${token_generer}</var>
+<arg>emilys</arg>
+<arg>emilyspass</arg>
+<arg>refreshToken</arg>
+<status status="PASS" start="2026-04-10T01:43:43.597991" elapsed="0.303004"/>
 </kw>
-<kw name="Saisir le mot de passe" owner="loginPage">
-<kw name="Fill Text" owner="Browser">
-<msg time="2026-04-01T15:13:14.719775" level="INFO">Fills the text 'admin123' in the given field.</msg>
-<arg>${champ_mot_de_passe}</arg>
-<arg>${password}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2026-04-01T15:13:14.718479" elapsed="0.048333"/>
+<kw name="Create Authenticated Session" owner="baseApi">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2026-04-10T01:43:43.902690" level="INFO">${headers} = {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6Ikpva...</msg>
+<var>${headers}</var>
+<arg>Authorization=Bearer ${token}</arg>
+<arg>Content-Type=application/json</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2026-04-10T01:43:43.902263" elapsed="0.000460"/>
 </kw>
-<arg>${password}</arg>
-<status status="PASS" start="2026-04-01T15:13:14.717401" elapsed="0.052875"/>
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2026-04-10T01:43:43.903116" level="INFO">Creating Session using : alias=api, url=https://dummyjson.com, headers={'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3NzU3NzgyMjQsImV4cCI6MTc3ODM3MDIyNH0.sm1w2Hf9Dywu0WLh1B8HmrPh2NtiRy9JO32el30xEUk', 'Content-Type': 'application/json'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>api</arg>
+<arg>${BASE_API_URL}</arg>
+<arg>headers=${headers}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2026-04-10T01:43:43.902849" elapsed="0.000589"/>
 </kw>
-<kw name="Cliquer sur le bouton Login" owner="loginPage">
-<kw name="Click" owner="Browser">
-<msg time="2026-04-01T15:13:14.773438" level="INFO">Clicks the element 'css=button.orangehrm-login-button'.</msg>
-<arg>${bouton_login}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2026-04-01T15:13:14.771951" elapsed="2.245103"/>
+<arg>${token_generer}</arg>
+<status status="PASS" start="2026-04-10T01:43:43.901538" elapsed="0.001980"/>
 </kw>
-<status status="PASS" start="2026-04-01T15:13:14.770987" elapsed="2.250380"/>
+<kw name="GET Protected Resource" owner="baseApi">
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2026-04-10T01:43:44.265778" level="INFO">GET Request : url=https://dummyjson.com/products/28 
+ path_url=/products/28 
+ headers={'User-Agent': 'python-requests/2.33.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3NzU3NzgyMjQsImV4cCI6MTc3ODM3MDIyNH0.sm1w2Hf9Dywu0WLh1B8HmrPh2NtiRy9JO32el30xEUk', 'Content-Type': 'application/json'} 
+ body=None 
+ </msg>
+<msg time="2026-04-10T01:43:44.265996" level="INFO">GET Response : url=https://dummyjson.com/products/28 
+ status=200, reason=OK 
+ headers={'Date': 'Thu, 09 Apr 2026 23:43:44 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'access-control-allow-origin': '*', 'Report-To': '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=IF6LbS%2FVUz%2FNen5IJ73TMRB0ofuJJiYQIjsLe%2B%2BbT%2Be1snp90NVY3SzKhjEDxT5CqgYA7KOZpff1%2Bz5KlChw8crUQv%2BawtOoDf6qIaQK9RAlxTedL6w2rQZI9Zw3zb%2FXdShsVtg8klNfRsl%2F"}]}', 'etag': 'W/"5f0-w+aaJqWPNXNMYdtWrlDC88dcZGo"', 'strict-transport-security': 'max-age=15552000; includeSubDomains', 'vary': 'Accept-Encoding', 'x-content-type-options': 'nosniff', 'x-dns-prefetch-control': 'off', 'x-download-options': 'noopen', 'x-frame-options': 'SAMEORIGIN', 'x-ratelimit-limit': '100', 'x-ratelimit-remaining': '99', 'x-ratelimit-reset': '1775778233', 'x-xss-protection': '1; mode=block', 'cf-cache-status': 'DYNAMIC', 'Nel': '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}', 'Content-Encoding': 'gzip', 'Server': 'cloudflare', 'CF-RAY': '9e9d602fa953d14a-CDG'} 
+ body={"id":28,"title":"Ice Cream","description":"Creamy and delicious ice cream, available in various flavors for a delightful treat.","category":"groceries","price":5.49,"discountPercentage":8.69,"rating":3.39,"stock":27,"tags":["desserts"],"sku":"GRO-BRD-CRE-028","weight":1,"dimensions":{"width":14.83,"height":15.07,"depth":24.2},"warrantyInformation":"1 month warranty","shippingInformation":"Ships in 2 weeks","availabilityStatus":"In Stock","reviews":[{"rating":5,"comment":"Very pleased!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Elijah Cruz","reviewerEmail":"elijah.cruz@x.dummyjson.com"},{"rating":4,"comment":"Excellent quality!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Jace Smith","reviewerEmail":"jace.smith@x.dummyjson.com"},{"rating":5,"comment":"Highly impressed!","date":"2025-04-30T09:41:02.053Z","reviewerName":"Sadie Morales","reviewerEmail":"sadie.morales@x.dummyjson.com"}],"returnPolicy":"No return policy","minimumOrderQuantity":42,"meta":{"createdAt":"2025-04-30T09:41:02.053Z","updatedAt":"2025-04-30T09:41:02.053Z","barcode":"0788954559076","qrCode":"https://cdn.dummyjson.com/public/qr-code.png"},"images":["https://cdn.dummyjson.com/product-images/groceries/ice-cream/1.webp","https://cdn.dummyjson.com/product-images/groceries/ice-cream/2.webp","https://cdn.dummyjson.com/product-images/groceries/ice-cream/3.webp","https://cdn.dummyjson.com/product-images/groceries/ice-cream/4.webp"],"thumbnail":"https://cdn.dummyjson.com/product-images/groceries/ice-cream/thumbnail.webp"} 
+ </msg>
+<msg time="2026-04-10T01:43:44.266201" level="INFO">C:\Users\afiac\PycharmProjects\Projet_entreprise2\.venv\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'dummyjson.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2026-04-10T01:43:44.267786" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>api</arg>
+<arg>/products/${id}</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2026-04-10T01:43:43.904205" elapsed="0.363665"/>
 </kw>
-<arg>${username}</arg>
-<arg>${password}</arg>
-<status status="PASS" start="2026-04-01T15:13:13.743858" elapsed="3.278367"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${response.json()["id"]}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-04-10T01:43:44.268319" elapsed="0.001803"/>
 </kw>
-<kw name="Verifier présence du mot dashboard" owner="dashboardPage">
-<kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-04-01T15:13:17.952688" level="INFO">Waited for Element with selector css=h6.oxd-text.oxd-text--h6.oxd-topbar-header-breadcrumb-module at state visible</msg>
-<arg>${mot_dashboard}</arg>
-<arg>visible</arg>
-<arg>timeout=10s</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-04-01T15:13:17.024063" elapsed="0.928864"/>
+<return>
+<value>${response}</value>
+<status status="PASS" start="2026-04-10T01:43:44.270212" elapsed="0.000141"/>
+</return>
+<arg>28</arg>
+<status status="PASS" start="2026-04-10T01:43:43.903942" elapsed="0.366552"/>
 </kw>
-<status status="PASS" start="2026-04-01T15:13:17.023253" elapsed="0.931121"/>
-</kw>
-<kw name="Générer un nom utilisateur" owner="loginUi">
-<kw name="Generate Random Name" owner="Faker">
-<msg time="2026-04-01T15:13:17.955920" level="INFO">${nom} = Benoît de la Pottier</msg>
-<var>${nom}</var>
-<status status="PASS" start="2026-04-01T15:13:17.955365" elapsed="0.000613"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2026-04-01T15:13:17.958608" level="INFO">Benoît de la Pottier</msg>
-<arg>${nom}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2026-04-01T15:13:17.957992" elapsed="0.000705"/>
-</kw>
-<status status="PASS" start="2026-04-01T15:13:17.954788" elapsed="0.005143"/>
-</kw>
-<arg>${VALID_USER}</arg>
-<arg>${VALID_PASSWORD}</arg>
-<status status="PASS" start="2026-04-01T15:13:13.720412" elapsed="4.239784"/>
-</kw>
-<kw name="Fermer le navigateur" owner="navigation" type="TEARDOWN">
-<kw name="Close Browser" owner="Browser">
-<msg time="2026-04-01T15:13:18.425331" level="INFO">Closed browser</msg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-04-01T15:13:17.961506" elapsed="0.464041"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2026-04-01T15:13:18.427412" level="INFO">Fermeture du navigateur</msg>
-<arg>Fermeture du navigateur</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2026-04-01T15:13:18.426848" elapsed="0.000657"/>
-</kw>
-<status status="PASS" start="2026-04-01T15:13:17.960884" elapsed="0.467541"/>
-</kw>
-<tag>critique</tag>
-<tag>login</tag>
-<tag>regression</tag>
-<status status="PASS" start="2026-04-01T15:13:07.386481" elapsed="11.042166"/>
+<msg time="2026-04-10T01:43:44.305786" level="INFO">Starting Browser process C:\Users\afiac\PycharmProjects\Projet_entreprise2\.venv\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:51360</msg>
+<status status="PASS" start="2026-04-10T01:43:43.597391" elapsed="0.673429"/>
 </test>
-<test id="s1-s1-s2-t2" name="Connexion avec des identifiants invalident" line="15">
-<kw name="Ouvrir le navigateur" owner="navigation" type="SETUP">
-<kw name="New Browser" owner="Browser">
-<msg time="2026-04-01T15:13:07.336323" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\afiac\\PycharmProjects\\Projet_entreprise2\\resultats\\pabot_results\\2\\browser\\traces\\temp\\2f20c81e-bf86-4e0b-bac5-3608cc1302f7"}</msg>
-<msg time="2026-04-01T15:13:07.397655" level="INFO">Starting Browser process C:\Users\afiac\PycharmProjects\Projet_entreprise2\.venv\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:54511</msg>
-<msg time="2026-04-01T15:13:09.513376" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\afiac\\PycharmProjects\\Projet_entreprise2\\resultats\\pabot_results\\2\\browser\\traces\\temp\\2f20c81e-bf86-4e0b-bac5-3608cc1302f7"}</msg>
-<arg>${BROWSER}</arg>
-<arg>headless=${HEADLESS}</arg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2026-04-01T15:13:07.334438" elapsed="2.179156"/>
-</kw>
-<kw name="New Context" owner="Browser">
-<msg time="2026-04-01T15:13:09.517554" level="INFO">{
-  "acceptDownloads": true,
-  "bypassCSP": false,
-  "forcedColors": "none",
-  "ignoreHTTPSErrors": false,
-  "javaScriptEnabled": true,
-  "offline": false,
-  "reducedMotion": "no-preference",
-  "serviceWorkers": "allow",
-  "viewport": {
-    "width": 1280,
-    "height": 720
-  }
-}</msg>
-<msg time="2026-04-01T15:13:09.549492" level="INFO">Successfully created context. </msg>
-<msg time="2026-04-01T15:13:09.549622" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Create a new BrowserContext with specified options.</doc>
-<status status="PASS" start="2026-04-01T15:13:09.515090" elapsed="0.034664"/>
-</kw>
-<kw name="New Page" owner="Browser">
-<msg time="2026-04-01T15:13:14.256873" level="INFO">Successfully initialized new page object and opened url: https://opensource-demo.orangehrmlive.com</msg>
-<arg>${BASE_URL}</arg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Open a new Page.</doc>
-<status status="PASS" start="2026-04-01T15:13:09.551459" elapsed="4.705743"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2026-04-01T15:13:14.292393" level="INFO">Ouverture du navigateur</msg>
-<arg>Ouverture du navigateur</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2026-04-01T15:13:14.291703" elapsed="0.000797"/>
-</kw>
-<status status="PASS" start="2026-04-01T15:13:07.333112" elapsed="6.963785"/>
-</kw>
-<kw name="Authentification echoue" owner="loginBusiness">
-<kw name="Vérifier l'url de la page de login" owner="loginPage">
-<kw name="Get Url" owner="Browser">
-<msg time="2026-04-01T15:13:14.306483" level="INFO">${url} = https://opensource-demo.orangehrmlive.com/web/index.php/auth/login</msg>
-<var>${url}</var>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns the current URL.</doc>
-<status status="PASS" start="2026-04-01T15:13:14.299185" elapsed="0.007404"/>
-</kw>
-<kw name="Should Contain" owner="BuiltIn">
-<arg>${url}</arg>
-<arg>/auth/login</arg>
-<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2026-04-01T15:13:14.308519" elapsed="0.001155"/>
-</kw>
-<status status="PASS" start="2026-04-01T15:13:14.298609" elapsed="0.011534"/>
-</kw>
-<kw name="Authentification avec les identifiants" owner="loginUi">
-<kw name="Saisir le nom utilisateur" owner="loginPage">
-<kw name="Fill Text" owner="Browser">
-<msg time="2026-04-01T15:13:14.314185" level="INFO">Fills the text 'wrong' in the given field.</msg>
-<arg>${champ_nom_utilisateur}</arg>
-<arg>${username}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2026-04-01T15:13:14.313183" elapsed="1.068663"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2026-04-01T15:13:15.385170" level="INFO">le nom utilisateur saisir est wrong</msg>
-<arg>le nom utilisateur saisir est ${username}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2026-04-01T15:13:15.383616" elapsed="0.002118"/>
-</kw>
-<arg>${username}</arg>
-<status status="PASS" start="2026-04-01T15:13:14.312208" elapsed="1.075400"/>
-</kw>
-<kw name="Saisir le mot de passe" owner="loginPage">
-<kw name="Fill Text" owner="Browser">
-<msg time="2026-04-01T15:13:15.389600" level="INFO">Fills the text 'wrong123' in the given field.</msg>
-<arg>${champ_mot_de_passe}</arg>
-<arg>${password}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2026-04-01T15:13:15.388773" elapsed="0.042878"/>
-</kw>
-<arg>${password}</arg>
-<status status="PASS" start="2026-04-01T15:13:15.388087" elapsed="0.045071"/>
-</kw>
-<kw name="Cliquer sur le bouton Login" owner="loginPage">
-<kw name="Click" owner="Browser">
-<msg time="2026-04-01T15:13:15.435178" level="INFO">Clicks the element 'css=button.orangehrm-login-button'.</msg>
-<arg>${bouton_login}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2026-04-01T15:13:15.434283" elapsed="1.374718"/>
-</kw>
-<status status="PASS" start="2026-04-01T15:13:15.433622" elapsed="1.376740"/>
-</kw>
-<arg>${username}</arg>
-<arg>${password}</arg>
-<status status="PASS" start="2026-04-01T15:13:14.310637" elapsed="2.500124"/>
-</kw>
-<kw name="Verifier Message authentification échoué" owner="loginPage">
-<kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-04-01T15:13:17.693426" level="INFO">Waited for Element with selector css=p.oxd-text--p.oxd-alert-content-text at state visible</msg>
-<arg>${message_erreur}</arg>
-<arg>visible</arg>
-<arg>timeout=10s</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-04-01T15:13:16.811741" elapsed="0.881911"/>
-</kw>
-<status status="PASS" start="2026-04-01T15:13:16.811170" elapsed="0.883849"/>
-</kw>
-<arg>${INVALID_USER}</arg>
-<arg>${INVALID_PASSWORD}</arg>
-<status status="PASS" start="2026-04-01T15:13:14.297506" elapsed="3.397781"/>
-</kw>
-<kw name="Fermer le navigateur" owner="navigation" type="TEARDOWN">
-<kw name="Close Browser" owner="Browser">
-<msg time="2026-04-01T15:13:18.199829" level="INFO">Closed browser</msg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-04-01T15:13:17.696309" elapsed="0.503695"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2026-04-01T15:13:18.202310" level="INFO">Fermeture du navigateur</msg>
-<arg>Fermeture du navigateur</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2026-04-01T15:13:18.201488" elapsed="0.000927"/>
-</kw>
-<status status="PASS" start="2026-04-01T15:13:17.695749" elapsed="0.508454"/>
-</kw>
-<tag>login</tag>
-<tag>moyen</tag>
-<tag>regression</tag>
-<status status="PASS" start="2026-04-01T15:13:07.331870" elapsed="10.872561"/>
-</test>
-<test id="s1-s1-s2-t3" name="Connexion avec des identifiants vident" line="19">
-<kw name="Ouvrir le navigateur" owner="navigation" type="SETUP">
-<kw name="New Browser" owner="Browser">
-<msg time="2026-04-01T15:13:07.356826" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\afiac\\PycharmProjects\\Projet_entreprise2\\resultats\\pabot_results\\3\\browser\\traces\\temp\\c3266e5b-3f60-4a37-a4fa-11ddab5b87e6"}</msg>
-<msg time="2026-04-01T15:13:07.430858" level="INFO">Starting Browser process C:\Users\afiac\PycharmProjects\Projet_entreprise2\.venv\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:54512</msg>
-<msg time="2026-04-01T15:13:09.440477" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\afiac\\PycharmProjects\\Projet_entreprise2\\resultats\\pabot_results\\3\\browser\\traces\\temp\\c3266e5b-3f60-4a37-a4fa-11ddab5b87e6"}</msg>
-<arg>${BROWSER}</arg>
-<arg>headless=${HEADLESS}</arg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2026-04-01T15:13:07.355687" elapsed="2.085226"/>
-</kw>
-<kw name="New Context" owner="Browser">
-<msg time="2026-04-01T15:13:09.445603" level="INFO">{
-  "acceptDownloads": true,
-  "bypassCSP": false,
-  "forcedColors": "none",
-  "ignoreHTTPSErrors": false,
-  "javaScriptEnabled": true,
-  "offline": false,
-  "reducedMotion": "no-preference",
-  "serviceWorkers": "allow",
-  "viewport": {
-    "width": 1280,
-    "height": 720
-  }
-}</msg>
-<msg time="2026-04-01T15:13:09.466918" level="INFO">Successfully created context. </msg>
-<msg time="2026-04-01T15:13:09.467043" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Create a new BrowserContext with specified options.</doc>
-<status status="PASS" start="2026-04-01T15:13:09.443018" elapsed="0.024153"/>
-</kw>
-<kw name="New Page" owner="Browser">
-<msg time="2026-04-01T15:13:13.958170" level="INFO">Successfully initialized new page object and opened url: https://opensource-demo.orangehrmlive.com</msg>
-<arg>${BASE_URL}</arg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Open a new Page.</doc>
-<status status="PASS" start="2026-04-01T15:13:09.471317" elapsed="4.487513"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2026-04-01T15:13:13.964242" level="INFO">Ouverture du navigateur</msg>
-<arg>Ouverture du navigateur</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2026-04-01T15:13:13.962306" elapsed="0.002157"/>
-</kw>
-<status status="PASS" start="2026-04-01T15:13:07.354167" elapsed="6.612590"/>
-</kw>
-<kw name="Authentification avec coordonnées vident" owner="loginBusiness">
-<kw name="Vérifier l'url de la page de login" owner="loginPage">
-<kw name="Get Url" owner="Browser">
-<msg time="2026-04-01T15:13:13.979484" level="INFO">${url} = https://opensource-demo.orangehrmlive.com/web/index.php/auth/login</msg>
-<var>${url}</var>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns the current URL.</doc>
-<status status="PASS" start="2026-04-01T15:13:13.971191" elapsed="0.008393"/>
-</kw>
-<kw name="Should Contain" owner="BuiltIn">
-<arg>${url}</arg>
-<arg>/auth/login</arg>
-<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2026-04-01T15:13:13.982720" elapsed="0.001679"/>
-</kw>
-<status status="PASS" start="2026-04-01T15:13:13.969404" elapsed="0.016223"/>
-</kw>
-<kw name="Authentification avec les identifiants" owner="loginUi">
-<kw name="Saisir le nom utilisateur" owner="loginPage">
-<kw name="Fill Text" owner="Browser">
-<msg time="2026-04-01T15:13:13.991896" level="INFO">Fills the text '' in the given field.</msg>
-<arg>${champ_nom_utilisateur}</arg>
-<arg>${username}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2026-04-01T15:13:13.990160" elapsed="0.906128"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2026-04-01T15:13:14.900594" level="INFO">le nom utilisateur saisir est </msg>
-<arg>le nom utilisateur saisir est ${username}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2026-04-01T15:13:14.899676" elapsed="0.001037"/>
-</kw>
-<arg>${username}</arg>
-<status status="PASS" start="2026-04-01T15:13:13.988843" elapsed="0.914101"/>
-</kw>
-<kw name="Saisir le mot de passe" owner="loginPage">
-<kw name="Fill Text" owner="Browser">
-<msg time="2026-04-01T15:13:14.906898" level="INFO">Fills the text '' in the given field.</msg>
-<arg>${champ_mot_de_passe}</arg>
-<arg>${password}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2026-04-01T15:13:14.905389" elapsed="0.036069"/>
-</kw>
-<arg>${password}</arg>
-<status status="PASS" start="2026-04-01T15:13:14.903715" elapsed="0.040100"/>
-</kw>
-<kw name="Cliquer sur le bouton Login" owner="loginPage">
-<kw name="Click" owner="Browser">
-<msg time="2026-04-01T15:13:14.946286" level="INFO">Clicks the element 'css=button.orangehrm-login-button'.</msg>
-<arg>${bouton_login}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2026-04-01T15:13:14.945201" elapsed="0.121616"/>
-</kw>
-<status status="PASS" start="2026-04-01T15:13:14.944413" elapsed="0.124387"/>
-</kw>
-<arg>${username}</arg>
-<arg>${password}</arg>
-<status status="PASS" start="2026-04-01T15:13:13.987041" elapsed="1.082159"/>
-</kw>
-<kw name="Vérifier le message d'erreur required pour le champ username" owner="loginPage">
-<kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-04-01T15:13:15.135005" level="INFO">Waited for Element with selector css=span.oxd-input-field-error-message.oxd-input-group__message &gt;&gt; nth=0 at state visible</msg>
-<arg>${message_required_username}</arg>
-<arg>visible</arg>
-<arg>timeout=10s</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-04-01T15:13:15.070845" elapsed="0.064531"/>
-</kw>
-<status status="PASS" start="2026-04-01T15:13:15.069906" elapsed="0.067838"/>
-</kw>
-<kw name="Vérifier le message d'erreur required pour le champ password" owner="loginPage">
-<kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-04-01T15:13:15.165723" level="INFO">Waited for Element with selector css=span.oxd-input-field-error-message.oxd-input-group__message &gt;&gt; nth=1 at state visible</msg>
-<arg>${message_required_password}</arg>
-<arg>visible</arg>
-<arg>timeout=10s</arg>
-<tag>PageContent</tag>
-<tag>Wait</tag>
-<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-04-01T15:13:15.139511" elapsed="0.026566"/>
-</kw>
-<status status="PASS" start="2026-04-01T15:13:15.138510" elapsed="0.029438"/>
-</kw>
-<arg>${CHAMP_VIDE}</arg>
-<arg>${CHAMP_VIDE}</arg>
-<status status="PASS" start="2026-04-01T15:13:13.967623" elapsed="1.201075"/>
-</kw>
-<kw name="Fermer le navigateur" owner="navigation" type="TEARDOWN">
-<kw name="Close Browser" owner="Browser">
-<msg time="2026-04-01T15:13:15.981128" level="INFO">Closed browser</msg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-04-01T15:13:15.170640" elapsed="0.810832"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2026-04-01T15:13:15.984243" level="INFO">Fermeture du navigateur</msg>
-<arg>Fermeture du navigateur</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2026-04-01T15:13:15.983533" elapsed="0.000817"/>
-</kw>
-<status status="PASS" start="2026-04-01T15:13:15.169595" elapsed="0.816608"/>
-</kw>
-<tag>faible</tag>
-<tag>login</tag>
-<tag>regression</tag>
-<status status="PASS" start="2026-04-01T15:13:07.352890" elapsed="8.633746"/>
-</test>
-<status status="PASS" start="2026-04-01T15:13:06.727000" elapsed="21.966000"/>
-</suite>
-<suite id="s1-s1-s3" name="Test" source="C:\Users\afiac\PycharmProjects\Projet_entreprise2\tests\ui\test.robot">
-<test id="s1-s1-s3-t1" name="Open Google" line="5">
-<kw name="New Browser" owner="Browser">
-<msg time="2026-04-01T15:13:11.905966" level="INFO">{"browser": "chromium", "headless": true, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\afiac\\PycharmProjects\\Projet_entreprise2\\resultats\\pabot_results\\4\\browser\\traces\\temp\\36321964-ecbc-45b2-aead-a850e75e1dc1"}</msg>
-<msg time="2026-04-01T15:13:12.070952" level="INFO">Starting Browser process C:\Users\afiac\PycharmProjects\Projet_entreprise2\.venv\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:51871</msg>
-<msg time="2026-04-01T15:13:14.519774" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":true,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\afiac\\PycharmProjects\\Projet_entreprise2\\resultats\\pabot_results\\4\\browser\\traces\\temp\\36321964-ecbc-45b2-aead-a850e75e1dc1"}</msg>
-<arg>chromium</arg>
-<arg>headless=True</arg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2026-04-01T15:13:11.902996" elapsed="2.617075"/>
-</kw>
-<kw name="New Page" owner="Browser">
-<msg time="2026-04-01T15:13:15.902462" level="INFO">Successfully initialized new page object and opened url: https://www.google.com</msg>
-<msg time="2026-04-01T15:13:15.902678" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
-<arg>https://www.google.com</arg>
-<tag>BrowserControl</tag>
-<tag>Setter</tag>
-<doc>Open a new Page.</doc>
-<status status="PASS" start="2026-04-01T15:13:14.521923" elapsed="1.381280"/>
-</kw>
-<msg time="2026-04-01T15:13:16.029444" level="INFO">Switching context to context=16d0b43b-3da6-42a9-ad0d-9ed911cfdb23 in CURRENT</msg>
-<msg time="2026-04-01T15:13:16.082903" level="INFO">Successfully changed active context: context=16d0b43b-3da6-42a9-ad0d-9ed911cfdb23</msg>
-<msg time="2026-04-01T15:13:16.114731" level="INFO">Successfully closed Context</msg>
-<status status="PASS" start="2026-04-01T15:13:11.900189" elapsed="4.007156"/>
-</test>
-<status status="PASS" start="2026-04-01T15:13:11.433638" elapsed="4.683339"/>
-</suite>
-<status status="PASS" start="2026-04-01T15:13:06.726000" elapsed="11.740000"/>
-</suite>
-<status status="PASS" start="2026-04-01T15:13:06.698000" elapsed="11.769000"/>
+<status status="PASS" start="2026-04-10T01:43:43.165405" elapsed="2.193272"/>
 </suite>
 <statistics>
 <total>
-<stat pass="5" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">api</stat>
-<stat pass="1" fail="0" skip="0">connexion_bd</stat>
-<stat pass="2" fail="0" skip="0">critique</stat>
-<stat pass="1" fail="0" skip="0">faible</stat>
-<stat pass="3" fail="0" skip="0">login</stat>
-<stat pass="1" fail="0" skip="0">moyen</stat>
-<stat pass="3" fail="0" skip="0">regression</stat>
 </tag>
 <suite>
-<stat name="Tests" id="s1" pass="5" fail="0" skip="0">Tests</stat>
-<stat name="Ui" id="s1-s1" pass="5" fail="0" skip="0">Tests.Ui</stat>
-<stat name="Connexion Bd" id="s1-s1-s1" pass="1" fail="0" skip="0">Tests.Ui.Connexion Bd</stat>
-<stat name="Login" id="s1-s1-s2" pass="3" fail="0" skip="0">Tests.Ui.Login</stat>
-<stat name="Test" id="s1-s1-s3" pass="1" fail="0" skip="0">Tests.Ui.Test</stat>
+<stat name="Test Api Auth" id="s1" pass="1" fail="0" skip="0">Test Api Auth</stat>
 </suite>
 </statistics>
 <errors>

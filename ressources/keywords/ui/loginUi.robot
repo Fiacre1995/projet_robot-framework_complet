@@ -1,5 +1,4 @@
 *** Settings ***
-
 Resource    ../../pagesObject/pages/loginPage.robot
 
 *** Keywords ***
@@ -12,3 +11,7 @@ Authentification avec les identifiants
 Générer un nom utilisateur
     ${nom}=     Faker.Generate Random Name
     Log    ${nom}
+    
+Générer un titre
+    ${titre}=   Faker.Generate Title
+    Log    ${titre}

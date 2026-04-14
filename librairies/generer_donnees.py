@@ -10,3 +10,6 @@ def generate_random_email():
 
 def generate_random_phone():
     return fake.phone_number()
+
+def generate_title():
+    return fake.sentence(nb_words=6)

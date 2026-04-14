@@ -5,3 +5,4 @@ robotframework-pabot
 psycopg2-binary
 robotframework-pabot
 allure-robotframework
+robotframework-requests

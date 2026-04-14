@@ -3,8 +3,11 @@ Resource    ../../common.robot
 Variables    ../../../configs/${ENV}.yaml
 
 *** Keywords ***
+
 Ouvrir le navigateur
     New Browser    ${BROWSER}    headless=${HEADLESS}
+
+Ouvrir la page
     New Context
     New Page    ${BASE_URL}
     Log    Ouverture du navigateur

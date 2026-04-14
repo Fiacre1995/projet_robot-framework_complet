@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.2 (Python 3.13.5 on win32)" generated="2026-04-01T15:13:06.629820" rpa="false" schemaversion="5">
+<robot generator="Robot 7.4.2 (Python 3.13.5 on win32)" generated="2026-04-01T19:03:04.187862" rpa="false" schemaversion="5">
 <suite id="s1" name="Tests" source="C:\Users\afiac\PycharmProjects\Projet_entreprise2\tests">
 <suite id="s1-s1" name="Ui" source="C:\Users\afiac\PycharmProjects\Projet_entreprise2\tests\ui">
 <suite id="s1-s1-s1" name="Connexion Bd" source="C:\Users\afiac\PycharmProjects\Projet_entreprise2\tests\ui\connexion_bd.robot">
@@ -10,21 +10,21 @@
 <arg>${DB_NAME}</arg>
 <arg>${DB_USER}</arg>
 <arg>${DB_PASS}</arg>
-<status status="PASS" start="2026-04-01T15:13:07.315769" elapsed="0.076828"/>
+<status status="PASS" start="2026-04-01T19:03:05.511601" elapsed="0.091015"/>
 </kw>
-<status status="PASS" start="2026-04-01T15:13:07.315158" elapsed="0.077757"/>
+<status status="PASS" start="2026-04-01T19:03:05.510572" elapsed="0.092516"/>
 </kw>
-<msg time="2026-04-01T15:13:07.472508" level="INFO">Starting Browser process C:\Users\afiac\PycharmProjects\Projet_entreprise2\.venv\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:54515</msg>
+<msg time="2026-04-01T19:03:05.669090" level="INFO">Starting Browser process C:\Users\afiac\PycharmProjects\Projet_entreprise2\.venv\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:58145</msg>
 <tag>api</tag>
 <tag>connexion_bd</tag>
 <tag>critique</tag>
-<status status="PASS" start="2026-04-01T15:13:07.314296" elapsed="0.078827"/>
+<status status="PASS" start="2026-04-01T19:03:05.468288" elapsed="0.135120"/>
 </test>
-<status status="PASS" start="2026-04-01T15:13:06.729890" elapsed="2.344691"/>
+<status status="PASS" start="2026-04-01T19:03:04.789023" elapsed="2.482111"/>
 </suite>
-<status status="PASS" start="2026-04-01T15:13:06.728279" elapsed="2.352381"/>
+<status status="PASS" start="2026-04-01T19:03:04.787369" elapsed="2.492334"/>
 </suite>
-<status status="PASS" start="2026-04-01T15:13:06.698236" elapsed="2.382892"/>
+<status status="PASS" start="2026-04-01T19:03:04.754050" elapsed="2.526253"/>
 </suite>
 <statistics>
 <total>

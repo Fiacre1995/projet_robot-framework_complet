@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.2 (Python 3.13.5 on win32)" generated="2026-04-01T15:13:11.174419" rpa="false" schemaversion="5">
+<robot generator="Robot 7.4.2 (Python 3.13.5 on win32)" generated="2026-04-01T19:03:09.362816" rpa="false" schemaversion="5">
 <suite id="s1" name="Tests" source="C:\Users\afiac\PycharmProjects\Projet_entreprise2\tests">
 <suite id="s1-s1" name="Ui" source="C:\Users\afiac\PycharmProjects\Projet_entreprise2\tests\ui">
 <suite id="s1-s1-s1" name="Test" source="C:\Users\afiac\PycharmProjects\Projet_entreprise2\tests\ui\test.robot">
 <test id="s1-s1-s1-t1" name="Open Google" line="5">
 <kw name="New Browser" owner="Browser">
-<msg time="2026-04-01T15:13:11.905966" level="INFO">{"browser": "chromium", "headless": true, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\afiac\\PycharmProjects\\Projet_entreprise2\\resultats\\pabot_results\\4\\browser\\traces\\temp\\36321964-ecbc-45b2-aead-a850e75e1dc1"}</msg>
-<msg time="2026-04-01T15:13:12.070952" level="INFO">Starting Browser process C:\Users\afiac\PycharmProjects\Projet_entreprise2\.venv\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:51871</msg>
-<msg time="2026-04-01T15:13:14.519774" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":true,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\afiac\\PycharmProjects\\Projet_entreprise2\\resultats\\pabot_results\\4\\browser\\traces\\temp\\36321964-ecbc-45b2-aead-a850e75e1dc1"}</msg>
+<msg time="2026-04-01T19:03:10.436297" level="INFO">{"browser": "chromium", "headless": true, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\afiac\\PycharmProjects\\Projet_entreprise2\\resultats\\pabot_results\\4\\browser\\traces\\temp\\63eac836-084b-4857-9e78-eede7a1ce743"}</msg>
+<msg time="2026-04-01T19:03:10.641182" level="INFO">Starting Browser process C:\Users\afiac\PycharmProjects\Projet_entreprise2\.venv\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:62394</msg>
+<msg time="2026-04-01T19:03:13.033106" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":true,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\afiac\\PycharmProjects\\Projet_entreprise2\\resultats\\pabot_results\\4\\browser\\traces\\temp\\63eac836-084b-4857-9e78-eede7a1ce743"}</msg>
 <arg>chromium</arg>
 <arg>headless=True</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2026-04-01T15:13:11.902996" elapsed="2.617075"/>
+<status status="PASS" start="2026-04-01T19:03:10.433021" elapsed="2.600369"/>
 </kw>
 <kw name="New Page" owner="Browser">
-<msg time="2026-04-01T15:13:15.902462" level="INFO">Successfully initialized new page object and opened url: https://www.google.com</msg>
-<msg time="2026-04-01T15:13:15.902678" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<msg time="2026-04-01T19:03:14.406762" level="INFO">Successfully initialized new page object and opened url: https://www.google.com</msg>
+<msg time="2026-04-01T19:03:14.406996" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
 <arg>https://www.google.com</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="PASS" start="2026-04-01T15:13:14.521923" elapsed="1.381280"/>
+<status status="PASS" start="2026-04-01T19:03:13.035527" elapsed="1.371980"/>
 </kw>
-<msg time="2026-04-01T15:13:16.029444" level="INFO">Switching context to context=16d0b43b-3da6-42a9-ad0d-9ed911cfdb23 in CURRENT</msg>
-<msg time="2026-04-01T15:13:16.082903" level="INFO">Successfully changed active context: context=16d0b43b-3da6-42a9-ad0d-9ed911cfdb23</msg>
-<msg time="2026-04-01T15:13:16.114731" level="INFO">Successfully closed Context</msg>
-<status status="PASS" start="2026-04-01T15:13:11.900189" elapsed="4.007156"/>
+<msg time="2026-04-01T19:03:14.483812" level="INFO">Switching context to context=e3be6fd3-2eee-41f6-a3aa-ecdb2999d818 in CURRENT</msg>
+<msg time="2026-04-01T19:03:14.578427" level="INFO">Successfully changed active context: context=e3be6fd3-2eee-41f6-a3aa-ecdb2999d818</msg>
+<msg time="2026-04-01T19:03:14.613941" level="INFO">Successfully closed Context</msg>
+<status status="PASS" start="2026-04-01T19:03:10.430509" elapsed="3.979705"/>
 </test>
-<status status="PASS" start="2026-04-01T15:13:11.433638" elapsed="4.683339"/>
+<status status="PASS" start="2026-04-01T19:03:09.773798" elapsed="4.842644"/>
 </suite>
-<status status="PASS" start="2026-04-01T15:13:11.431029" elapsed="4.704280"/>
+<status status="PASS" start="2026-04-01T19:03:09.769958" elapsed="4.872382"/>
 </suite>
-<status status="PASS" start="2026-04-01T15:13:11.379298" elapsed="4.758899"/>
+<status status="PASS" start="2026-04-01T19:03:09.693413" elapsed="4.951489"/>
 </suite>
 <statistics>
 <total>

@@ -4,8 +4,9 @@ Resource    ../../ressources/keywords/business/loginBusiness.robot
 Resource    ../../ressources/keywords/navigation/navigation.robot
 Variables    ../../testdata/users_${ENV}.yaml
 
-Test Setup      Ouvrir le navigateur
-Test Teardown       Fermer le navigateur
+Suite Setup     Ouvrir le navigateur
+Test Setup      Ouvrir la page
+Suite Teardown       Fermer le navigateur
 
 *** Test Cases ***
 Connexion avec des identifiants valident

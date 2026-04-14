@@ -1,8 +1,8 @@
 --test Tests.Ui.Connexion Bd.Connexion bd valide
 --variable ENV:dev
---variable CALLER_ID:6bdb38da0a0f442cb8fc5125431bcf53
+--variable CALLER_ID:ac4ac9041c604477b8040a9adb6b95d5
 --variable PABOTLIBURI:127.0.0.1:8270
---variable PABOTEXECUTIONPOOLID:2
+--variable PABOTEXECUTIONPOOLID:1
 --variable PABOTISLASTEXECUTIONINPOOL:0
 --variable PABOTNUMBEROFPROCESSES:4
 --variable PABOTQUEUEINDEX:0

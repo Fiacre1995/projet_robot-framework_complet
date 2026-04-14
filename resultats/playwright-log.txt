@@ -1,35 +1,4 @@
-{"level":30,"time":"2026-03-28T03:30:05.471Z","pid":18016,"hostname":"Fiacre_DION","msg":"Listening on 127.0.0.1:58375"}
-{"level":30,"time":"2026-03-28T03:30:05.945Z","pid":18016,"hostname":"Fiacre_DION","msg":"Start of node method newBrowser"}
-{"level":30,"time":"2026-03-28T03:30:06.146Z","pid":18016,"hostname":"Fiacre_DION","msg":"Adding browser to stack: chromium, version: 145.0.7632.6"}
-{"level":30,"time":"2026-03-28T03:30:06.146Z","pid":18016,"hostname":"Fiacre_DION","msg":"Adding 0 contexts to browser"}
-{"level":30,"time":"2026-03-28T03:30:06.147Z","pid":18016,"hostname":"Fiacre_DION","msg":"End of node method newBrowser"}
-{"level":30,"time":"2026-03-28T03:30:06.154Z","pid":18016,"hostname":"Fiacre_DION","msg":"Start of node method newContext"}
-{"level":30,"time":"2026-03-28T03:30:06.154Z","pid":18016,"hostname":"Fiacre_DION","msg":"Creating new context with options: {\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"width\":1280,\"height\":720}}"}
-{"level":30,"time":"2026-03-28T03:30:06.154Z","pid":18016,"hostname":"Fiacre_DION","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@7e8278ed567f99389e92e109c00b16e8\"},\"headless\":false,\"_contextStack\":[],\"id\":\"browser=9e7db0a9-754c-4fb1-add1-74459503e5cb\"}"}
-{"level":30,"time":"2026-03-28T03:30:06.154Z","pid":18016,"hostname":"Fiacre_DION","msg":"Trace file: "}
-{"level":30,"time":"2026-03-28T03:30:06.170Z","pid":18016,"hostname":"Fiacre_DION","msg":"Setting default timeout for context context=ab6aa5f4-2720-43cd-902d-8244f96b13fd to 10000"}
-{"level":30,"time":"2026-03-28T03:30:06.170Z","pid":18016,"hostname":"Fiacre_DION","msg":"Changed active context: context=ab6aa5f4-2720-43cd-902d-8244f96b13fd"}
-{"level":30,"time":"2026-03-28T03:30:06.170Z","pid":18016,"hostname":"Fiacre_DION","msg":"End of node method newContext"}
-{"level":30,"time":"2026-03-28T03:30:06.176Z","pid":18016,"hostname":"Fiacre_DION","msg":"Start of node method newPage"}
-{"level":30,"time":"2026-03-28T03:30:06.177Z","pid":18016,"hostname":"Fiacre_DION","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@7e8278ed567f99389e92e109c00b16e8\"},\"headless\":false,\"_contextStack\":[{\"id\":\"context=ab6aa5f4-2720-43cd-902d-8244f96b13fd\",\"c\":{\"_type\":\"BrowserContext\",\"_guid\":\"browser-context@221a8f50a15c6c8ed63f4776e251ac2b\"},\"pageStack\":[],\"options\":{\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"width\":1280,\"height\":720}},\"traceFile\":\"\"}],\"id\":\"browser=9e7db0a9-754c-4fb1-add1-74459503e5cb\"}"}
-{"level":30,"time":"2026-03-28T03:30:06.369Z","pid":18016,"hostname":"Fiacre_DION","msg":"Video path: undefined"}
-{"level":30,"time":"2026-03-28T03:30:06.369Z","pid":18016,"hostname":"Fiacre_DION","msg":"Changed active page"}
-{"level":30,"time":"2026-03-28T03:30:09.865Z","pid":18016,"hostname":"Fiacre_DION","msg":"End of node method newPage"}
-{"level":30,"time":"2026-03-28T03:30:09.875Z","pid":18016,"hostname":"Fiacre_DION","msg":"Start of node method fillText"}
-{"level":30,"time":"2026-03-28T03:30:09.876Z","pid":18016,"hostname":"Fiacre_DION","msg":"Strict mode is enabled, find Locator with input[name=\"username\"] in page."}
-{"level":30,"time":"2026-03-28T03:30:10.805Z","pid":18016,"hostname":"Fiacre_DION","msg":"End of node method fillText"}
-{"level":30,"time":"2026-03-28T03:30:10.812Z","pid":18016,"hostname":"Fiacre_DION","msg":"Start of node method fillText"}
-{"level":30,"time":"2026-03-28T03:30:10.812Z","pid":18016,"hostname":"Fiacre_DION","msg":"Strict mode is enabled, find Locator with input[name=\"password\"] in page."}
-{"level":30,"time":"2026-03-28T03:30:10.831Z","pid":18016,"hostname":"Fiacre_DION","msg":"End of node method fillText"}
-{"level":30,"time":"2026-03-28T03:30:10.837Z","pid":18016,"hostname":"Fiacre_DION","msg":"Start of node method click"}
-{"level":30,"time":"2026-03-28T03:30:10.838Z","pid":18016,"hostname":"Fiacre_DION","msg":"Strict mode is enabled, find Locator with css=button.orangehrm-login-button in page."}
-{"level":30,"time":"2026-03-28T03:30:12.426Z","pid":18016,"hostname":"Fiacre_DION","msg":"End of node method click"}
-{"level":30,"time":"2026-03-28T03:30:12.432Z","pid":18016,"hostname":"Fiacre_DION","msg":"Start of node method waitForElementState"}
-{"level":30,"time":"2026-03-28T03:30:12.433Z","pid":18016,"hostname":"Fiacre_DION","msg":"Strict mode is enabled, find Locator with css=h6.oxd-text.oxd-text--h6.oxd-topbar-header-breadcrumb-module in page."}
-{"level":30,"time":"2026-03-28T03:30:13.328Z","pid":18016,"hostname":"Fiacre_DION","msg":"End of node method waitForElementState"}
-{"level":30,"time":"2026-03-28T03:30:13.334Z","pid":18016,"hostname":"Fiacre_DION","msg":"Start of node method closeBrowser"}
-{"level":30,"time":"2026-03-28T03:30:13.349Z","pid":18016,"hostname":"Fiacre_DION","msg":"Removed page=da2f4f8d-ea61-46c3-afea-7671d3ea57cb from context=ab6aa5f4-2720-43cd-902d-8244f96b13fd page stack"}
-{"level":30,"time":"2026-03-28T03:30:13.602Z","pid":18016,"hostname":"Fiacre_DION","msg":"End of node method closeBrowser"}
+{"level":30,"time":"2026-04-09T23:43:44.909Z","pid":36280,"hostname":"Fiacre_DION","msg":"Listening on 127.0.0.1:51360"}
 ================= Original suppressed error =================
 Error: Browser has been closed.
     at PlaywrightState.getActiveBrowser (C:\Users\afiac\PycharmProjects\Projet_entreprise2\.venv\Lib\site-packages\Browser\wrapper\index.js:12757:15)
@@ -43,41 +12,8 @@ Error: Browser has been closed.
     at endReadableNT (node:internal/streams/readable:1400:12)
     at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
 =============================================================
-{"level":30,"time":"2026-03-28T03:30:13.609Z","pid":18016,"hostname":"Fiacre_DION","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-03-28T03:30:13.609Z","pid":18016,"hostname":"Fiacre_DION","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-03-28T03:30:13.612Z","pid":18016,"hostname":"Fiacre_DION","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-03-28T03:30:13.612Z","pid":18016,"hostname":"Fiacre_DION","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-03-28T03:30:13.614Z","pid":18016,"hostname":"Fiacre_DION","msg":"Start of node method newBrowser"}
-{"level":30,"time":"2026-03-28T03:30:13.852Z","pid":18016,"hostname":"Fiacre_DION","msg":"Adding browser to stack: chromium, version: 145.0.7632.6"}
-{"level":30,"time":"2026-03-28T03:30:13.852Z","pid":18016,"hostname":"Fiacre_DION","msg":"Adding 0 contexts to browser"}
-{"level":30,"time":"2026-03-28T03:30:13.852Z","pid":18016,"hostname":"Fiacre_DION","msg":"End of node method newBrowser"}
-{"level":30,"time":"2026-03-28T03:30:13.859Z","pid":18016,"hostname":"Fiacre_DION","msg":"Start of node method newContext"}
-{"level":30,"time":"2026-03-28T03:30:13.859Z","pid":18016,"hostname":"Fiacre_DION","msg":"Creating new context with options: {\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"width\":1280,\"height\":720}}"}
-{"level":30,"time":"2026-03-28T03:30:13.859Z","pid":18016,"hostname":"Fiacre_DION","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@19482aede601e7eca9fa22f46d8eef1e\"},\"headless\":false,\"_contextStack\":[],\"id\":\"browser=0ea8ed1d-5cb6-40a8-ad61-62f70d2fab6f\"}"}
-{"level":30,"time":"2026-03-28T03:30:13.859Z","pid":18016,"hostname":"Fiacre_DION","msg":"Trace file: "}
-{"level":30,"time":"2026-03-28T03:30:13.868Z","pid":18016,"hostname":"Fiacre_DION","msg":"Setting default timeout for context context=e9d1a76c-b1aa-4584-a80f-a9a65bc4a85e to 10000"}
-{"level":30,"time":"2026-03-28T03:30:13.868Z","pid":18016,"hostname":"Fiacre_DION","msg":"Changed active context: context=e9d1a76c-b1aa-4584-a80f-a9a65bc4a85e"}
-{"level":30,"time":"2026-03-28T03:30:13.868Z","pid":18016,"hostname":"Fiacre_DION","msg":"End of node method newContext"}
-{"level":30,"time":"2026-03-28T03:30:13.872Z","pid":18016,"hostname":"Fiacre_DION","msg":"Start of node method newPage"}
-{"level":30,"time":"2026-03-28T03:30:13.872Z","pid":18016,"hostname":"Fiacre_DION","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@19482aede601e7eca9fa22f46d8eef1e\"},\"headless\":false,\"_contextStack\":[{\"id\":\"context=e9d1a76c-b1aa-4584-a80f-a9a65bc4a85e\",\"c\":{\"_type\":\"BrowserContext\",\"_guid\":\"browser-context@49a4c32138de64d2661742d2b0932429\"},\"pageStack\":[],\"options\":{\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"width\":1280,\"height\":720}},\"traceFile\":\"\"}],\"id\":\"browser=0ea8ed1d-5cb6-40a8-ad61-62f70d2fab6f\"}"}
-{"level":30,"time":"2026-03-28T03:30:14.099Z","pid":18016,"hostname":"Fiacre_DION","msg":"Video path: undefined"}
-{"level":30,"time":"2026-03-28T03:30:14.099Z","pid":18016,"hostname":"Fiacre_DION","msg":"Changed active page"}
-{"level":30,"time":"2026-03-28T03:30:16.369Z","pid":18016,"hostname":"Fiacre_DION","msg":"End of node method newPage"}
-{"level":30,"time":"2026-03-28T03:30:16.378Z","pid":18016,"hostname":"Fiacre_DION","msg":"Start of node method fillText"}
-{"level":30,"time":"2026-03-28T03:30:16.378Z","pid":18016,"hostname":"Fiacre_DION","msg":"Strict mode is enabled, find Locator with input[name=\"username\"] in page."}
-{"level":30,"time":"2026-03-28T03:30:17.247Z","pid":18016,"hostname":"Fiacre_DION","msg":"End of node method fillText"}
-{"level":30,"time":"2026-03-28T03:30:17.254Z","pid":18016,"hostname":"Fiacre_DION","msg":"Start of node method fillText"}
-{"level":30,"time":"2026-03-28T03:30:17.254Z","pid":18016,"hostname":"Fiacre_DION","msg":"Strict mode is enabled, find Locator with input[name=\"password\"] in page."}
-{"level":30,"time":"2026-03-28T03:30:17.269Z","pid":18016,"hostname":"Fiacre_DION","msg":"End of node method fillText"}
-{"level":30,"time":"2026-03-28T03:30:17.275Z","pid":18016,"hostname":"Fiacre_DION","msg":"Start of node method click"}
-{"level":30,"time":"2026-03-28T03:30:17.275Z","pid":18016,"hostname":"Fiacre_DION","msg":"Strict mode is enabled, find Locator with css=button.orangehrm-login-button in page."}
-{"level":30,"time":"2026-03-28T03:30:17.313Z","pid":18016,"hostname":"Fiacre_DION","msg":"End of node method click"}
-{"level":30,"time":"2026-03-28T03:30:17.317Z","pid":18016,"hostname":"Fiacre_DION","msg":"Start of node method waitForElementState"}
-{"level":30,"time":"2026-03-28T03:30:17.317Z","pid":18016,"hostname":"Fiacre_DION","msg":"Strict mode is enabled, find Locator with css=p.oxd-text--p.oxd-alert-content-text in page."}
-{"level":30,"time":"2026-03-28T03:30:20.071Z","pid":18016,"hostname":"Fiacre_DION","msg":"End of node method waitForElementState"}
-{"level":30,"time":"2026-03-28T03:30:20.074Z","pid":18016,"hostname":"Fiacre_DION","msg":"Start of node method closeBrowser"}
-{"level":30,"time":"2026-03-28T03:30:20.086Z","pid":18016,"hostname":"Fiacre_DION","msg":"Removed page=0ff67f65-0a89-43f8-adcf-e0ffd29aac3b from context=e9d1a76c-b1aa-4584-a80f-a9a65bc4a85e page stack"}
-{"level":30,"time":"2026-03-28T03:30:20.286Z","pid":18016,"hostname":"Fiacre_DION","msg":"End of node method closeBrowser"}
+{"level":30,"time":"2026-04-09T23:43:45.356Z","pid":36280,"hostname":"Fiacre_DION","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-04-09T23:43:45.356Z","pid":36280,"hostname":"Fiacre_DION","msg":"End of node method getBrowserCatalog"}
 ================= Original suppressed error =================
 Error: Browser has been closed.
     at PlaywrightState.getActiveBrowser (C:\Users\afiac\PycharmProjects\Projet_entreprise2\.venv\Lib\site-packages\Browser\wrapper\index.js:12757:15)
@@ -91,104 +27,7 @@ Error: Browser has been closed.
     at endReadableNT (node:internal/streams/readable:1400:12)
     at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
 =============================================================
-{"level":30,"time":"2026-03-28T03:30:20.294Z","pid":18016,"hostname":"Fiacre_DION","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-03-28T03:30:20.294Z","pid":18016,"hostname":"Fiacre_DION","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-03-28T03:30:20.296Z","pid":18016,"hostname":"Fiacre_DION","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-03-28T03:30:20.296Z","pid":18016,"hostname":"Fiacre_DION","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-03-28T03:30:20.298Z","pid":18016,"hostname":"Fiacre_DION","msg":"Start of node method newBrowser"}
-{"level":30,"time":"2026-03-28T03:30:20.530Z","pid":18016,"hostname":"Fiacre_DION","msg":"Adding browser to stack: chromium, version: 145.0.7632.6"}
-{"level":30,"time":"2026-03-28T03:30:20.530Z","pid":18016,"hostname":"Fiacre_DION","msg":"Adding 0 contexts to browser"}
-{"level":30,"time":"2026-03-28T03:30:20.530Z","pid":18016,"hostname":"Fiacre_DION","msg":"End of node method newBrowser"}
-{"level":30,"time":"2026-03-28T03:30:20.537Z","pid":18016,"hostname":"Fiacre_DION","msg":"Start of node method newContext"}
-{"level":30,"time":"2026-03-28T03:30:20.537Z","pid":18016,"hostname":"Fiacre_DION","msg":"Creating new context with options: {\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"width\":1280,\"height\":720}}"}
-{"level":30,"time":"2026-03-28T03:30:20.538Z","pid":18016,"hostname":"Fiacre_DION","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@c82b3fcb9915f67b7bbf8eb03fba9954\"},\"headless\":false,\"_contextStack\":[],\"id\":\"browser=3210c316-5e19-4862-bf34-2248bd84479b\"}"}
-{"level":30,"time":"2026-03-28T03:30:20.538Z","pid":18016,"hostname":"Fiacre_DION","msg":"Trace file: "}
-{"level":30,"time":"2026-03-28T03:30:20.547Z","pid":18016,"hostname":"Fiacre_DION","msg":"Setting default timeout for context context=f3fa74ab-52c0-4317-8a1a-5ccdfd7d9302 to 10000"}
-{"level":30,"time":"2026-03-28T03:30:20.547Z","pid":18016,"hostname":"Fiacre_DION","msg":"Changed active context: context=f3fa74ab-52c0-4317-8a1a-5ccdfd7d9302"}
-{"level":30,"time":"2026-03-28T03:30:20.547Z","pid":18016,"hostname":"Fiacre_DION","msg":"End of node method newContext"}
-{"level":30,"time":"2026-03-28T03:30:20.553Z","pid":18016,"hostname":"Fiacre_DION","msg":"Start of node method newPage"}
-{"level":30,"time":"2026-03-28T03:30:20.553Z","pid":18016,"hostname":"Fiacre_DION","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@c82b3fcb9915f67b7bbf8eb03fba9954\"},\"headless\":false,\"_contextStack\":[{\"id\":\"context=f3fa74ab-52c0-4317-8a1a-5ccdfd7d9302\",\"c\":{\"_type\":\"BrowserContext\",\"_guid\":\"browser-context@060538e84b53a3b87c29c720df28fbf1\"},\"pageStack\":[],\"options\":{\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"width\":1280,\"height\":720}},\"traceFile\":\"\"}],\"id\":\"browser=3210c316-5e19-4862-bf34-2248bd84479b\"}"}
-{"level":30,"time":"2026-03-28T03:30:20.786Z","pid":18016,"hostname":"Fiacre_DION","msg":"Video path: undefined"}
-{"level":30,"time":"2026-03-28T03:30:20.786Z","pid":18016,"hostname":"Fiacre_DION","msg":"Changed active page"}
-{"level":30,"time":"2026-03-28T03:30:24.200Z","pid":18016,"hostname":"Fiacre_DION","msg":"End of node method newPage"}
-{"level":30,"time":"2026-03-28T03:30:24.210Z","pid":18016,"hostname":"Fiacre_DION","msg":"Start of node method fillText"}
-{"level":30,"time":"2026-03-28T03:30:24.210Z","pid":18016,"hostname":"Fiacre_DION","msg":"Strict mode is enabled, find Locator with input[name=\"username\"] in page."}
-{"level":30,"time":"2026-03-28T03:30:25.594Z","pid":18016,"hostname":"Fiacre_DION","msg":"End of node method fillText"}
-{"level":30,"time":"2026-03-28T03:30:25.601Z","pid":18016,"hostname":"Fiacre_DION","msg":"Start of node method fillText"}
-{"level":30,"time":"2026-03-28T03:30:25.601Z","pid":18016,"hostname":"Fiacre_DION","msg":"Strict mode is enabled, find Locator with input[name=\"password\"] in page."}
-{"level":30,"time":"2026-03-28T03:30:25.619Z","pid":18016,"hostname":"Fiacre_DION","msg":"End of node method fillText"}
-{"level":30,"time":"2026-03-28T03:30:25.623Z","pid":18016,"hostname":"Fiacre_DION","msg":"Start of node method click"}
-{"level":30,"time":"2026-03-28T03:30:25.623Z","pid":18016,"hostname":"Fiacre_DION","msg":"Strict mode is enabled, find Locator with css=button.orangehrm-login-button in page."}
-{"level":30,"time":"2026-03-28T03:30:25.670Z","pid":18016,"hostname":"Fiacre_DION","msg":"End of node method click"}
-{"level":30,"time":"2026-03-28T03:30:25.674Z","pid":18016,"hostname":"Fiacre_DION","msg":"Start of node method waitForElementState"}
-{"level":30,"time":"2026-03-28T03:30:25.674Z","pid":18016,"hostname":"Fiacre_DION","msg":"Strict mode is enabled, find Locator with css=span.oxd-input-field-error-message.oxd-input-group__message >> nth=0 in page."}
-{"level":30,"time":"2026-03-28T03:30:25.679Z","pid":18016,"hostname":"Fiacre_DION","msg":"End of node method waitForElementState"}
-{"level":30,"time":"2026-03-28T03:30:25.683Z","pid":18016,"hostname":"Fiacre_DION","msg":"Start of node method waitForElementState"}
-{"level":30,"time":"2026-03-28T03:30:25.683Z","pid":18016,"hostname":"Fiacre_DION","msg":"Strict mode is enabled, find Locator with css=span.oxd-input-field-error-message.oxd-input-group__message >> nth=1 in page."}
-{"level":30,"time":"2026-03-28T03:30:25.686Z","pid":18016,"hostname":"Fiacre_DION","msg":"End of node method waitForElementState"}
-{"level":30,"time":"2026-03-28T03:30:25.690Z","pid":18016,"hostname":"Fiacre_DION","msg":"Start of node method closeBrowser"}
-{"level":30,"time":"2026-03-28T03:30:25.703Z","pid":18016,"hostname":"Fiacre_DION","msg":"Removed page=cbbdb0d0-0a34-4bfb-83cc-04fb4f8d7625 from context=f3fa74ab-52c0-4317-8a1a-5ccdfd7d9302 page stack"}
-{"level":30,"time":"2026-03-28T03:30:25.920Z","pid":18016,"hostname":"Fiacre_DION","msg":"End of node method closeBrowser"}
-================= Original suppressed error =================
-Error: Browser has been closed.
-    at PlaywrightState.getActiveBrowser (C:\Users\afiac\PycharmProjects\Projet_entreprise2\.venv\Lib\site-packages\Browser\wrapper\index.js:12757:15)
-    at PlaywrightServer.getActiveBrowser (C:\Users\afiac\PycharmProjects\Projet_entreprise2\.venv\Lib\site-packages\Browser\wrapper\index.js:13677:59)
-    at PlaywrightServer.setTimeout (C:\Users\afiac\PycharmProjects\Projet_entreprise2\.venv\Lib\site-packages\Browser\wrapper\index.js:13933:56)
-    at Object.onReceiveHalfClose (C:\Users\afiac\PycharmProjects\Projet_entreprise2\.venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1464:25)
-    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\afiac\PycharmProjects\Projet_entreprise2\.venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:595:31)
-    at BaseServerInterceptingCall.handleEndEvent (C:\Users\afiac\PycharmProjects\Projet_entreprise2\.venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:635:14)
-    at ServerHttp2Stream.<anonymous> (C:\Users\afiac\PycharmProjects\Projet_entreprise2\.venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:394:18)
-    at ServerHttp2Stream.emit (node:events:529:35)
-    at endReadableNT (node:internal/streams/readable:1400:12)
-    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
-=============================================================
-{"level":30,"time":"2026-03-28T03:30:25.926Z","pid":18016,"hostname":"Fiacre_DION","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-03-28T03:30:25.926Z","pid":18016,"hostname":"Fiacre_DION","msg":"End of node method getBrowserCatalog"}
-================= Original suppressed error =================
-Error: Browser has been closed.
-    at PlaywrightState.getActiveBrowser (C:\Users\afiac\PycharmProjects\Projet_entreprise2\.venv\Lib\site-packages\Browser\wrapper\index.js:12757:15)
-    at PlaywrightServer.getActiveBrowser (C:\Users\afiac\PycharmProjects\Projet_entreprise2\.venv\Lib\site-packages\Browser\wrapper\index.js:13677:59)
-    at PlaywrightServer.setTimeout (C:\Users\afiac\PycharmProjects\Projet_entreprise2\.venv\Lib\site-packages\Browser\wrapper\index.js:13933:56)
-    at Object.onReceiveHalfClose (C:\Users\afiac\PycharmProjects\Projet_entreprise2\.venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1464:25)
-    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\afiac\PycharmProjects\Projet_entreprise2\.venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:595:31)
-    at BaseServerInterceptingCall.handleEndEvent (C:\Users\afiac\PycharmProjects\Projet_entreprise2\.venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:635:14)
-    at ServerHttp2Stream.<anonymous> (C:\Users\afiac\PycharmProjects\Projet_entreprise2\.venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:394:18)
-    at ServerHttp2Stream.emit (node:events:529:35)
-    at endReadableNT (node:internal/streams/readable:1400:12)
-    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
-=============================================================
-{"level":30,"time":"2026-03-28T03:30:25.931Z","pid":18016,"hostname":"Fiacre_DION","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-03-28T03:30:25.931Z","pid":18016,"hostname":"Fiacre_DION","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-03-28T03:30:25.935Z","pid":18016,"hostname":"Fiacre_DION","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-03-28T03:30:25.935Z","pid":18016,"hostname":"Fiacre_DION","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-03-28T03:30:25.936Z","pid":18016,"hostname":"Fiacre_DION","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-03-28T03:30:25.936Z","pid":18016,"hostname":"Fiacre_DION","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-03-28T03:30:25.938Z","pid":18016,"hostname":"Fiacre_DION","msg":"Start of node method newBrowser"}
-{"level":30,"time":"2026-03-28T03:30:26.008Z","pid":18016,"hostname":"Fiacre_DION","msg":"Adding browser to stack: chromium, version: 145.0.7632.6"}
-{"level":30,"time":"2026-03-28T03:30:26.008Z","pid":18016,"hostname":"Fiacre_DION","msg":"Adding 0 contexts to browser"}
-{"level":30,"time":"2026-03-28T03:30:26.008Z","pid":18016,"hostname":"Fiacre_DION","msg":"End of node method newBrowser"}
-{"level":30,"time":"2026-03-28T03:30:26.011Z","pid":18016,"hostname":"Fiacre_DION","msg":"Start of node method newPage"}
-{"level":30,"time":"2026-03-28T03:30:26.011Z","pid":18016,"hostname":"Fiacre_DION","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@16148702320e8d86ccad76acb329c022\"},\"headless\":true,\"_contextStack\":[],\"id\":\"browser=9f9925bd-b41b-4445-bc12-e5f46ef36a47\"}"}
-{"level":30,"time":"2026-03-28T03:30:26.016Z","pid":18016,"hostname":"Fiacre_DION","msg":"Setting default timeout for context context=f7ec12ce-f188-4a35-8853-4c36678bc57e to 10000"}
-{"level":30,"time":"2026-03-28T03:30:26.016Z","pid":18016,"hostname":"Fiacre_DION","msg":"Changed active context: context=f7ec12ce-f188-4a35-8853-4c36678bc57e"}
-{"level":30,"time":"2026-03-28T03:30:26.113Z","pid":18016,"hostname":"Fiacre_DION","msg":"Video path: undefined"}
-{"level":30,"time":"2026-03-28T03:30:26.113Z","pid":18016,"hostname":"Fiacre_DION","msg":"Changed active page"}
-{"level":30,"time":"2026-03-28T03:30:26.602Z","pid":18016,"hostname":"Fiacre_DION","msg":"End of node method newPage"}
-{"level":30,"time":"2026-03-28T03:30:26.607Z","pid":18016,"hostname":"Fiacre_DION","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-03-28T03:30:26.609Z","pid":18016,"hostname":"Fiacre_DION","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-03-28T03:30:26.611Z","pid":18016,"hostname":"Fiacre_DION","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-03-28T03:30:26.612Z","pid":18016,"hostname":"Fiacre_DION","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-03-28T03:30:26.613Z","pid":18016,"hostname":"Fiacre_DION","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-03-28T03:30:26.613Z","pid":18016,"hostname":"Fiacre_DION","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-03-28T03:30:26.615Z","pid":18016,"hostname":"Fiacre_DION","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-03-28T03:30:26.616Z","pid":18016,"hostname":"Fiacre_DION","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-03-28T03:30:26.619Z","pid":18016,"hostname":"Fiacre_DION","msg":"Changed active context: context=f7ec12ce-f188-4a35-8853-4c36678bc57e"}
-{"level":30,"time":"2026-03-28T03:30:26.619Z","pid":18016,"hostname":"Fiacre_DION","msg":"Changing current active page: page=acb41405-bfd0-4111-b200-520cfbe36810"}
-{"level":30,"time":"2026-03-28T03:30:26.619Z","pid":18016,"hostname":"Fiacre_DION","msg":"Changed active page"}
-{"level":30,"time":"2026-03-28T03:30:26.621Z","pid":18016,"hostname":"Fiacre_DION","msg":"Start of node method closeContext"}
-{"level":30,"time":"2026-03-28T03:30:26.623Z","pid":18016,"hostname":"Fiacre_DION","msg":"Removed page=365815fe-51ce-4515-8bb2-993a8d8d17ba from context=f7ec12ce-f188-4a35-8853-4c36678bc57e page stack"}
-{"level":30,"time":"2026-03-28T03:30:26.626Z","pid":18016,"hostname":"Fiacre_DION","msg":"End of node method closeContext"}
-{"level":30,"time":"2026-03-28T03:30:26.631Z","pid":18016,"hostname":"Fiacre_DION","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2026-03-28T03:30:26.631Z","pid":18016,"hostname":"Fiacre_DION","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2026-03-28T03:30:26.655Z","pid":18016,"hostname":"Fiacre_DION","msg":"Start of node method closeAllBrowsers"}
-{"level":30,"time":"2026-03-28T03:30:26.713Z","pid":18016,"hostname":"Fiacre_DION","msg":"End of node method closeAllBrowsers"}
+{"level":30,"time":"2026-04-09T23:43:45.362Z","pid":36280,"hostname":"Fiacre_DION","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-04-09T23:43:45.362Z","pid":36280,"hostname":"Fiacre_DION","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-04-09T23:43:45.380Z","pid":36280,"hostname":"Fiacre_DION","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2026-04-09T23:43:45.380Z","pid":36280,"hostname":"Fiacre_DION","msg":"End of node method closeAllBrowsers"}

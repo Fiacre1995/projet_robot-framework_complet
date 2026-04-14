@@ -5,7 +5,7 @@
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="-1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta content="Robot Framework 7.3.2 (Python 3.13.5 on win32)" name="Generator">
+<meta content="Robot Framework 7.4.2 (Python 3.13.5 on win32)" name="Generator">
 <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKcAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAqAAAAAAAAAAAAAAAAAAAALIAAAD/AAAA4AAAANwAAADcAAAA3AAAANwAAADcAAAA3AAAANwAAADcAAAA4AAAAP8AAACxAAAAAAAAAKYAAAD/AAAAuwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC/AAAA/wAAAKkAAAD6AAAAzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN8AAAD/AAAA+gAAAMMAAAAAAAAAAgAAAGsAAABrAAAAawAAAGsAAABrAAAAawAAAGsAAABrAAAADAAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAAIsAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAANEAAAAAAAAA2gAAAP8AAAD6AAAAwwAAAAAAAAAAAAAAMgAAADIAAAAyAAAAMgAAADIAAAAyAAAAMgAAADIAAAAFAAAAAAAAANoAAAD/AAAA+gAAAMMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAADwAAAB8AAAAAAAAAGAAAABcAAAAAAAAAH8AAABKAAAAAAAAAAAAAAAAAAAA2gAAAP8AAAD6AAAAwwAAAAAAAADCAAAA/wAAACkAAADqAAAA4QAAAAAAAAD7AAAA/wAAALAAAAAGAAAAAAAAANoAAAD/AAAA+gAAAMMAAAAAAAAAIwAAAP4AAAD/AAAA/wAAAGAAAAAAAAAAAAAAAMkAAAD/AAAAigAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAAAAAAAAIAAAAcAAAABkAAAAAAAAAAAAAAAAAAAAAAAAAEgAAAAAAAAAAAAAA2gAAAP8AAAD7AAAAywAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN4AAAD/AAAAqwAAAP8AAACvAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALIAAAD/AAAAsgAAAAAAAAC5AAAA/wAAAMoAAADAAAAAwAAAAMAAAADAAAAAwAAAAMAAAADAAAAAwAAAAMkAAAD/AAAAvAAAAAAAAAAAAAAAAAAAAKwAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAArQAAAAAAAAAAwAMAAIABAAAf+AAAP/wAAD/8AAAgBAAAP/wAAD/8AAA//AAAJIwAADHEAAA//AAAP/wAAB/4AACAAQAAwAMAAA==">
 <style media="all">
 :root {
@@ -116,15 +116,16 @@ select {
 #header {
     width: 65em;
     height: 3em;
-    margin: 20px 0 6px 0;
+    margin: 1em 0 0 0;
 }
 h1 {
     float: left;
-    margin: 0 0 0.5em 0;
+    margin: 0 0 1em 0;
     width: 75%;
 }
 h2 {
     clear: left;
+    margin: 1.5em 0 0.5em 0;
 }
 #generated {
     float: right;
@@ -168,7 +169,13 @@ h2 {
     background-color: var(--primary-color);
     border-radius: 3px;
 }
-.label.debug, .label.trace, .label.error, .label.keyword {
+/* https://stackoverflow.com/questions/75238633 */
+@supports (-moz-appearance: none) {
+    .label {
+        padding-top: 4px;
+    }
+}
+.label.debug, .label.trace, .label.error {
     letter-spacing: 0;
 }
 .label.pass, .label.fail, .label.error, .label.skip, .label.warn {
@@ -355,19 +362,6 @@ th.stats-col-graph:hover {
 [data-theme="light"] .dark-mode-icon {
     display: block;
 }
-@keyframes highlight {
-    0% {
-        background: var(--primary-color)
-    }
-    100% {
-        background: var(--target-color);
-    }
-}
-:target {
-    background: var(--target-color);
-    transition: background 0.3s;
-    animation: highlight 4s;
-}
 </style>
 <style media="all">
 /* Icons are from Open Iconic <https://useiconic.com/open/>.
@@ -384,36 +378,43 @@ th.stats-col-graph:hover {
     --elapsed-color: #999;
 }
 /* Containers */
-.suite, .test, #errors {
+.suite, .test, #errors, #errors .messages {
     border-color: #ccc; /* Fallback value */
     border-color: var(--secondary-color);
     border-width: 1px;
     border-style: solid;
-    padding: 0.3em 0.2em;
-    margin: 0.2em 0;
+    padding: 5px;
+    margin-top: 5px;
 }
 .test {
     border-style: dashed;
 }
-#errors, .messages {
+.messages {
     width: 100%;
     border-spacing: 0;
+    padding: 0 5px;
 }
 .children {
     display: none;
-    margin-left: 1.4em;
+    margin-left: 18px;
+    margin-top: 2px;
 }
-.suite, .test, .keyword {
-    margin-left: -0.2em;
+#errors .children {
+    margin-left: 22px;
 }
-#s1, .suite > .children > .keyword {
-    margin-left: 0;
+.suite, .test {
+    margin-left: -5px;
+}
+#s1, #errors {
+    margin: 0;
 }
 /* Suite, test and kw headers */
 .element-header {
+    display: flex;
+    align-items: center;
+    padding: 2px;
     border: 1px solid transparent;
     border-radius: 2px;
-    position: relative;
 }
 .element-header:hover {
     cursor: pointer;
@@ -423,17 +424,15 @@ th.stats-col-graph:hover {
     border-color: var(--secondary-color);
 }
 .element-header-toggle {
-    position: absolute;
-    left: 3px;
-    top: 5px;
+    margin: 0 4px 0 2px;
+    height: 11px;
+    width: 11px;
+    min-width: 11px;
+    background-size: 6px 6px;
     background-repeat: no-repeat;
     background-position: center;
-    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxMAAAsTAQCanBgAAAAHdElNRQfeCR0JChSkZz20AAAAGklEQVQI12NgQAKMDKzInP8IDhOqMk4G7AAANQwBE427PYUAAAAASUVORK5CYII=);
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiIHZpZXdCb3g9IjAgMCA4IDgiPgogIDxwYXRoIGQ9Ik0wIDB2Mmg4di0yaC04eiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAzKSIgLz4KPC9zdmc+), none;
     filter: var(--icon-filter);
-    height: 10px;
-    width: 10px;
-    background-size: 6px 6px;
     border-color: #ccc; /* Fallback value */
     border-color: var(--icon-highlight);
     border-width: 1px;
@@ -441,67 +440,59 @@ th.stats-col-graph:hover {
     border-radius: 2px;
 }
 .closed > .element-header-toggle {
-    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxMAAAsTAQCanBgAAAAHdElNRQfeCR0JCDHdVYtxAAAAM0lEQVQI103MMQqAMBQFwVHyITaB3P+W1sKzSBC3mW6hRFw0pUB5DvF1bu9FN0RM3X/wAk98CUnvFTakAAAAAElFTkSuQmCC);
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiIHZpZXdCb3g9IjAgMCA4IDgiPgogIDxwYXRoIGQ9Ik0zIDB2M2gtM3YyaDN2M2gydi0zaDN2LTJoLTN2LTNoLTJ6IiAvPgo8L3N2Zz4=), none;
 }
 .element-header:hover > .element-header-toggle {
     background-color: #ccc; /* Fallback value */
     background-color: var(--icon-highlight);
 }
-.element-header-right:hover ~ .element-header-toggle {
+.element-header-menu:hover ~ .element-header-toggle {
     background-color: transparent;
 }
-.element-header-left {
-    padding: 3px 80px 3px 20px;
-}
-.element-header-right {
-    position: absolute;
-    right: 0;
-    top: 0;
-    padding: 3px;
+.element-header-menu {
+    margin: 0 2px 0 4px;
     cursor: default;
 }
-.element-header .label {
-    margin-right: 0.5em;
+.name, .arg, .assign {
+    margin-left: 7px;
+    white-space: pre-wrap;
 }
 .name {
     font-weight: bold;
-    white-space: pre-wrap;
-}
-.arg, .assign {
-    white-space: pre-wrap;
 }
 .elapsed {
-    float: right;
+    margin-left: auto;
+    padding-left: 0.5em;
     color: #666; /* Fallback value */
     color: var(--elapsed-color);
-    padding-left: 1em;
+    font-size: 0.9em;
+}
+/* https://stackoverflow.com/questions/75238633 */
+@supports (-moz-appearance: none) {
+    .name, .arg, .assign, .elapsed {
+        padding-top: 3px;
+    }
 }
 .link {
-    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEwAACxMBAJqcGAAAAHlJREFUGJVtzrEJwmAQBtCn6ASuIKTIBhY2gmghBiJYB1udwk10B8FJbKMBcQFbtbkfJHrVwfu+4/idJR64Y9H7E3higj5O3S8Y44ApLnjhnXCNGhV2yNGggDJwiC02gavUbpDFvscRo4QdXOMKDHBufz3HLYKzNn4AbSkV3fncGQYAAAAASUVORK5CYII=);
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiIHZpZXdCb3g9IjAgMCA4IDgiPgogIDxwYXRoIGQ9Ik01Ljg4LjAzYy0uMTguMDEtLjM2LjAzLS41My4wOS0uMjcuMS0uNTMuMjUtLjc1LjQ3YS41LjUgMCAxIDAgLjY5LjY5Yy4xMS0uMTEuMjQtLjE3LjM4LS4yMi4zNS0uMTIuNzgtLjA3IDEuMDYuMjIuMzkuMzkuMzkgMS4wNCAwIDEuNDRsLTEuNSAxLjVjLS40NC40NC0uOC40OC0xLjA2LjQ3LS4yNi0uMDEtLjQxLS4xMy0uNDEtLjEzYS41LjUgMCAxIDAtLjUuODhzLjM0LjIyLjg0LjI1Yy41LjAzIDEuMi0uMTYgMS44MS0uNzhsMS41LTEuNWMuNzgtLjc4Ljc4LTIuMDQgMC0yLjgxLS4yOC0uMjgtLjYxLS40NS0uOTctLjUzLS4xOC0uMDQtLjM4LS4wNC0uNTYtLjAzem0tMiAyLjMxYy0uNS0uMDItMS4xOS4xNS0xLjc4Ljc1bC0xLjUgMS41Yy0uNzguNzgtLjc4IDIuMDQgMCAyLjgxLjU2LjU2IDEuMzYuNzIgMi4wNi40Ny4yNy0uMS41My0uMjUuNzUtLjQ3YS41LjUgMCAxIDAtLjY5LS42OWMtLjExLjExLS4yNC4xNy0uMzguMjItLjM1LjEyLS43OC4wNy0xLjA2LS4yMi0uMzktLjM5LS4zOS0xLjA0IDAtMS40NGwxLjUtMS41Yy40LS40Ljc1LS40NSAxLjAzLS40NC4yOC4wMS40Ny4wOS40Ny4wOWEuNS41IDAgMSAwIC40NC0uODhzLS4zNC0uMi0uODQtLjIyeiIKICAvPgo8L3N2Zz4=), none;
-    filter: var(--icon-filter);
 }
 .expand {
-    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEwAACxMBAJqcGAAAADtJREFUGJVjYCACKDAwMByA0ljFDjAwMPxnYGB4ABVQgLL/Q+VQBB6gseGmIivCkERXhFUSWRFOSawAAEl7E3uv1iMcAAAAAElFTkSuQmCC);
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiIHZpZXdCb3g9IjAgMCA4IDgiPgogIDxwYXRoIGQ9Ik0xLjUgMGwtMS41IDEuNSA0IDQgNC00LTEuNS0xLjUtMi41IDIuNS0yLjUtMi41eiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAxKSIgLz4KPC9zdmc+), none;
-    filter: var(--icon-filter);
 }
 .collapse {
-    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEwAACxMBAJqcGAAAAC5JREFUGJVjYCARNEAxTsn/UIyhCFkSQxG6ThQ+C5IpjWhG1yNb4YDFTdjEMAEACi8Q++9Y9TAAAAAASUVORK5CYII=);
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiIHZpZXdCb3g9IjAgMCA4IDgiPgogIDxwYXRoIGQ9Ik00IDBsLTQgNCAxLjUgMS41IDIuNS0yLjUgMi41IDIuNSAxLjUtMS41LTQtNHoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgMSkiIC8+Cjwvc3ZnPg==), none;
-    filter: var(--icon-filter);
 }
 .expand, .collapse, .link {
     float: left;
     display: block;
     visibility: hidden;
-    margin: 0 4px;
+    margin: 0 3px;
     height: 14px;
     width: 14px;
     background-size: 8px 8px;
     background-repeat: no-repeat;
     background-position: center;
+    filter: var(--icon-filter);
     border-color: #ccc; /* Fallback value */
     border-color: var(--icon-highlight);
     border-width: 1px;
@@ -519,23 +510,18 @@ th.stats-col-graph:hover {
     background-color: var(--icon-highlight);
 }
 /* Messages and errors */
+.message-row {
+    height: 20px;
+}
 .messages .time, .messages .message {
     font-family: monospace;
     font-size: 1.1em;
 }
-#errors .message {
-    font-family: monospace;
-    font-size: 1.2em;
-}
-.message-row {
-    height: 20px;
-}
-.time {
+.messages .time {
     width: 7.5em;
 }
-.error-time {
-    width: 11em;
-    font-size: 0.9em;
+#errors .time {
+    width: 12.5em;
     white-space: nowrap;
 }
 .level {
@@ -555,7 +541,6 @@ th.stats-col-graph:hover {
     background-position: center;
 }
 .message-row:hover .select-message div {
-    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAQAAAD8fJRsAAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxMAAAsTAQCanBgAAAAHdElNRQfeCR0MOzhWKZQOAAAASUlEQVQY032PsRHAIAwDX9BkicD+W8UMEqegAQJWKZ/+3sLZJhFGQEZzNaIa4ibh66En867VNaIeoP5WppNuIGoAlOm3g5VC1AdYeQv1BZPRSgAAAABJRU5ErkJggg==);
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiIHZpZXdCb3g9IjAgMCA4IDgiPgogIDxwYXRoIGQ9Ik0wIDB2MWg4di0xaC04em0wIDJ2MWg2di0xaC02em0wIDJ2MWg4di0xaC04em0wIDJ2MWg2di0xaC02eiIgLz4KPC9zdmc+), none;
     filter: var(--icon-filter);
     border-color: #ccc; /* Fallback value */
@@ -577,7 +562,6 @@ th.stats-col-graph:hover {
 .debug-message {
     display: table;
 }
-/* Metadata */
 .metadata {
     width: 100%;
     border-spacing: 0.2em;
@@ -596,6 +580,20 @@ th.stats-col-graph:hover {
 /* Custom styles for statistics */
 #total-stats tr:hover, #tag-stats tr:hover {
     cursor: default;
+}
+/* Target highlight */
+@keyframes highlight {
+    0% {
+        background: var(--primary-color)
+    }
+    100% {
+        background: var(--target-color);
+    }
+}
+:target {
+    background: var(--target-color);
+    transition: background 0.3s;
+    animation: highlight 4s;
 }
 </style>
 <style media="print">
@@ -741,7 +739,8 @@ function toggleElement(elementId, childrenNames) {
     children.toggle(100, '', function () {
         element.children('.element-header').toggleClass('closed');
     });
-    populateChildren(elementId, children, childrenNames);
+    if (childrenNames)
+        populateChildren(elementId, children, childrenNames);
 }
 function populateChildren(elementId, childElement, childrenNames) {
     if (!childElement.hasClass('populated')) {
@@ -1144,7 +1143,7 @@ window.model = (function () {
         kw.type = data.type;
         kw.template = 'keywordTemplate';
         kw.arguments = data.args;
-        kw.assign = data.assign + (data.assign ? ' =  ' : '');
+        kw.assign = data.assign;
         kw.tags = data.tags;
         kw.timeout = data.timeout;
         kw.populateKeywords = createIterablePopulator('Keyword');
@@ -1883,7 +1882,7 @@ function addStatistics() {
         '<th class="stats-col-elapsed">Elapsed</th>' +
         '<th class="stats-col-graph">Pass / Fail / Skip</th>';
     var statTable =
-        '<h2>{Test} Statistics</h2>' +
+        '<h2>Statistics</h2>' +
         '<table class="statistics" id="total-stats"><thead><tr>' +
         '<th class="stats-col-name">Total Statistics</th>' + statHeaders +
         '</tr></thead></table>' +
@@ -1893,7 +1892,7 @@ function addStatistics() {
         '<table class="statistics" id="suite-stats"><thead><tr>' +
         '<th class="stats-col-name">Statistics by Suite</th>' + statHeaders +
         '</tr></thead></table>';
-    $(testOrTask(statTable)).appendTo('#statistics-container');
+    $(statTable).appendTo('#statistics-container');
     util.map(['total', 'tag', 'suite'], addStatTable);
     addTooltipsToElapsedTimes();
     enableStatisticsSorter();
@@ -2074,31 +2073,31 @@ storage = function () {
 window.output = {};
 </script>
 <script type="text/javascript">
-window.output["suite"] = [1,2,3,0,[4,5,6,7],[1,0,13424],[[8,9,10,0,[],[1,1150,11740],[[11,12,13,0,[],[1,1153,79],[],[[14,0,0,[15,16,17],[1,1738,79],[[0,18,19,0,0,0,0,0,[1,1739,78],[[0,20,21,0,0,22,0,0,[1,1740,77],[]]]],[1897,2,23]]]],[],[1,1,0,0]],[24,25,26,0,[],[1,1151,21966],[],[[27,0,0,[17,28,29],[1,1810,11042],[[1,30,31,0,0,0,0,0,[1,1812,6331],[[0,32,33,0,34,35,0,36,[1,1813,2121],[[1814,2,37],[1887,2,38],[3934,2,39]]],[0,40,33,0,41,0,0,36,[1,3937,31],[[3940,2,42],[3968,2,43],[3968,2,44]]],[0,45,33,0,46,47,0,36,[1,3969,4169],[[8138,2,48]]],[0,49,50,0,51,52,0,0,[1,8140,1],[[8141,2,52]]]]],[0,53,54,0,0,55,0,0,[1,8144,4240],[[0,56,57,0,0,0,0,0,[1,8147,20],[[0,58,33,0,59,0,60,61,[1,8148,11],[[8158,2,62]]],[0,63,50,0,64,65,0,0,[1,8164,2],[]]]],[0,66,67,0,0,68,0,0,[1,8168,3278],[[0,69,57,0,0,70,0,0,[1,8169,971],[[0,71,33,0,72,73,0,74,[1,8170,964],[[8172,2,75]]],[0,49,50,0,51,76,0,0,[1,9137,1],[[9138,2,77]]]]],[0,78,57,0,0,79,0,0,[1,9141,53],[[0,71,33,0,72,80,0,74,[1,9142,48],[[9144,2,81]]]]],[0,82,57,0,0,0,0,0,[1,9195,2250],[[0,83,33,0,84,85,0,74,[1,9196,2245],[[9197,2,86]]]]]]],[0,87,88,0,0,0,0,0,[1,11447,931],[[0,89,33,0,90,91,0,92,[1,11448,929],[[12377,2,93]]]]],[0,94,67,0,0,0,0,0,[1,12379,5],[[0,95,96,0,0,0,97,0,[1,12379,1],[[12380,2,98]]],[0,49,50,0,51,97,0,0,[1,12382,1],[[12383,2,99]]]]]]],[2,100,31,0,0,0,0,0,[1,12385,468],[[0,101,33,0,102,0,0,36,[1,12386,464],[[12849,2,103]]],[0,49,50,0,51,104,0,0,[1,12851,1],[[12851,2,104]]]]]]],[105,0,0,[28,106,29],[1,1756,10873],[[1,30,31,0,0,0,0,0,[1,1757,6964],[[0,32,33,0,34,35,0,36,[1,1758,2179],[[1760,2,107],[1822,2,108],[3937,2,109]]],[0,40,33,0,41,0,0,36,[1,3939,35],[[3942,2,42],[3973,2,43],[3974,2,44]]],[0,45,33,0,46,47,0,36,[1,3975,4706],[[8681,2,48]]],[0,49,50,0,51,52,0,0,[1,8716,1],[[8716,2,52]]]]],[0,110,54,0,0,111,0,0,[1,8722,3398],[[0,56,57,0,0,0,0,0,[1,8723,12],[[0,58,33,0,59,0,60,61,[1,8723,7],[[8730,2,62]]],[0,63,50,0,64,65,0,0,[1,8733,1],[]]]],[0,66,67,0,0,68,0,0,[1,8735,2500],[[0,69,57,0,0,70,0,0,[1,8736,1075],[[0,71,33,0,72,73,0,74,[1,8737,1069],[[8738,2,112]]],[0,49,50,0,51,76,0,0,[1,9808,2],[[9809,2,113]]]]],[0,78,57,0,0,79,0,0,[1,9812,45],[[0,71,33,0,72,80,0,74,[1,9813,43],[[9814,2,114]]]]],[0,82,57,0,0,0,0,0,[1,9858,1377],[[0,83,33,0,84,85,0,74,[1,9858,1375],[[9859,2,86]]]]]]],[0,115,57,0,0,0,0,0,[1,11235,884],[[0,89,33,0,90,116,0,92,[1,11236,882],[[12117,2,117]]]]]]],[2,100,31,0,0,0,0,0,[1,12120,508],[[0,101,33,0,102,0,0,36,[1,12120,504],[[12624,2,103]]],[0,49,50,0,51,104,0,0,[1,12625,1],[[12626,2,104]]]]]]],[118,0,0,[119,28,29],[1,1777,8634],[[1,30,31,0,0,0,0,0,[1,1778,6613],[[0,32,33,0,34,35,0,36,[1,1780,2085],[[1781,2,120],[1855,2,121],[3864,2,122]]],[0,40,33,0,41,0,0,36,[1,3867,24],[[3870,2,42],[3891,2,43],[3891,2,44]]],[0,45,33,0,46,47,0,36,[1,3895,4488],[[8382,2,48]]],[0,49,50,0,51,52,0,0,[1,8386,2],[[8388,2,52]]]]],[0,123,54,0,0,124,0,0,[1,8392,1201],[[0,56,57,0,0,0,0,0,[1,8393,16],[[0,58,33,0,59,0,60,61,[1,8395,8],[[8403,2,62]]],[0,63,50,0,64,65,0,0,[1,8407,2],[]]]],[0,66,67,0,0,68,0,0,[1,8411,1082],[[0,69,57,0,0,70,0,0,[1,8413,914],[[0,71,33,0,72,73,0,74,[1,8414,906],[[8416,2,125]]],[0,49,50,0,51,76,0,0,[1,9324,1],[[9325,2,126]]]]],[0,78,57,0,0,79,0,0,[1,9328,40],[[0,71,33,0,72,80,0,74,[1,9329,36],[[9331,2,125]]]]],[0,82,57,0,0,0,0,0,[1,9368,124],[[0,83,33,0,84,85,0,74,[1,9369,122],[[9370,2,86]]]]]]],[0,127,57,0,0,0,0,0,[1,9494,68],[[0,89,33,0,90,128,0,92,[1,9495,65],[[9559,2,129]]]]],[0,130,57,0,0,0,0,0,[1,9563,29],[[0,89,33,0,90,131,0,92,[1,9564,27],[[9590,2,132]]]]]]],[2,100,31,0,0,0,0,0,[1,9594,817],[[0,101,33,0,102,0,0,36,[1,9595,811],[[10405,2,103]]],[0,49,50,0,51,104,0,0,[1,10408,1],[[10408,2,104]]]]]]]],[],[3,3,0,0]],[133,134,135,0,[],[1,5858,4683],[],[[136,0,0,[],[1,6324,4007],[[0,32,33,0,34,137,0,36,[1,6327,2617],[[6330,2,138],[6495,2,139],[8944,2,140]]],[0,45,33,0,46,141,0,36,[1,8946,1381],[[10326,2,142],[10327,2,143]]],[10453,2,144],[10507,2,145],[10539,2,146]]]],[],[1,1,0,0]]],[],[],[5,5,0,0]]],[],[],[5,5,0,0]];
+window.output["suite"] = [1,2,3,0,[],[1,0,2193],[],[[4,0,0,[],[1,432,673],[[0,5,6,0,0,7,8,0,[1,433,303],[[0,9,10,0,11,12,0,0,[1,434,0],[[434,2,13]]],[0,14,15,0,16,17,18,0,[1,434,0],[[434,2,19]]],[0,20,10,0,21,22,23,0,[1,434,295],[[728,2,24],[729,2,25],[729,2,26],[730,2,27]]],[0,28,15,0,29,30,0,0,[1,730,2],[[732,2,31]]],[0,32,15,0,33,34,35,0,[1,732,2],[[734,2,36]]],[0,37,15,0,38,39,0,0,[1,735,1],[]],[8,0,0,0,0,35,0,0,[1,736,0],[]],[736,2,40]]],[0,41,6,0,0,8,0,0,[1,737,2],[[0,14,15,0,16,42,43,0,[1,737,0],[[738,2,44]]],[0,9,10,0,11,45,0,0,[1,738,1],[[738,2,46]]]]],[0,47,6,0,0,48,0,0,[1,739,367],[[0,49,10,0,50,51,23,0,[1,739,364],[[1101,2,52],[1101,2,53],[1101,2,26],[1103,2,27]]],[0,37,15,0,38,54,0,0,[1,1103,2],[]],[8,0,0,0,0,23,0,0,[1,1105,0],[]]]],[1141,2,55]]]],[],[1,1,0,0]];
 </script>
 <script type="text/javascript">
 window.output["strings"] = [];
 </script>
 <script type="text/javascript">
-window.output["strings"] = window.output["strings"].concat(["*","*Tests","*C:\\Users\\afiac\\PycharmProjects\\Projet_entreprise2\\tests","*../tests","*Pabot Info","*<p><a href=\"https://pabot.org/?ref=log\">Pabot\x3c/a> result from 5 executions.\x3c/p>","*Pabot Version","*<p>5.2.2\x3c/p>","*Ui","*C:\\Users\\afiac\\PycharmProjects\\Projet_entreprise2\\tests\\ui","*../tests/ui","*Connexion Bd","*C:\\Users\\afiac\\PycharmProjects\\Projet_entreprise2\\tests\\ui\\connexion_bd.robot","*../tests/ui/connexion_bd.robot","*Connexion bd valide","*api","*connexion_bd","*critique","*Connect To Database","*postgres_bd","*Connect Bd","*Bd","*${DB_HOST}    ${DB_NAME}    ${DB_USER}    ${DB_PASS}","*Starting Browser process C:\\Users\\afiac\\PycharmProjects\\Projet_entreprise2\\.venv\\Lib\\site-packages\\Browser\\wrapper\\index.js using at 127.0.0.1:54515","*Login","*C:\\Users\\afiac\\PycharmProjects\\Projet_entreprise2\\tests\\ui\\login.robot","*../tests/ui/login.robot","*Connexion avec des identifiants valident","*login","*regression","*Ouvrir le navigateur","*navigation","*New Browser","*Browser","*<p>Create a new playwright Browser with specified options.\x3c/p>","*${BROWSER}    headless=${HEADLESS}","*BrowserControl, Setter","eNptkE1rwzAMhv9K8bkZTpuQpNdtbD10hLW9CYrjKMTDroPsrBtj/31aM2gH1UV6n1egjy/RkD8FJLGaCd2Td2Z0Yj4TParWYgjMO2UDzi/2Vh3bxn9cOS2+R+/tdXPPTRa366fnfc040viPrl92N+ju8XVzwcH608azlneSZTQO/RhZLyXHxEhpDA/mvP79CmDPpwQA1RmlAepP3StyNfk31JH5uYoHPEbCgUzABQBhGG1Uv/agGh8PE2CZAvx9B2CaxBndALDIigLzqkzSMl8mWYEyKfO0TFSRNXklq67VKL5/AGCpdI4=","*Starting Browser process C:\\Users\\afiac\\PycharmProjects\\Projet_entreprise2\\.venv\\Lib\\site-packages\\Browser\\wrapper\\index.js using at 127.0.0.1:54514","*Successfully created browser with options: {\"browser\":\"chromium\",\"headless\":false,\"chromiumSandbox\":false,\"devtools\":false,\"handleSIGHUP\":true,\"handleSIGINT\":true,\"handleSIGTERM\":true,\"slowMo\":0,\"timeout\":30000,\"tracesDir\":\"C:\\\\Users\\\\afiac\\\\PycharmProjects\\\\Projet_entreprise2\\\\resultats\\\\pabot_results\\\\1\\\\browser\\\\traces\\\\temp\\\\2477e598-1853-47e0-8518-a74b5909fdce\"}","*New Context","*<p>Create a new BrowserContext with specified options.\x3c/p>","eNpNjsEKgzAQRO9+hXi2YHtp6dUKvRQKCj3HZKNpQzZsolLEf29sCvU4b2Z2dk7SNGOcg/UXnIxGJlx2Tj0NkK9W+7bMubK+ByiZdpFKJA6iRI20pjODBrKvozqDBNemudcVUbT/vScbWc1JWV8Z1moQ2ymUUqtwZ1sgEENYuqFXaOLSzhJIIDD8N+mARsXhgfSC+A7TGqdojgomi+QDnoMOZFLC90HuD6cij6gH1fVr5HgoAlmS5QMi5lUM","*Successfully created context. ","*{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}","*New Page","*<p>Open a new Page.\x3c/p>","*${BASE_URL}","*Successfully initialized new page object and opened url: <a href=\"https://opensource-demo.orangehrmlive.com\">https://opensource-demo.orangehrmlive.com\x3c/a>","*Log","*BuiltIn","*<p>Logs the given message with the given level.\x3c/p>","*Ouverture du navigateur","*Authentification Valide","*loginBusiness","*${VALID_USER}    ${VALID_PASSWORD}","*Vérifier l'url de la page de login","*loginPage","*Get Url","*<p>Returns the current URL.\x3c/p>","*${url}","*Assertion, Getter, PageContent","eNqlzMENgCAMAMBVCPEr/RtxF4RqSYCSCmpi3N0hvAFueLqkV1k1O0WCm9XUWj0mAK5YDu7icQyY2bC4siNJTvFE4znDhSvEEvA2lSq43ggS77Ho5f8xg1s+hkc5mg==","*Should Contain","*<p>Fails if <code>container\x3c/code> does not contain <code>item\x3c/code> one or more times.\x3c/p>","*${url}    /auth/login","*Authentification avec les identifiants","*loginUi","*${username}    ${password}","*Saisir le nom utilisateur","*${username}","*Fill Text","*<p>Clears and fills the given <code>txt\x3c/code> into the text field found by <code>selector\x3c/code>.\x3c/p>","*${champ_nom_utilisateur}    ${username}","*PageContent, Setter","*Fills the text 'Admin' in the given field.","*le nom utilisateur saisir est ${username}","*le nom utilisateur saisir est Admin","*Saisir le mot de passe","*${password}","*${champ_mot_de_passe}    ${password}","*Fills the text 'admin123' in the given field.","*Cliquer sur le bouton Login","*Click","*<p>Simulates mouse click on the element found by <code>selector\x3c/code>.\x3c/p>","*${bouton_login}","*Clicks the element 'css=button.orangehrm-login-button'.","*Verifier présence du mot dashboard","*dashboardPage","*Wait For Elements State","*<p>Waits for the element found by <code>selector\x3c/code> to satisfy state option.\x3c/p>","*${mot_dashboard}    visible    timeout=10s","*PageContent, Wait","*Waited for Element with selector css=h6.oxd-text.oxd-text--h6.oxd-topbar-header-breadcrumb-module at state visible","*Générer un nom utilisateur","*Generate Random Name","*Faker","*${nom}","*${nom} = Benoît de la Pottier","*Benoît de la Pottier","*Fermer le navigateur","*Close Browser","*<p>Closes the current browser.\x3c/p>","*Closed browser","*Fermeture du navigateur","*Connexion avec des identifiants invalident","*moyen","eNptkMFKAzEQhl+l5NyVdFfr0qtK7aGy2PY2UCbZCZuSNEuStYr47o5doRXMZfJ/38Ak8ylUDKdEUSwmQncxeDt4MZ2IjrB1lBJzgy7R9KI3eGxVeL8yLb3lENx1c8dNjjar5fOuYZzj8IeuXrb/0O3T6/qCkwundeAsbyTHbD2FIXOuJJ+RRdSUHu35+Q8LgB1/JQGgsagBmg/dYfRNDAfSmfn5lvd0zJH6aBOVAJHS4DL+6B5VyPsRcGT5ux2AcRJX8j0bU0pdz6hQpp4XtyRVoVDfFdVc1lrPKlmae/H1DX8fdVM=","*Starting Browser process C:\\Users\\afiac\\PycharmProjects\\Projet_entreprise2\\.venv\\Lib\\site-packages\\Browser\\wrapper\\index.js using at 127.0.0.1:54511","*Successfully created browser with options: {\"browser\":\"chromium\",\"headless\":false,\"chromiumSandbox\":false,\"devtools\":false,\"handleSIGHUP\":true,\"handleSIGINT\":true,\"handleSIGTERM\":true,\"slowMo\":0,\"timeout\":30000,\"tracesDir\":\"C:\\\\Users\\\\afiac\\\\PycharmProjects\\\\Projet_entreprise2\\\\resultats\\\\pabot_results\\\\2\\\\browser\\\\traces\\\\temp\\\\2f20c81e-bf86-4e0b-bac5-3608cc1302f7\"}","*Authentification echoue","*${INVALID_USER}    ${INVALID_PASSWORD}","*Fills the text 'wrong' in the given field.","*le nom utilisateur saisir est wrong","*Fills the text 'wrong123' in the given field.","*Verifier Message authentification échoué","*${message_erreur}    visible    timeout=10s","*Waited for Element with selector css=p.oxd-text--p.oxd-alert-content-text at state visible","*Connexion avec des identifiants vident","*faible","eNptkE1rAjEQhv+K5OyW1ehavLbFerAsVW8DMklm2UhiliRbW0r/e6duQQudy8z7vAPz8SlUDOdEUSxHQrcxeNt7MR6JltA4Sol5gy7R+Gpv8WRUeL9xDL3lENxtc8tNjrbr1fO+Zpxj/4euX3b/0N3T6+aKkwvnTWBd3pUss/UU+sxalhwDi6gpPdrL+g9LgD2fkgCwsagB6g/dYvR1DEfSmfmlygc65UhdtImmAJFS7zL+2B2qkA8DYCkBfr8DMEziTL4D0HJaVTRXhWyqspihXBQ4a7CYTIxBNVf3C6rE1zd7g3WL","*Starting Browser process C:\\Users\\afiac\\PycharmProjects\\Projet_entreprise2\\.venv\\Lib\\site-packages\\Browser\\wrapper\\index.js using at 127.0.0.1:54512","*Successfully created browser with options: {\"browser\":\"chromium\",\"headless\":false,\"chromiumSandbox\":false,\"devtools\":false,\"handleSIGHUP\":true,\"handleSIGINT\":true,\"handleSIGTERM\":true,\"slowMo\":0,\"timeout\":30000,\"tracesDir\":\"C:\\\\Users\\\\afiac\\\\PycharmProjects\\\\Projet_entreprise2\\\\resultats\\\\pabot_results\\\\3\\\\browser\\\\traces\\\\temp\\\\c3266e5b-3f60-4a37-a4fa-11ddab5b87e6\"}","*Authentification avec coordonnées vident","*${CHAMP_VIDE}    ${CHAMP_VIDE}","*Fills the text '' in the given field.","*le nom utilisateur saisir est ","*Vérifier le message d'erreur required pour le champ username","*${message_required_username}    visible    timeout=10s","*Waited for Element with selector css=span.oxd-input-field-error-message.oxd-input-group__message &gt;&gt; nth=0 at state visible","*Vérifier le message d'erreur required pour le champ password","*${message_required_password}    visible    timeout=10s","*Waited for Element with selector css=span.oxd-input-field-error-message.oxd-input-group__message &gt;&gt; nth=1 at state visible","*Test","*C:\\Users\\afiac\\PycharmProjects\\Projet_entreprise2\\tests\\ui\\test.robot","*../tests/ui/test.robot","*Open Google","*chromium    headless=True","eNptkMtOwzAQRX+l8rpBeRboFhB0URTRdjdSNXamSpBdRx6HghD/zrRBhAXe2Pdcax73U+ngT0xBLWfKtMG7bnBqPlMtYWOJWXgMA80nd4PHRvt3MQ5o+ew09Ba9t/wHtfLJ0mb1+LSrpxK/dPW8/YduH17WE2brT2svOr1KRcbOkR+i6CKVM7KAhvi+u0x/twTYySYMgIcODUD9YVoMrg7+lUwUfnnFPR1joD50TDlAIB5sxLPdo/ZxPwKRJcBPOABjJ7nJ9QDFosiz20WZkNEmKSudJyh5JXhTpXRdUdaYTH19AxEYdT0=","*Starting Browser process C:\\Users\\afiac\\PycharmProjects\\Projet_entreprise2\\.venv\\Lib\\site-packages\\Browser\\wrapper\\index.js using at 127.0.0.1:51871","*Successfully created browser with options: {\"browser\":\"chromium\",\"headless\":true,\"chromiumSandbox\":false,\"devtools\":false,\"handleSIGHUP\":true,\"handleSIGINT\":true,\"handleSIGTERM\":true,\"slowMo\":0,\"timeout\":30000,\"tracesDir\":\"C:\\\\Users\\\\afiac\\\\PycharmProjects\\\\Projet_entreprise2\\\\resultats\\\\pabot_results\\\\4\\\\browser\\\\traces\\\\temp\\\\36321964-ecbc-45b2-aead-a850e75e1dc1\"}","*<a href=\"https://www.google.com\">https://www.google.com\x3c/a>","*Successfully initialized new page object and opened url: <a href=\"https://www.google.com\">https://www.google.com\x3c/a>","*No context was open. New context was automatically opened when this page is created.","*Switching context to context=16d0b43b-3da6-42a9-ad0d-9ed911cfdb23 in CURRENT","*Successfully changed active context: context=16d0b43b-3da6-42a9-ad0d-9ed911cfdb23","*Successfully closed Context"]);
+window.output["strings"] = window.output["strings"].concat(["*","*Test Api Auth","*C:\\Users\\afiac\\PycharmProjects\\Projet_entreprise2\\tests\\api\\test_api_auth.robot","*../tests/api/test_api_auth.robot","*Authentification Api","*Get Auth Token","*baseApi","*emilys    emilyspass    refreshToken","*${token_generer}","*Create Session","*RequestsLibrary","*<p>Create Session: create a HTTP session to a server\x3c/p>","*auth    ${BASE_API_URL}","*Creating Session using : alias=auth, url=https://dummyjson.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 ","*Create Dictionary","*BuiltIn","*<p>Creates and returns a dictionary based on the given <code>items\x3c/code>.\x3c/p>","*username=${username}    password=${password}","*${body}","*${body} = {'username': 'emilys', 'password': 'emilyspass'}","*POST On Session","*<p>Sends a POST request on a previously created HTTP Session.\x3c/p>","*auth    /auth/login    json=${body}","*${response}","*POST Request : url=https://dummyjson.com/auth/login \n path_url=/auth/login \n headers={'User-Agent': 'python-requests/2.33.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '48', 'Content-Type': 'application/json'} \n body=b'{\"username\": \"emilys\", \"password\": \"emilyspass\"}' \n ","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","*${response} = &lt;Response [200]&gt;","*Should Be Equal As Integers","*<p>Fails if objects are unequal after converting them to integers.\x3c/p>","*${response.status_code}    200","*Argument types are:\n&lt;class 'int'&gt;\n&lt;class 'str'&gt;","*Set Variable","*<p>Returns the given values which can then be assigned to a variables.\x3c/p>","*${response.json()[\"${key_token}\"]}","*${token}","*${token} = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1...","*Log To Console","*<p>Logs the given message to the console.\x3c/p>","*Token: ${token}","*${token_generer} = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1...","*Create Authenticated Session","*Authorization=Bearer ${token}    Content-Type=application/json","*${headers}","*${headers} = {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6Ikpva...","*api    ${BASE_API_URL}    headers=${headers}","*Creating Session using : alias=api, url=https://dummyjson.com, headers={'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3NzU3NzgyMjQsImV4cCI6MTc3ODM3MDIyNH0.sm1w2Hf9Dywu0WLh1B8HmrPh2NtiRy9JO32el30xEUk', 'Content-Type': 'application/json'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 ","*GET Protected Resource","*28","*GET On Session","*<p>Sends a GET request on a previously created HTTP Session.\x3c/p>","*api    /products/${id}","*GET Request : url=https://dummyjson.com/products/28 \n path_url=/products/28 \n headers={'User-Agent': 'python-requests/2.33.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3NzU3NzgyMjQsImV4cCI6MTc3ODM3MDIyNH0.sm1w2Hf9Dywu0WLh1B8HmrPh2NtiRy9JO32el30xEUk', 'Content-Type': 'application/json'} \n body=None \n ","eNqtVm1v2kgQ/n6/Ys9SFekOG2MwbxW6o0BTkoY0QNMmp6pa1mO8ib3r7K4hJMp/v1k7SZP2VJ3aSsgJ+8zOyzPPjNmfLMkcdC6FBtInhUoHiTG57tfrUZFluwsthcdkVs+VjApmdD3okt+INtQUehD4fo0ooGg0OD7E8wRoBEoPbvfG1MBen+wtk6JG/B4Z5ooEftAmQbPfwk+L7B8t92pkbySFAWHc5S4vL9A8TzmjhktRt9FfEpZQpcEMChO7XXtlqajQMSh3IpiMuFjbeywpxCVE9y4FMOvBApcAuUtTvgGLUcZAa5dhVCVTPE/l1pWKr3lp/Ie1mUMuFWYk7cmts1ayyJ2+w2JXQOrUnIxef6ZrcPptv9VFChwQUS65MNrp/3PrIIlo/UAj9fCSx1JZRHFKFZRsqjJCfdP6Sw+mr9tvV4sXwevT9zf4nIEIpwed5vJo/sqXcXFwwM9Ophf6LbwIXuFntcQHNLTIe/7s9Ky5uDlMLibj62U4ulqfDTuHx+d5HDfQ6CY8TEfJtsvU+5MNfqdbcyzHcftqSk8Oe/Nher2E6G17G6iT82nvfNu8WWH8j9Ei0adm3b1MZ/Fcp3jk3H26s7yAoSXVH+pOGPvu9k9KD64+vJt9nB2dReaDSsejbjdi5/vSsebaKM6Ma2y3SkI1sEJxs7M+kEMXORw0wjBEGfkvCRcsLSJYFKuxzCgX2vrYUFWaD7FtufnScISuyyZa6RiUjitz23BtjYXUgsdxZRQJ7eYKYjAseWi7NZKPBnIrUkmj5x5kDqLCY0WzZ+4Xw6PJ8Xy6P51VBgqlnvKMG7d8WpOG73+NKbBF3Yu11/sWRomXVzudsNPpBs1mZXKtbf7SfBF04yXJZASDVSrZpTVCYTLKEnCrsbQ247PZ8Gg6sugM0krHleg+G/lUy7ooB+IzVlkGcPq+538j8bunk/p06tY3PLfYAtQGVDmHj0ov77x258OzsmToRW0/iGkvbEaNFnVH4/29O9wZKxntBrcOj5x+0K05hpsU4zpTBmSEuyXDJCPQTPG8ys8pT3eEiohEyB7jstCEozmzQI3QDeUpXaWAkiIooBLHjDZS4V+pCC3vrRMTFykxeMl4GAR3Dqyl2mEEnHgGioPG4xxFjPmEXquHiXDNZCHMO1AMqSgZ6nptRLCTSInTb3pN/KYNtgbr6WA9dG3Xgq1Bg8IV8QnhywKj7M+P3VfzsTuaT1w/6GKsLdisnH7DRspAaCs5p3/rbHlkEjxved1mzUkezELP71h2cgsGLS+4Qx9U4cCZ3VRgqRm956yBkhEmIQ+o7XzC8xxzfm64wFNtiQvIFuDSMnDPJ09xdBelwmx7BFmURWLpsOGwrXbfAw0h8ikzLAHTdE5B7Uie4nsCot9tO5FpPMbXQej6LbfpL/1ev9Xo+4Hnh83zR5egZjh6aDlJ+QVNUA7FzRNwggNlNy2UqMcQ/fvae/bacu5qX3JqPc1pcs0gTfF/clVQW9kPJXZAUXYLnN/kP/K6QNDTFvxuWs+oeoOdTXeEZ7iy9I/StaARB3IkFU1LCX+dmLa4l1X4t7l9sjdMocQ7idNl52EmSXVC8uoIFwTusqzIjhW+708KlBRSiBQHiOBrwmrWTqOBaGi+n3uRR//HbEUVbh1bnd/pdnthKwx7fqeNyJUaVcDDG5dFwvvqx0uxwrTrV8q1PrwcacdJ4RnObzmb37lZ/exxK9v642Ko41Jwy31Tb3hbWOWYyE95CX6Jl+Yv8dKqvKAOTFJkK1Gp5qdcPjqqXNu9/y/uym3d","*${response.json()[\"id\"]}","*Starting Browser process C:\\Users\\afiac\\PycharmProjects\\Projet_entreprise2\\.venv\\Lib\\site-packages\\Browser\\wrapper\\index.js using at 127.0.0.1:51360"]);
 </script>
 <script type="text/javascript">
-window.output["stats"] = [[{"elapsed":"00:00:35","fail":0,"label":"All Tests","pass":5,"skip":0}],[{"elapsed":"00:00:00","fail":0,"label":"api","pass":1,"skip":0},{"elapsed":"00:00:00","fail":0,"label":"connexion_bd","pass":1,"skip":0},{"elapsed":"00:00:11","fail":0,"label":"critique","pass":2,"skip":0},{"elapsed":"00:00:09","fail":0,"label":"faible","pass":1,"skip":0},{"elapsed":"00:00:31","fail":0,"label":"login","pass":3,"skip":0},{"elapsed":"00:00:11","fail":0,"label":"moyen","pass":1,"skip":0},{"elapsed":"00:00:31","fail":0,"label":"regression","pass":3,"skip":0}],[{"elapsed":"00:00:13","fail":0,"id":"s1","label":"Tests","name":"Tests","pass":5,"skip":0},{"elapsed":"00:00:12","fail":0,"id":"s1-s1","label":"Tests.Ui","name":"Ui","pass":5,"skip":0},{"elapsed":"00:00:00","fail":0,"id":"s1-s1-s1","label":"Tests.Ui.Connexion Bd","name":"Connexion Bd","pass":1,"skip":0},{"elapsed":"00:00:22","fail":0,"id":"s1-s1-s2","label":"Tests.Ui.Login","name":"Login","pass":3,"skip":0},{"elapsed":"00:00:05","fail":0,"id":"s1-s1-s3","label":"Tests.Ui.Test","name":"Test","pass":1,"skip":0}]];
+window.output["stats"] = [[{"elapsed":"00:00:01","fail":0,"label":"All Tests","pass":1,"skip":0}],[],[{"elapsed":"00:00:02","fail":0,"id":"s1","label":"Test Api Auth","name":"Test Api Auth","pass":1,"skip":0}]];
 </script>
 <script type="text/javascript">
 window.output["errors"] = [];
 </script>
 <script type="text/javascript">
-window.output["baseMillis"] = 1775049185576;
+window.output["baseMillis"] = 1775778223165;
 </script>
 <script type="text/javascript">
-window.output["generated"] = 13460;
+window.output["generated"] = 2202;
 </script>
 <script type="text/javascript">
 window.output["expand_keywords"] = null;
 </script>
 <script type="text/javascript">
-window.settings = {"defaultLevel":"TRACE","minLevel":"INFO","reportURL":"report.html","rpa":null,"splitLogBase":"log","title":""};
+window.settings = {"defaultLevel":"INFO","minLevel":"INFO","reportURL":"report.html","rpa":false,"splitLogBase":"log","title":""};
 </script>
 <title></title>
 </head>
@@ -2154,8 +2153,9 @@ function addErrors() {
     var errors = window.testdata.errorIterator();
     if (errors.hasNext()) {
         $.tmpl('errorHeaderTemplate').appendTo($('body'));
-        drawErrorsRecursively(errors, $('#errors'));
+        drawErrorsRecursively(errors, $('#errors .messages'));
     }
+    toggleElement('errors');
 }
 
 function drawErrorsRecursively(errors, target) {
@@ -2189,7 +2189,7 @@ function makeElementVisible(id) {
 }
 
 function addExecutionLog(main) {
-    $('body').append($(testOrTask('<h2>{Test} Execution Log</h2>')),
+    $('body').append('<h2>Execution Log</h2>',
                      $.tmpl('suiteTemplate', main));
 }
 </script>
@@ -2234,20 +2234,31 @@ function addExecutionLog(main) {
 </script>
 
 <script type="text/x-jquery-tmpl" id="errorHeaderTemplate">
-  <h2>{{= testOrTask('{Test}')}} Execution Errors</h2>
-  <table id="errors"></table>
+  <h2>Execution Errors</h2>
+  <div id="errors">
+    <div class="element-header closed" onclick="toggleElement('errors')">
+      <div class="element-header-toggle" title="Toggle visibility"></div>
+      <div class="label error">ERRORS</div>
+      <div class="name">Errors and warnings during execution</div>
+    </div>
+    <div class="children">
+      <table class="messages"></table>
+    </div>
+  </div>
 </script>
 
 <script type="text/x-jquery-tmpl" id="errorTemplate">
   <tr id="${id}" class="message-row">
-    <td class="error-time">
+    <td class="time">
       {{if link}}
       <a onclick="makeElementVisible('${link}')" href="#${link}" title="Link to details">${date} ${time}</a>
       {{else}}
       ${date} ${time}
       {{/if}}
     </td>
-    <td class="${level.toLowerCase()} level"><span class="label ${level.toLowerCase()}">${level}</span></td>
+    <td class="${level.toLowerCase()} level">
+      <span class="label ${level.toLowerCase()}">${level}</span>
+    </td>
     <td class="message">{{html text}}</td>
     <td class="select-message" onclick="javascript:selectMessage('${id}')" title="Select message text">
       <div></div>
@@ -2257,18 +2268,18 @@ function addExecutionLog(main) {
 
 <script type="text/x-jquery-tmpl" id="suiteTemplate">
   <div id="${id}" class="suite">
-    <div class="element-header closed" onclick="toggleSuite('${id}')">
-      <div class="element-header-left" title="SUITE  {{html name}}  [${status}]">
-        <span class="elapsed" title="Elapsed time">${times.elapsedTime}</span>
-        <span class="label ${status.toLowerCase()}">SUITE</span>
-        <span class="name">{{html name}}</span>
-      </div>
-      <div class="element-header-right" onclick="stopPropagation(event)" title="">
+    <div class="element-header closed" onclick="toggleSuite('${id}')"
+         title="SUITE  {{html name}}  [${status}]">
+      <div class="element-header-toggle" title="Toggle visibility"></div>
+      <div class="label ${status.toLowerCase()}">SUITE</div>
+      <div class="name">{{html name}}</div>
+      <div class="elapsed" title="Elapsed time">${times.elapsedTime}</div>
+      <div class="element-header-menu" onclick="stopPropagation(event)" title="">
         <a class="expand" title="Expand all" href="javascript:expandAll('${id}')"></a>
         <a class="collapse" title="Collapse all" href="javascript:collapseAll('${id}')"></a>
-        <a class="link" title="Link to this suite" href="#${id}" onclick="makeElementVisible('${id}')"></a>
+        <a class="link" onclick="makeElementVisible('${id}')"
+           title="Link to this suite" href="#${id}"></a>
       </div>
-      <div class="element-header-toggle" title="Toggle visibility"></div>
     </div>
     <div class="children">
       <table class="metadata">
@@ -2319,18 +2330,18 @@ function addExecutionLog(main) {
 
 <script type="text/x-jquery-tmpl" id="testTemplate">
   <div id="${id}" class="test">
-    <div class="element-header closed" onclick="toggleTest('${id}')">
-      <div class="element-header-left" title="{{= testOrTask('{TEST}')}}  {{html name}}  [${status}]">
-        <span class="elapsed" title="Elapsed time">${times.elapsedTime}</span>
-        <span class="label ${status.toLowerCase()}">{{= testOrTask('{TEST}')}}</span>
-        <span class="name">{{html name}}</span>
-      </div>
-      <div class="element-header-right" onclick="stopPropagation(event)" title="">
+    <div class="element-header closed" onclick="toggleTest('${id}')"
+         title="{{= testOrTask('{TEST}')}}  {{html name}}  [${status}]">
+      <div class="element-header-toggle" title="Toggle visibility"></div>
+      <div class="label ${status.toLowerCase()}">{{= testOrTask('{TEST}')}}</div>
+      <div class="name">{{html name}}</div>
+      <div class="elapsed" title="Elapsed time">${times.elapsedTime}</div>
+      <div class="element-header-menu" onclick="stopPropagation(event)" title="">
         <a class="expand" title="Expand all" href="javascript:expandAll('${id}')"></a>
         <a class="collapse" title="Collapse all" href="javascript:collapseAll('${id}')"></a>
-        <a class="link" title="Link to this {{= testOrTask('{test}')}}" href="#${id}" onclick="makeElementVisible('${id}')"></a>
+        <a class="link" href="#${id}" onclick="makeElementVisible('${id}')"
+           title="Link to this {{= testOrTask('{test}')}}"></a>
       </div>
-      <div class="element-header-toggle" title="Toggle visibility"></div>
     </div>
     <div class="children">
       <table class="metadata">
@@ -2377,21 +2388,20 @@ function addExecutionLog(main) {
 
 <script type="text/x-jquery-tmpl" id="keywordTemplate">
   <div id="${id}" class="keyword">
-    <div class="element-header closed" onclick="toggleKeyword('${id}')">
-      <div class="element-header-left" title="${type}  {{if name}}{{html fullName}}  {{/if}}[${status}]">
-        <span class="elapsed" title="Elapsed time">${times.elapsedTime}</span>
-        <span class="label ${status.toLowerCase()}">${type}</span>
-        <span class="assign">{{html assign}}</span>
-        <span class="name"><span class="parent-name">{{html libname}}{{if libname}} . {{/if}}</span>{{html name}}</span>
-        &nbsp;
-        <span class="arg">{{html arguments}}</span>
-      </div>
-      <div class="element-header-right" onclick="stopPropagation(event)">
+    <div class="element-header closed" onclick="toggleKeyword('${id}')"
+         title="${type}  {{if name}}{{html fullName}}  {{/if}}[${status}]">
+      <div class="element-header-toggle" title="Toggle visibility"></div>
+      <div class="label ${status.toLowerCase()}">${type}</div>
+      {{if assign}}<div class="assign">{{html assign}}&nbsp;=</div>{{/if}}
+      <div class="name">{{if libname}}<span class="parent-name">{{html libname}} . </span>{{/if}}{{html name}}</div>
+      <div class="arg">{{html arguments}}</div>
+      <div class="elapsed" title="Elapsed time">${times.elapsedTime}</div>
+      <div class="element-header-menu" onclick="stopPropagation(event)">
         <a class="expand" title="Expand all" href="javascript:expandAll('${id}')"></a>
         <a class="collapse" title="Collapse all" href="javascript:collapseAll('${id}')"></a>
-        <a class="link" title="Link to this item" href="#${id}" onclick="makeElementVisible('${id}')"></a>
+        <a class="link" onclick="makeElementVisible('${id}')"
+           title="Link to this item" href="#${id}"></a>
       </div>
-      <div class="element-header-toggle" title="Toggle visibility"></div>
     </div>
     <div class="children">
       <table class="metadata keyword-metadata">
