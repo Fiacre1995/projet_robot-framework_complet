@@ -40,7 +40,7 @@
     -  pabot --processes 4 --testlevelsplit --variable ENV:dev --outputdir resultats tests/
     -  pabot --processes 4 --testlevelsplit --variable ENV:dev --listener allure_robotframework --outputdir resultats tests/
 
-# Exécuté des fichiers en triant à partir du Tag préciser
+# Exécuté des fichiers en triant à partir du Tag préciser 
     - robot --include api --outputdir resultats tests/
     - robot --exclude api --outputdir resultats tests/
     - robot --include "smokeANDlogin" tests/   (sélectionner plusieurs tags pour le filtre)
