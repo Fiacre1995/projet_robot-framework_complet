@@ -1,9 +1,12 @@
 *** Settings ***
 Resource    ../../ressources/keywords/api/baseApi.robot
 Resource    ../../ressources/keywords/ui/loginUi.robot
+Resource    ../../ressources/keywords/api/userApi.robot
+
+*** Variables ***
+${USER_DATA}
 
 *** Test Cases ***
-Authentification Api
-    ${token_generer}=    Get Auth Token    emilys    emilyspass    refreshToken
-    Create Authenticated Session    ${token_generer}
-    GET Protected Resource    28
+Créer un nouvel utilisateur et Authentification
+    ${USER_DATA}=    Create user
+    Authentification user    ${USER_DATA}

@@ -2,4 +2,4 @@
 BROWSER: chromium
 HEADLESS: false
 BASE_URL: https://opensource-demo.orangehrmlive.com
-BASE_API_URL: https://dummyjson.com
+BASE_API_URL: https://practice.expandtesting.com
