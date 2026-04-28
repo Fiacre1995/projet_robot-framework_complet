@@ -28,11 +28,16 @@ Get Auth Token
 
 Create Authenticated Session
     [Arguments]    ${token}
-    ${headers}=    Create Dictionary    Authorization=Bearer ${token}   Content-Type=application/json
+    ${headers}=    Create Dictionary    x-auth-token=${token}   Content-Type=application/json
     Create Session    api    ${BASE_API_URL}    headers=${headers}
 
 GET Protected Resource
     [Arguments]     ${id}
     ${response}=    GET On Session    api    /products/${id}
     Log To Console    ${response.json()["id"]}
+    RETURN    ${response}
+
+DELETE Request
+    [Arguments]    ${endpoint}
+    ${response}=    DELETE On Session    api    ${endpoint}
     RETURN    ${response}
