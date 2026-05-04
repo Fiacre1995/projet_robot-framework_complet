@@ -1,9 +1,5 @@
-datasources:1b31ed2028dab69ca67937d8cd8c5d771ef72ae0
-commandlineoptions:975d77ebdf67e3d943d531aee479515583659eeb
+datasources:9a6edbeed87633f0bf486588377c4e067e78b52a
+commandlineoptions:bd144f9fd48525aa851150ebcc1f5cb54c0afa24
 suitesfrom:no-suites-from-option
-file:0a32584c3e7c8614f65d9aa71580ca5d5de23b50
---test Tests.Ui.Connexion Bd.Connexion bd valide
---test Tests.Ui.Login.Connexion avec des identifiants valident
---test Tests.Ui.Login.Connexion avec des identifiants invalident
---test Tests.Ui.Login.Connexion avec des identifiants vident
---test Tests.Ui.Test.Open Google
+file:b690cf532074c86f67eaff7e5cce1a89831429ce
+--suite testExemple
