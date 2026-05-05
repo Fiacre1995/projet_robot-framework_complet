@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.13.5 on win32)" generated="2026-05-05T00:34:17.948968" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="C:\Users\afiac\PycharmProjects\Projet_entreprise2\tests">
+<suite id="s1-s1" name="Ui" source="C:\Users\afiac\PycharmProjects\Projet_entreprise2\tests\ui">
+<suite id="s1-s1-s1" name="Test" source="C:\Users\afiac\PycharmProjects\Projet_entreprise2\tests\ui\test.robot">
+<test id="s1-s1-s1-t1" name="Open Google" line="5">
+<kw name="New Browser" owner="Browser">
+<msg time="2026-05-05T00:34:18.600523" level="INFO">{"browser": "chromium", "headless": true, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\afiac\\PycharmProjects\\Projet_entreprise2\\pabot_results\\5\\browser\\traces\\temp\\cb306322-fbcd-411c-88c4-0aea9d32467f"}</msg>
+<msg time="2026-05-05T00:34:18.679593" level="INFO">Starting Browser process C:\Users\afiac\PycharmProjects\Projet_entreprise2\.venv\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:50747</msg>
+<msg time="2026-05-05T00:34:21.729290" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":true,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\afiac\\PycharmProjects\\Projet_entreprise2\\pabot_results\\5\\browser\\traces\\temp\\cb306322-fbcd-411c-88c4-0aea9d32467f"}</msg>
+<arg>chromium</arg>
+<arg>headless=True</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2026-05-05T00:34:18.599537" elapsed="3.130039"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2026-05-05T00:34:23.866474" level="INFO">Successfully initialized new page object and opened url: https://www.google.com</msg>
+<msg time="2026-05-05T00:34:23.866633" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>https://www.google.com</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2026-05-05T00:34:21.729976" elapsed="2.136920"/>
+</kw>
+<msg time="2026-05-05T00:34:23.949807" level="INFO">Switching context to context=2fafb1af-0f8a-4c51-b0b5-50e9520bf68c in CURRENT</msg>
+<msg time="2026-05-05T00:34:23.975578" level="INFO">Successfully changed active context: context=2fafb1af-0f8a-4c51-b0b5-50e9520bf68c</msg>
+<msg time="2026-05-05T00:34:24.019265" level="INFO">Successfully closed Context</msg>
+<status status="PASS" start="2026-05-05T00:34:18.598458" elapsed="5.268793"/>
+</test>
+<test id="s1-s1-s1-t2" name="Test de iframe" line="10">
+<kw name="New Browser" owner="Browser">
+<msg time="2026-05-05T00:34:24.029049" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\afiac\\PycharmProjects\\Projet_entreprise2\\pabot_results\\5\\browser\\traces\\temp\\f921d5ad-377c-4b4c-9aa9-c1229c56ab2e"}</msg>
+<msg time="2026-05-05T00:34:24.698134" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\afiac\\PycharmProjects\\Projet_entreprise2\\pabot_results\\5\\browser\\traces\\temp\\f921d5ad-377c-4b4c-9aa9-c1229c56ab2e"}</msg>
+<arg>chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2026-05-05T00:34:24.027177" elapsed="0.671326"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2026-05-05T00:34:26.752434" level="INFO">Successfully initialized new page object and opened url: https://demoqa.com</msg>
+<msg time="2026-05-05T00:34:26.752573" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>https://demoqa.com</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2026-05-05T00:34:24.698832" elapsed="2.053969"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2026-05-05T00:34:26.754600" level="INFO">Clicks the element 'text=Alerts, Frame &amp; Windows'.</msg>
+<arg>text=Alerts, Frame &amp; Windows</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-05-05T00:34:26.753126" elapsed="2.239576"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2026-05-05T00:34:28.995741" level="INFO">Clicks the element 'span:has-text("Frames") &gt;&gt; nth=0'.</msg>
+<arg>span:has-text("Frames") &gt;&gt; nth=0</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-05-05T00:34:28.993453" elapsed="0.428340"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-05T00:34:29.546731" level="INFO">Waited for Element with selector iframe#frame1 at state visible</msg>
+<arg>iframe#frame1</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-05T00:34:29.422343" elapsed="0.124926"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-05T00:34:30.105062" level="INFO">Waited for Element with selector iframe#frame1 &gt;&gt;&gt; text=This is a sample page at state visible</msg>
+<arg>iframe#frame1 &gt;&gt;&gt; text=This is a sample page</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-05T00:34:29.547787" elapsed="0.557613"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2026-05-05T00:34:30.106853" level="INFO">Clicks the element 'text=Alerts &gt;&gt; nth=0'.</msg>
+<arg>text=Alerts &gt;&gt; nth=0</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-05-05T00:34:30.105758" elapsed="0.174392"/>
+</kw>
+<msg time="2026-05-05T00:34:30.400145" level="INFO">Switching context to context=a56c6777-5c43-49f4-ae49-0b9a3068c2cd in CURRENT</msg>
+<msg time="2026-05-05T00:34:30.422824" level="INFO">Successfully changed active context: context=a56c6777-5c43-49f4-ae49-0b9a3068c2cd</msg>
+<msg time="2026-05-05T00:34:30.534685" level="INFO">Successfully closed Context</msg>
+<status status="PASS" start="2026-05-05T00:34:24.020032" elapsed="6.260642"/>
+</test>
+<test id="s1-s1-s1-t3" name="Test sur les alertes" line="19">
+<kw name="New Browser" owner="Browser">
+<msg time="2026-05-05T00:34:30.564844" level="INFO">Switching browser to browser=b2f207fa-0580-4b68-a1bf-ad1b501f86e1</msg>
+<msg time="2026-05-05T00:34:30.582678" level="INFO">Successfully changed active browser: browser=b2f207fa-0580-4b68-a1bf-ad1b501f86e1</msg>
+<msg time="2026-05-05T00:34:30.582962" level="INFO">Reusing existing browser with id: browser=b2f207fa-0580-4b68-a1bf-ad1b501f86e1</msg>
+<arg>chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2026-05-05T00:34:30.560777" elapsed="0.022333"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2026-05-05T00:34:32.161227" level="INFO">Successfully initialized new page object and opened url: https://demoqa.com</msg>
+<msg time="2026-05-05T00:34:32.161443" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>https://demoqa.com</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2026-05-05T00:34:30.583463" elapsed="1.578434"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2026-05-05T00:34:32.165666" level="INFO">Clicks the element 'text=Alerts, Frame &amp; Windows'.</msg>
+<arg>text=Alerts, Frame &amp; Windows</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-05-05T00:34:32.163529" elapsed="1.658615"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2026-05-05T00:34:33.824426" level="INFO">Clicks the element 'text=Alerts &gt;&gt; nth=1'.</msg>
+<arg>text=Alerts &gt;&gt; nth=1</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-05-05T00:34:33.822739" elapsed="0.409745"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2026-05-05T00:34:34.235531" level="INFO">Clicks the element 'text=Click me &gt;&gt; nth=1'.</msg>
+<arg>text=Click me &gt;&gt; nth=1</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-05-05T00:34:34.233069" elapsed="0.753054"/>
+</kw>
+<msg time="2026-05-05T00:34:35.069606" level="INFO">Switching context to context=84def150-9e4d-4ef1-94b2-9f56f3c996c7 in CURRENT</msg>
+<msg time="2026-05-05T00:34:35.095955" level="INFO">Successfully changed active context: context=84def150-9e4d-4ef1-94b2-9f56f3c996c7</msg>
+<msg time="2026-05-05T00:34:35.196654" level="INFO">Successfully closed Context</msg>
+<tag>alertes</tag>
+<status status="PASS" start="2026-05-05T00:34:30.536662" elapsed="4.449956"/>
+</test>
+<status status="PASS" start="2026-05-05T00:34:18.035174" elapsed="17.163376"/>
+</suite>
+<status status="PASS" start="2026-05-05T00:34:18.033082" elapsed="17.182116"/>
+</suite>
+<status status="PASS" start="2026-05-05T00:34:17.955863" elapsed="17.260826"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">alertes</stat>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="3" fail="0" skip="0">Tests</stat>
+<stat name="Ui" id="s1-s1" pass="3" fail="0" skip="0">Tests.Ui</stat>
+<stat name="Test" id="s1-s1-s1" pass="3" fail="0" skip="0">Tests.Ui.Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

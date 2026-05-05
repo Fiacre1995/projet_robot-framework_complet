@@ -1,5 +1,11 @@
-datasources:9a6edbeed87633f0bf486588377c4e067e78b52a
-commandlineoptions:bd144f9fd48525aa851150ebcc1f5cb54c0afa24
+datasources:57032fd1bd95e4558b7ad708137f0e2ee65acd66
+commandlineoptions:bed9893078c3f66c49b8693fdac0b106e022a807
 suitesfrom:no-suites-from-option
-file:b690cf532074c86f67eaff7e5cce1a89831429ce
---suite testExemple
+file:30774e3887bb46fb2a21543abf857c1827344e20
+--suite Tests.Api.Test Api
+--suite Tests.Api.Test Api Auth
+--suite Tests.Api.Test Wiremock
+--suite Tests.Ui.Connexion Bd
+--suite Tests.Ui.Login
+--suite Tests.Ui.Test
+--suite Tests.Ui.testExemple

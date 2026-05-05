@@ -1,0 +1,18 @@
+{
+  "id": "a1b2c3d4-0000-0000-0000-000000000200",
+  "priority": 1,
+  "request": {
+    "method": "GET",
+    "urlPath": "/api/user/1",
+    "headers": {
+      "X-MOCK-STATUS": {
+        "absent": true
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "jsonBody": { "id": 1, "name": "John Doe", "email": "john@test.com" },
+    "headers": { "Content-Type": "application/json" }
+  }
+}

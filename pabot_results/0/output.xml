@@ -1,0 +1,789 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.13.5 on win32)" generated="2026-05-05T00:34:17.948852" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="C:\Users\afiac\PycharmProjects\Projet_entreprise2\tests">
+<suite id="s1-s1" name="Api" source="C:\Users\afiac\PycharmProjects\Projet_entreprise2\tests\api">
+<suite id="s1-s1-s1" name="Test Api" source="C:\Users\afiac\PycharmProjects\Projet_entreprise2\tests\api\test_api.robot">
+<kw name="Create API Session" owner="baseApi" type="SETUP">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2026-05-05T00:34:19.546306" level="INFO">Creating Session using : alias=api, url=https://practice.expandtesting.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>api</arg>
+<arg>${BASE_API_URL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2026-05-05T00:34:19.543760" elapsed="0.003067"/>
+</kw>
+<status status="PASS" start="2026-05-05T00:34:19.541935" elapsed="0.005124"/>
+</kw>
+<test id="s1-s1-s1-t1" name="Get All Products" line="8">
+<kw name="GET Request" owner="baseApi">
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2026-05-05T00:34:19.815628" level="INFO">GET Request : url=https://practice.expandtesting.com/products 
+ path_url=/products 
+ headers={'User-Agent': 'python-requests/2.33.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2026-05-05T00:34:19.815977" level="INFO">GET Response : url=https://practice.expandtesting.com/products 
+ status=200, reason=OK 
+ headers={'access-control-allow-origin': '*', 'access-control-allow-credentials': 'true', 'access-control-allow-methods': 'GET, POST, PUT, DELETE, PATCH', 'access-control-allow-headers': 'Origin, X-Requested-With, Authorization, Content-Type, Accept, X-Auth-Token', 'content-type': 'text/html; charset=utf-8', 'content-encoding': 'gzip', 'etag': 'W/"3199-Py1KEMzAu/9VORv6tS58T0f/+GM"', 'set-cookie': 'express:sess=eyJmbGFzaCI6e319; path=/; httponly, express:sess.sig=tdt42nQZiQvICqmrvHQ1_16fHk0; path=/; httponly', 'date': 'Mon, 04 May 2026 22:34:19 GMT', 'connection': 'keep-alive', 'keep-alive': 'timeout=5', 'transfer-encoding': 'chunked'} 
+ body=&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+	&lt;meta charset="utf-8"&gt;
+	&lt;meta name=viewport content="width=device-width,initial-scale=1"&gt;
+	&lt;title&gt;Products&lt;/title&gt;
+	&lt;meta name="description"
+		content="Practice Test Automation Website | Free Web UI and REST API Examples"&gt;
+
+	&lt;meta property="og:locale" content="en_US"&gt;
+
+
+
+	&lt;meta property="og:type" content="article" /&gt;
+	&lt;link rel="canonical" href="https://practice.expandtesting.com/products" /&gt;
+
+	&lt;meta property="og:title" content="Products"&gt;
+
+
+
+
+	&lt;meta name="google-adsense-account" content="ca-pub-1056034821646296"&gt;
+	&lt;meta name="msvalidate.01" content="C7DB002AC3EF3CA1AFB65068DA704F2B" /&gt;
+
+
+	&lt;link rel='shortcut icon' , href='/assets/images/favicon.png' type="image/png"&gt;
+	&lt;link rel="apple-touch-icon" href="/apple-touch-icon.png"&gt;
+
+	&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+	&lt;link rel='stylesheet' , href='/assets/css/main.css?v=e64cd80e'&gt;
+
+	&lt;style&gt;
+		ins.adsbygoogle[data-ad-status="unfilled"] {
+			display: none !important;
+		}
+
+
+		#contentbody {
+			position: relative;
+			margin: 0 auto;
+			padding: 2px;
+		}
+
+
+		#menuleft {
+			position: relative;
+			overflow: hidden;
+			float: left;
+			width: 15%;
+			height: auto;
+			margin-top: 1em;
+			z-index: 1;
+		}
+
+
+		#core {
+			position: relative;
+			margin-top: 1em;
+			overflow: hidden;
+			float: left;
+			width: 65%;
+			min-width: 500px;
+			border-left: 1px solid #c3c3c3;
+			border-right: 1px solid #c3c3c3;
+		}
+
+
+		#menuright {
+			overflow: hidden;
+			position: relative;
+			float: left;
+			width: 15%;
+			height: auto;
+			text-align: center;
+			margin-top: 1em;
+			z-index: 1;
+		}
+	&lt;/style&gt;
+
+	&lt;script src="https://code.jquery.com/jquery-3.6.3.min.js"&gt;&lt;/script&gt;
+	&lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+	&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		crossorigin="anonymous"&gt;&lt;/script&gt;
+
+
+	&lt;!-- Global site tag (gtag.js) - Google Analytics --&gt;
+	&lt;script async src="https://www.googletagmanager.com/gtag/js?id=G-90GRT6N40B"&gt;&lt;/script&gt;
+
+	&lt;script&gt;
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+		gtag('config', 'G-90GRT6N40B');
+	&lt;/script&gt;
+
+	&lt;!-- Google Ads --&gt;
+
+	&lt;script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1056034821646296"
+		crossorigin="anonymous"&gt;&lt;/script&gt;
+
+
+
+	&lt;script type="application/ld+json"&gt;
+		{
+			"@context": "https://schema.org",
+			"@type": "WebPage",
+			"name":  "Products",
+			"inLanguage":"en-US",
+			"url": "https://practice.expandtesting.com/products",
+			"description": "Practice Test Automation Website | Free Web UI and REST API Examples"
+		}
+	&lt;/script&gt;
+
+
+
+
+&lt;/head&gt;
+
+&lt;body class="d-flex flex-column min-vh-100"&gt;
+
+	
+	&lt;div class="ad-bar"&gt;
+	
+	
+	  &lt;p class="text-center ad-bar-text me-1 ms-1"&gt;&lt;a href="https://pmp.expandtesting.com/"&gt;PMP Practice&lt;/a&gt;
+	    | Free PMP Certification Mock Exam Test +900 Questions &amp; Quizzes
+	  &lt;/p&gt;
+	
+	&lt;/div&gt;
+	
+	&lt;div class="horizontal-divider" &lt;/div&gt;&lt;/div&gt;
+	
+	
+	
+	&lt;header class="navbar navbar-expand-md navbar-dark sticky-top main-navbar"&gt;
+	  &lt;nav class="container flex-wrap flex-md-nowrap" aria-label="Main navigation"&gt;
+	    &lt;a class="navbar-brand p-0 me-2 logo_title" href="/" aria-label="SUT"&gt;
+	      &lt;img src="/assets/images/logo.svg"
+	        alt="Best Website for Practice Automation Testing: Free UI and REST API Examples and Apps. Using Cypress, Playwright, Selenium, WebdriverIO and Postman."
+	        width="45" height="45" class="d-block my-1" role="img" /&gt;
+	      &lt;title&gt;SUT&lt;/title&gt;&amp;nbsp;Practice
+	    &lt;/a&gt;
+	
+	    &lt;button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#main-navbar"
+	      aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation"&gt;
+	      &lt;svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="bi" fill="currentColor" viewBox="0 0 16 16"&gt;
+	        &lt;path fill-rule="evenodd"
+	          d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"&gt;
+	        &lt;/path&gt;
+	      &lt;/svg&gt;
+	    &lt;/button&gt;
+	
+	
+	
+	    &lt;div class="navbar-collapse collapse" id="main-navbar"&gt;
+	      &lt;ul class="navbar-nav flex-row flex-wrap pt-2 py-md-0"&gt;
+	
+	
+	
+	        &lt;li class="nav-item dropdown col-6 col-md-auto"&gt;
+	          &lt;a class="nav-link dropdown-toggle" href="/#examples" id="examples-dropdown" role="button"
+	            data-bs-toggle="dropdown" aria-expanded="false"&gt;Demos&lt;/a&gt;
+	          &lt;ul class="dropdown-menu" aria-labelledby="examples-dropdown"&gt;
+	            &lt;li&gt;
+	              &lt;a class="dropdown-item" href="/#examples"&gt;Examples&lt;/a&gt;
+	            &lt;/li&gt;
+	            &lt;li&gt;
+	              &lt;hr class="dropdown-divider"&gt;
+	            &lt;li&gt;
+	              &lt;a class="dropdown-item" href="/#apps"&gt;Apps&lt;/a&gt;
+	            &lt;/li&gt;
+	            &lt;li&gt;
+	              &lt;hr class="dropdown-divider"&gt;
+	            &lt;/li&gt;
+	            &lt;li&gt;&lt;a class="dropdown-item" href="/#api"&gt;APIs&lt;/a&gt;&lt;/li&gt;
+	
+	            &lt;li&gt;
+	              &lt;hr class="dropdown-divider"&gt;
+	            &lt;/li&gt;
+	            &lt;li&gt;&lt;a class="dropdown-item" href="/#assertions"&gt;Assertions&lt;/a&gt;&lt;/li&gt;
+	            &lt;li&gt;
+	              &lt;hr class="dropdown-divider"&gt;
+	            &lt;/li&gt;
+	            &lt;li&gt;&lt;a class="dropdown-item" href="/#reports"&gt;Reports&lt;/a&gt;&lt;/li&gt;
+	
+	          &lt;/ul&gt;
+	        &lt;/li&gt;
+	
+	
+	        &lt;li class="nav-item col-6 col-md-auto"&gt;
+	          &lt;a class="nav-link p-2" href="/#tools"&gt;Tools&lt;/a&gt;
+	        &lt;/li&gt;
+	
+	        &lt;li class=" nav-item col-6 col-md-auto"&gt;
+	          &lt;a class="nav-link p-2" alt="Automation Tips" href="/tips"&gt;Tips&lt;/a&gt;
+	        &lt;/li&gt;
+	
+	        &lt;li class="nav-item col-6 col-md-auto"&gt;
+	          &lt;a class="nav-link p-2" href="/test-cases"&gt;Test Cases&lt;/a&gt;
+	        &lt;/li&gt;
+	
+	        &lt;li class="nav-item nav-item col-6 col-md-auto"&gt;
+	          &lt;a class="nav-link p-2" href="/notes/api/api-docs/"&gt;API Testing&lt;/a&gt;
+	        &lt;/li&gt;
+	
+	        &lt;li class="nav-item col-6 col-md-auto"&gt;
+	          &lt;a class="nav-link p-2" href="/about"&gt;About&lt;/a&gt;
+	        &lt;/li&gt;
+	
+	
+	      &lt;/ul&gt;
+	
+	      &lt;hr class="d-md-none text-white-50" /&gt;
+	
+	      &lt;ul class="navbar-nav flex-row flex-wrap ms-md-auto"&gt;
+	
+	      &lt;/ul&gt;
+	
+	      &lt;a class="btn btn-sut d-lg-inline-block my-2 my-md-0 ms-md-3" href="https://istqb.expandtesting.com/"&gt;Free ISTQB
+	        Mock Exams&lt;/a&gt;
+	    &lt;/div&gt;
+	
+	
+	  &lt;/nav&gt;
+	
+	&lt;/header&gt;
+
+	&lt;main class="flex-shrink-0 py-3"&gt;
+
+
+		&lt;div class="container-fluid mt-1 mb-3"&gt;
+		    &lt;div class="row"&gt;
+		        &lt;div class="col-12 border"&gt;
+		
+		            &lt;ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article"
+		                data-ad-format="fluid" data-ad-client="ca-pub-1056034821646296" data-ad-slot="4970212221"&gt;&lt;/ins&gt;
+		            &lt;script&gt;
+		                (adsbygoogle = window.adsbygoogle || []).push({});
+		            &lt;/script&gt;
+		
+		        &lt;/div&gt;
+		    &lt;/div&gt;
+		
+		&lt;/div&gt;
+
+		&lt;div class="container" id="support-coffee"&gt;
+		    &lt;p class="text-center X-border X-border-1 coffee-border px-2 py-2"&gt;
+		        Do you enjoy this platform? ❤️ &lt;a href="https://www.buymeacoffee.com/expandtesting"
+		            class="btn btn-expand btn-sm" target="_blank"&gt;Buy us a coffee&lt;/a&gt;
+		    &lt;/p&gt;
+		&lt;/div&gt;
+
+		&lt;div id="contentbody"&gt;
+
+			&lt;div id="menuleft"&gt;
+				&lt;!-- ad-sidebar --&gt;
+				&lt;ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1056034821646296" data-ad-slot="2406335743"
+				    data-ad-format="auto" data-full-width-responsive="true"&gt;&lt;/ins&gt;
+				&lt;script&gt;
+				    (adsbygoogle = window.adsbygoogle || []).push({});
+				&lt;/script&gt;			&lt;/div&gt;
+			&lt;div id="core"&gt;
+				&lt;div class="container py-4"&gt;
+    &lt;h1&gt;Products&lt;/h1&gt;
+    &lt;p class="text-muted"&gt;Browse our products.&lt;/p&gt;
+
+    &lt;div class="row"&gt;
+        &lt;div class="col-md-4"&gt;
+            &lt;div class="card shadow-sm"&gt;
+                &lt;div class="card-body"&gt;
+                    &lt;h5 class="card-title"&gt;Product Alpha&lt;/h5&gt;
+                    &lt;p class="card-text"&gt;Simple product description.&lt;/p&gt;
+                    &lt;a href="/products/1" class="btn btn-primary" data-testid="product-open-1"&gt;
+                        View details
+                    &lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Interruption modal --&gt;
+&lt;div id="interruptionOverlay" class="position-fixed top-0 start-0 w-100 h-100 d-none"
+    style="background: rgba(0,0,0,.55); z-index:9999;" data-testid="interruption-overlay" aria-hidden="true"&gt;
+
+    &lt;div class="bg-white rounded-4 p-3 shadow" style="width: min(480px, 92vw);" role="dialog" aria-modal="true"
+        aria-label="Interruption modal"&gt;
+
+        &lt;div class="d-flex justify-content-between align-items-center"&gt;
+            &lt;strong&gt;Special offer&lt;/strong&gt;
+            &lt;button class="btn btn-sm btn-light" type="button" data-testid="interruption-close"
+                aria-label="Close"&gt;✕&lt;/button&gt;
+        &lt;/div&gt;
+
+        &lt;p class="mt-2 small"&gt;This message may appear anytime.&lt;/p&gt;
+
+        &lt;div class="d-flex justify-content-end"&gt;
+            &lt;button class="btn btn-primary btn-sm" type="button" data-testid="interruption-accept"&gt;
+                Continue
+            &lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;style&gt;
+    /* ✅ centrage + blocage réel des clics derrière */
+    #interruptionOverlay {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        pointer-events: auto;
+        /* l’overlay capte les clics */
+    }
+
+    /* ✅ Quand le popup est visible, on bloque le scroll page */
+    body.modal-open {
+        overflow: hidden;
+    }
+&lt;/style&gt;
+
+&lt;script&gt;
+    (function () {
+        const overlay = document.getElementById('interruptionOverlay');
+        if (!overlay) return;
+
+        const open = () =&gt; {
+            overlay.classList.remove('d-none');
+            overlay.setAttribute('aria-hidden', 'false');
+            document.body.classList.add('modal-open');
+        };
+
+      ... (set the log level to DEBUG or TRACE to see the full content) 
+ </msg>
+<msg time="2026-05-05T00:34:19.816727" level="INFO">C:\Users\afiac\PycharmProjects\Projet_entreprise2\.venv\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'practice.expandtesting.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2026-05-05T00:34:19.817030" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>api</arg>
+<arg>${endpoint}</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2026-05-05T00:34:19.548546" elapsed="0.268546"/>
+</kw>
+<return>
+<value>${response}</value>
+<status status="PASS" start="2026-05-05T00:34:19.817249" elapsed="0.000257"/>
+</return>
+<msg time="2026-05-05T00:34:19.817835" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>/products</arg>
+<status status="PASS" start="2026-05-05T00:34:19.547956" elapsed="0.269935"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2026-05-05T00:34:19.819548" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${response.status_code}</arg>
+<arg>200</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2026-05-05T00:34:19.818162" elapsed="0.001511"/>
+</kw>
+<msg time="2026-05-05T00:34:19.872508" level="INFO">Starting Browser process C:\Users\afiac\PycharmProjects\Projet_entreprise2\.venv\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:50775</msg>
+<status status="PASS" start="2026-05-05T00:34:19.547207" elapsed="0.272706"/>
+</test>
+<test id="s1-s1-s1-t2" name="Create New Post" line="12">
+<kw name="Générer un titre" owner="loginUi">
+<kw name="Generate Title" owner="Faker">
+<msg time="2026-05-05T00:34:22.233892" level="INFO">${titre} = Enfoncer auprès sembler se secret dessus escalier.</msg>
+<var>${titre}</var>
+<status status="PASS" start="2026-05-05T00:34:22.233437" elapsed="0.000503"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-05-05T00:34:22.234559" level="INFO">Enfoncer auprès sembler se secret dessus escalier.</msg>
+<arg>${titre}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-05-05T00:34:22.234108" elapsed="0.000533"/>
+</kw>
+<msg time="2026-05-05T00:34:22.234819" level="INFO">${titre} = None</msg>
+<var>${titre}</var>
+<status status="PASS" start="2026-05-05T00:34:22.232854" elapsed="0.002004"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2026-05-05T00:34:22.235906" level="INFO">${body} = {'title': None}</msg>
+<var>${body}</var>
+<arg>title=${titre}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2026-05-05T00:34:22.235099" elapsed="0.000859"/>
+</kw>
+<kw name="POST Request" owner="baseApi">
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2026-05-05T00:34:22.521107" level="INFO">POST Request : url=https://practice.expandtesting.com/products/add 
+ path_url=/products/add 
+ headers={'User-Agent': 'python-requests/2.33.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Cookie': 'express:sess=eyJmbGFzaCI6e319; express:sess.sig=tdt42nQZiQvICqmrvHQ1_16fHk0', 'Content-Length': '15', 'Content-Type': 'application/json'} 
+ body=b'{"title": null}' 
+ </msg>
+<msg time="2026-05-05T00:34:22.521493" level="INFO">POST Response : url=https://practice.expandtesting.com/products/add 
+ status=404, reason=Not Found 
+ headers={'access-control-allow-origin': '*', 'access-control-allow-credentials': 'true', 'access-control-allow-methods': 'GET, POST, PUT, DELETE, PATCH', 'access-control-allow-headers': 'Origin, X-Requested-With, Authorization, Content-Type, Accept, X-Auth-Token', 'content-type': 'text/html; charset=utf-8', 'content-encoding': 'gzip', 'etag': 'W/"6c6e-DHb6s6KClOyVknnUvuseV+i60Fs"', 'date': 'Mon, 04 May 2026 22:34:22 GMT', 'connection': 'keep-alive', 'keep-alive': 'timeout=5', 'transfer-encoding': 'chunked'} 
+ body=&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+	&lt;meta charset="utf-8"&gt;
+	&lt;meta name=viewport content="width=device-width,initial-scale=1"&gt;
+	&lt;title&gt;404 Page Not Found&lt;/title&gt;
+	&lt;meta name="description"
+		content="Practice Test Automation Website | Free Web UI and REST API Examples"&gt;
+
+	&lt;meta property="og:locale" content="en_US"&gt;
+
+
+
+	&lt;meta property="og:type" content="article" /&gt;
+	&lt;link rel="canonical" href="https://practice.expandtesting.com/products/add" /&gt;
+
+	&lt;meta property="og:title" content="404 Page Not Found"&gt;
+
+
+
+
+	&lt;meta name="google-adsense-account" content="ca-pub-1056034821646296"&gt;
+	&lt;meta name="msvalidate.01" content="C7DB002AC3EF3CA1AFB65068DA704F2B" /&gt;
+
+
+	&lt;link rel='shortcut icon' , href='/assets/images/favicon.png' type="image/png"&gt;
+	&lt;link rel="apple-touch-icon" href="/apple-touch-icon.png"&gt;
+
+	&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+	&lt;link rel='stylesheet' , href='/assets/css/main.css?v=e64cd80e'&gt;
+
+	&lt;style&gt;
+		ins.adsbygoogle[data-ad-status="unfilled"] {
+			display: none !important;
+		}
+
+
+		#contentbody {
+			position: relative;
+			margin: 0 auto;
+			padding: 2px;
+		}
+
+
+		#menuleft {
+			position: relative;
+			overflow: hidden;
+			float: left;
+			width: 15%;
+			height: auto;
+			margin-top: 1em;
+			z-index: 1;
+		}
+
+
+		#core {
+			position: relative;
+			margin-top: 1em;
+			overflow: hidden;
+			float: left;
+			width: 65%;
+			min-width: 500px;
+			border-left: 1px solid #c3c3c3;
+			border-right: 1px solid #c3c3c3;
+		}
+
+
+		#menuright {
+			overflow: hidden;
+			position: relative;
+			float: left;
+			width: 15%;
+			height: auto;
+			text-align: center;
+			margin-top: 1em;
+			z-index: 1;
+		}
+	&lt;/style&gt;
+
+	&lt;script src="https://code.jquery.com/jquery-3.6.3.min.js"&gt;&lt;/script&gt;
+	&lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+	&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		crossorigin="anonymous"&gt;&lt;/script&gt;
+
+
+	&lt;!-- Global site tag (gtag.js) - Google Analytics --&gt;
+	&lt;script async src="https://www.googletagmanager.com/gtag/js?id=G-90GRT6N40B"&gt;&lt;/script&gt;
+
+	&lt;script&gt;
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+		gtag('config', 'G-90GRT6N40B');
+	&lt;/script&gt;
+
+	&lt;!-- Google Ads --&gt;
+
+	&lt;script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1056034821646296"
+		crossorigin="anonymous"&gt;&lt;/script&gt;
+
+
+
+	&lt;script type="application/ld+json"&gt;
+		{
+			"@context": "https://schema.org",
+			"@type": "WebPage",
+			"name":  "404 Page Not Found",
+			"inLanguage":"en-US",
+			"url": "https://practice.expandtesting.com/products/add",
+			"description": "Practice Test Automation Website | Free Web UI and REST API Examples"
+		}
+	&lt;/script&gt;
+
+
+
+
+&lt;/head&gt;
+
+&lt;body class="d-flex flex-column min-vh-100"&gt;
+
+	
+	&lt;div class="ad-bar"&gt;
+	
+	
+	  &lt;p class="text-center ad-bar-text me-1 ms-1"&gt;&lt;a href="https://pmp.expandtesting.com/"&gt;PMP Practice&lt;/a&gt;
+	    | Free PMP Certification Mock Exam Test +900 Questions &amp; Quizzes
+	  &lt;/p&gt;
+	
+	&lt;/div&gt;
+	
+	&lt;div class="horizontal-divider" &lt;/div&gt;&lt;/div&gt;
+	
+	
+	
+	&lt;header class="navbar navbar-expand-md navbar-dark sticky-top main-navbar"&gt;
+	  &lt;nav class="container flex-wrap flex-md-nowrap" aria-label="Main navigation"&gt;
+	    &lt;a class="navbar-brand p-0 me-2 logo_title" href="/" aria-label="SUT"&gt;
+	      &lt;img src="/assets/images/logo.svg"
+	        alt="Best Website for Practice Automation Testing: Free UI and REST API Examples and Apps. Using Cypress, Playwright, Selenium, WebdriverIO and Postman."
+	        width="45" height="45" class="d-block my-1" role="img" /&gt;
+	      &lt;title&gt;SUT&lt;/title&gt;&amp;nbsp;Practice
+	    &lt;/a&gt;
+	
+	    &lt;button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#main-navbar"
+	      aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation"&gt;
+	      &lt;svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="bi" fill="currentColor" viewBox="0 0 16 16"&gt;
+	        &lt;path fill-rule="evenodd"
+	          d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"&gt;
+	        &lt;/path&gt;
+	      &lt;/svg&gt;
+	    &lt;/button&gt;
+	
+	
+	
+	    &lt;div class="navbar-collapse collapse" id="main-navbar"&gt;
+	      &lt;ul class="navbar-nav flex-row flex-wrap pt-2 py-md-0"&gt;
+	
+	
+	
+	        &lt;li class="nav-item dropdown col-6 col-md-auto"&gt;
+	          &lt;a class="nav-link dropdown-toggle" href="/#examples" id="examples-dropdown" role="button"
+	            data-bs-toggle="dropdown" aria-expanded="false"&gt;Demos&lt;/a&gt;
+	          &lt;ul class="dropdown-menu" aria-labelledby="examples-dropdown"&gt;
+	            &lt;li&gt;
+	              &lt;a class="dropdown-item" href="/#examples"&gt;Examples&lt;/a&gt;
+	            &lt;/li&gt;
+	            &lt;li&gt;
+	              &lt;hr class="dropdown-divider"&gt;
+	            &lt;li&gt;
+	              &lt;a class="dropdown-item" href="/#apps"&gt;Apps&lt;/a&gt;
+	            &lt;/li&gt;
+	            &lt;li&gt;
+	              &lt;hr class="dropdown-divider"&gt;
+	            &lt;/li&gt;
+	            &lt;li&gt;&lt;a class="dropdown-item" href="/#api"&gt;APIs&lt;/a&gt;&lt;/li&gt;
+	
+	            &lt;li&gt;
+	              &lt;hr class="dropdown-divider"&gt;
+	            &lt;/li&gt;
+	            &lt;li&gt;&lt;a class="dropdown-item" href="/#assertions"&gt;Assertions&lt;/a&gt;&lt;/li&gt;
+	            &lt;li&gt;
+	              &lt;hr class="dropdown-divider"&gt;
+	            &lt;/li&gt;
+	            &lt;li&gt;&lt;a class="dropdown-item" href="/#reports"&gt;Reports&lt;/a&gt;&lt;/li&gt;
+	
+	          &lt;/ul&gt;
+	        &lt;/li&gt;
+	
+	
+	        &lt;li class="nav-item col-6 col-md-auto"&gt;
+	          &lt;a class="nav-link p-2" href="/#tools"&gt;Tools&lt;/a&gt;
+	        &lt;/li&gt;
+	
+	        &lt;li class=" nav-item col-6 col-md-auto"&gt;
+	          &lt;a class="nav-link p-2" alt="Automation Tips" href="/tips"&gt;Tips&lt;/a&gt;
+	        &lt;/li&gt;
+	
+	        &lt;li class="nav-item col-6 col-md-auto"&gt;
+	          &lt;a class="nav-link p-2" href="/test-cases"&gt;Test Cases&lt;/a&gt;
+	        &lt;/li&gt;
+	
+	        &lt;li class="nav-item nav-item col-6 col-md-auto"&gt;
+	          &lt;a class="nav-link p-2" href="/notes/api/api-docs/"&gt;API Testing&lt;/a&gt;
+	        &lt;/li&gt;
+	
+	        &lt;li class="nav-item col-6 col-md-auto"&gt;
+	          &lt;a class="nav-link p-2" href="/about"&gt;About&lt;/a&gt;
+	        &lt;/li&gt;
+	
+	
+	      &lt;/ul&gt;
+	
+	      &lt;hr class="d-md-none text-white-50" /&gt;
+	
+	      &lt;ul class="navbar-nav flex-row flex-wrap ms-md-auto"&gt;
+	
+	      &lt;/ul&gt;
+	
+	      &lt;a class="btn btn-sut d-lg-inline-block my-2 my-md-0 ms-md-3" href="https://istqb.expandtesting.com/"&gt;Free ISTQB
+	        Mock Exams&lt;/a&gt;
+	    &lt;/div&gt;
+	
+	
+	  &lt;/nav&gt;
+	
+	&lt;/header&gt;
+
+	&lt;main class="flex-shrink-0 py-3"&gt;
+
+
+		&lt;div class="container-fluid mt-1 mb-3"&gt;
+		    &lt;div class="row"&gt;
+		        &lt;div class="col-12 border"&gt;
+		
+		            &lt;ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article"
+		                data-ad-format="fluid" data-ad-client="ca-pub-1056034821646296" data-ad-slot="4970212221"&gt;&lt;/ins&gt;
+		            &lt;script&gt;
+		                (adsbygoogle = window.adsbygoogle || []).push({});
+		            &lt;/script&gt;
+		
+		        &lt;/div&gt;
+		    &lt;/div&gt;
+		
+		&lt;/div&gt;
+
+		&lt;div class="container" id="support-coffee"&gt;
+		    &lt;p class="text-center X-border X-border-1 coffee-border px-2 py-2"&gt;
+		        Do you enjoy this platform? ❤️ &lt;a href="https://www.buymeacoffee.com/expandtesting"
+		            class="btn btn-expand btn-sm" target="_blank"&gt;Buy us a coffee&lt;/a&gt;
+		    &lt;/p&gt;
+		&lt;/div&gt;
+
+		&lt;div id="contentbody"&gt;
+
+			&lt;div id="menuleft"&gt;
+				&lt;!-- ad-sidebar --&gt;
+				&lt;ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1056034821646296" data-ad-slot="2406335743"
+				    data-ad-format="auto" data-full-width-responsive="true"&gt;&lt;/ins&gt;
+				&lt;script&gt;
+				    (adsbygoogle = window.adsbygoogle || []).push({});
+				&lt;/script&gt;			&lt;/div&gt;
+			&lt;div id="core"&gt;
+				&lt;div class='page-layout'&gt;
+  &lt;div class='container'&gt;
+    &lt;div class='page-inner'&gt;
+      &lt;div class='not-available text-center mt-xl-5'&gt;
+        &lt;div class='clearfix fadeInDown animate mb-4'&gt;
+          &lt;svg
+            data-name='Layer 1'
+            width='270'
+            height='200'
+            viewBox='0 0 1097 810'
+            xmlns='http://www.w3.org/2000/svg'
+          &gt;&lt;defs&gt;&lt;linearGradient
+                id='a'
+                x1='588.67'
+                y1='838.15'
+                x2='588.67'
+                y2='115.47'
+                gradientUnits='userSpaceOnUse'
+              &gt;&lt;stop offset='0' stop-color='gray' stop-opacity='.25'&gt;&lt;/stop&gt;&lt;stop
+                  offset='.54'
+                  stop-color='gray'
+                  stop-opacity='.12'
+                &gt;&lt;/stop&gt;&lt;stop offset='1' stop-color='gray' stop-opacity='.1'&gt;&lt;/stop&gt;&lt;/linearGradient&gt;&lt;/defs&gt;&lt;path
+              d='M12.07 429.97c17.36 74.2 54.11 138.34 112.19 169.43 120.7 64.61 392.91 31.29 596.07-7a465.21 465.21 0 0 0 264.54-151.19z'
+              fill='currentcolor'
+              class='text-primary'
+              opacity='.1'
+            &gt;&lt;/path&gt;&lt;path
+              d='M799.31 649.72s-67.65 40.8 57.03 103.59c0 0 27.46-51-2.9-92.57a40.94 40.94 0 0 0-53.12-11.64z'
+              fill='currentcolor'
+              class='text-primary'
+            &gt;&lt;/path&gt;&lt;path
+              d='M800.09 648.86s57.88 44.28 56.25 104.45'
+              fill='none'
+              stroke='#535461'
+              stroke-miterlimit='10'
+            &gt;&lt;/path&gt;&lt;path
+              d='M18.31 661.72s-67.65 40.8 57.03 103.59c0 0 27.46-51-2.9-92.57a40.94 40.94 0 0 0-53.12-11.64z'
+              fill='currentcolor'
+              class='text-primary'
+            &gt;&lt;/path&gt;&lt;path
+              d='M19.09 660.86s57.88 44.28 56.25 104.45'
+              fill='none'
+              stroke='#535461'
+              stroke-miterlimit='10'
+            &gt;&lt;/path&gt;&lt;path
+              d='M859.66 759.08s-21.19-72 4-124.91a113.65 113.65 0 0 0 9.19-71.3 191.13 191.13 0 0 0-10.19-33.46'
+              fill='none'
+              stroke='#535461'
+              stroke-miterlimit='10'
+              stroke-width='2'
+            &gt;&lt;/path&gt;&lt;path
+              d='M878.35 495.95c0 8.82-16 34.39-16 34.39s-16-... (set the log level to DEBUG or TRACE to see the full content) 
+ </msg>
+<msg time="2026-05-05T00:34:22.522093" level="INFO">C:\Users\afiac\PycharmProjects\Projet_entreprise2\.venv\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'practice.expandtesting.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2026-05-05T00:34:22.522408" level="FAIL">HTTPError: 404 Client Error: Not Found for url: https://practice.expandtesting.com/products/add</msg>
+<var>${response}</var>
+<arg>api</arg>
+<arg>${endpoint}</arg>
+<arg>json=${body}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="FAIL" start="2026-05-05T00:34:22.236798" elapsed="0.291926">HTTPError: 404 Client Error: Not Found for url: https://practice.expandtesting.com/products/add</status>
+</kw>
+<return>
+<value>${response}</value>
+<status status="NOT RUN" start="2026-05-05T00:34:22.528963" elapsed="0.000213"/>
+</return>
+<var>${response}</var>
+<arg>/products/add</arg>
+<arg>${body}</arg>
+<status status="FAIL" start="2026-05-05T00:34:22.236250" elapsed="0.293178">HTTPError: 404 Client Error: Not Found for url: https://practice.expandtesting.com/products/add</status>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<arg>${response.status_code}</arg>
+<arg>201</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="NOT RUN" start="2026-05-05T00:34:22.529833" elapsed="0.000228"/>
+</kw>
+<status status="FAIL" start="2026-05-05T00:34:22.227641" elapsed="0.302750">HTTPError: 404 Client Error: Not Found for url: https://practice.expandtesting.com/products/add</status>
+</test>
+<status status="FAIL" start="2026-05-05T00:34:18.055646" elapsed="4.487254"/>
+</suite>
+<status status="FAIL" start="2026-05-05T00:34:18.052794" elapsed="4.501056"/>
+</suite>
+<status status="FAIL" start="2026-05-05T00:34:17.954559" elapsed="4.600138"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="1" fail="1" skip="0">Tests</stat>
+<stat name="Api" id="s1-s1" pass="1" fail="1" skip="0">Tests.Api</stat>
+<stat name="Test Api" id="s1-s1-s1" pass="1" fail="1" skip="0">Tests.Api.Test Api</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

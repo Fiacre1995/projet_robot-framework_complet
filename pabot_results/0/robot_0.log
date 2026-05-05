@@ -1,0 +1,26 @@
+2026-05-05 00:34:18.046903 ==============================================================================
+2026-05-05 00:34:18.052703 Tests
+2026-05-05 00:34:18.052773 ==============================================================================
+2026-05-05 00:34:18.052812 Tests.Api
+2026-05-05 00:34:18.055719 ==============================================================================
+2026-05-05 00:34:19.487120 Tests.Api.Test Api
+2026-05-05 00:34:19.539596 ==============================================================================
+2026-05-05 00:34:19.783709 C:\Users\afiac\PycharmProjects\Projet_entreprise2\.venv\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'practice.expandtesting.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+2026-05-05 00:34:19.847081   warnings.warn(
+2026-05-05 00:34:22.177589 Get All Products                                                      | PASS |
+2026-05-05 00:34:22.227509 ------------------------------------------------------------------------------
+2026-05-05 00:34:22.475504 Create New Post                                                       | FAIL |
+2026-05-05 00:34:22.475504 C:\Users\afiac\PycharmProjects\Projet_entreprise2\.venv\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'practice.expandtesting.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+2026-05-05 00:34:22.571736 HTTPError: 404 Client Error: Not Found for url: https://practice.expandtesting.com/products/add
+2026-05-05 00:34:22.571736   warnings.warn(
+2026-05-05 00:34:22.571854 ------------------------------------------------------------------------------
+2026-05-05 00:34:22.571888 Tests.Api.Test Api                                                    | FAIL |
+2026-05-05 00:34:22.571911 2 tests, 1 passed, 1 failed
+2026-05-05 00:34:22.571928 ==============================================================================
+2026-05-05 00:34:22.571947 Tests.Api                                                             | FAIL |
+2026-05-05 00:34:22.571963 2 tests, 1 passed, 1 failed
+2026-05-05 00:34:22.571981 ==============================================================================
+2026-05-05 00:34:22.571998 Tests                                                                 | FAIL |
+2026-05-05 00:34:22.572015 2 tests, 1 passed, 1 failed
+2026-05-05 00:34:22.572033 ==============================================================================
+2026-05-05 00:34:22.572050 Output:  C:\Users\afiac\PycharmProjects\Projet_entreprise2\pabot_results\0\output.xml

@@ -1,0 +1,17 @@
+--suite Tests.Ui.Test
+--variable ENV:dev
+--variable CALLER_ID:481a8a11d3f04d1f9c7ad9f4b020e413
+--variable PABOTLIBURI:127.0.0.1:8270
+--variable PABOTEXECUTIONPOOLID:1
+--variable PABOTISLASTEXECUTIONINPOOL:0
+--variable PABOTNUMBEROFPROCESSES:12
+--variable PABOTQUEUEINDEX:5
+--variable PABOTLASTLEVEL:Tests.Ui.Test
+--output output.xml
+--log NONE
+--report NONE
+--xunit NONE
+--outputdir .\pabot_results\5
+--consolecolors off
+--consolemarkers off
+.\tests\

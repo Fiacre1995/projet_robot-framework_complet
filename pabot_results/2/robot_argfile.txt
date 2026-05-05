@@ -1,0 +1,17 @@
+--suite Tests.Api.Test Wiremock
+--variable ENV:dev
+--variable CALLER_ID:e5b7a1e6e73848f3b7c5023f8d0f9345
+--variable PABOTLIBURI:127.0.0.1:8270
+--variable PABOTEXECUTIONPOOLID:0
+--variable PABOTISLASTEXECUTIONINPOOL:0
+--variable PABOTNUMBEROFPROCESSES:12
+--variable PABOTQUEUEINDEX:2
+--variable PABOTLASTLEVEL:Tests.Api
+--output output.xml
+--log NONE
+--report NONE
+--xunit NONE
+--outputdir .\pabot_results\2
+--consolecolors off
+--consolemarkers off
+.\tests\

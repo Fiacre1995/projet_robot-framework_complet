@@ -1,0 +1,1 @@
+[ WARN ] Error in file 'C:\Users\afiac\PycharmProjects\Projet_entreprise2\ressources\keywords\api\wiremock.robot' on line 10: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.
