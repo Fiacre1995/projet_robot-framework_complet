@@ -1,0 +1,118 @@
+{"level":30,"time":"2026-05-04T22:34:21.052Z","pid":37692,"hostname":"Fiacre_DION","msg":"Listening on 127.0.0.1:50747"}
+{"level":30,"time":"2026-05-04T22:34:21.453Z","pid":37692,"hostname":"Fiacre_DION","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2026-05-04T22:34:21.725Z","pid":37692,"hostname":"Fiacre_DION","msg":"Adding browser to stack: chromium, version: 145.0.7632.6"}
+{"level":30,"time":"2026-05-04T22:34:21.726Z","pid":37692,"hostname":"Fiacre_DION","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2026-05-04T22:34:21.726Z","pid":37692,"hostname":"Fiacre_DION","msg":"End of node method newBrowser"}
+{"level":30,"time":"2026-05-04T22:34:21.734Z","pid":37692,"hostname":"Fiacre_DION","msg":"Start of node method newPage"}
+{"level":30,"time":"2026-05-04T22:34:21.734Z","pid":37692,"hostname":"Fiacre_DION","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@880e6882b658af071fd4054c1b790a32\"},\"headless\":true,\"_contextStack\":[],\"id\":\"browser=ea4cee24-57d4-4f80-91f1-578eae4306b7\"}"}
+{"level":30,"time":"2026-05-04T22:34:21.750Z","pid":37692,"hostname":"Fiacre_DION","msg":"Setting default timeout for context context=2fafb1af-0f8a-4c51-b0b5-50e9520bf68c to 10000"}
+{"level":30,"time":"2026-05-04T22:34:21.750Z","pid":37692,"hostname":"Fiacre_DION","msg":"Changed active context: context=2fafb1af-0f8a-4c51-b0b5-50e9520bf68c"}
+{"level":30,"time":"2026-05-04T22:34:22.001Z","pid":37692,"hostname":"Fiacre_DION","msg":"Video path: undefined"}
+{"level":30,"time":"2026-05-04T22:34:22.002Z","pid":37692,"hostname":"Fiacre_DION","msg":"Changed active page"}
+{"level":30,"time":"2026-05-04T22:34:23.824Z","pid":37692,"hostname":"Fiacre_DION","msg":"End of node method newPage"}
+{"level":30,"time":"2026-05-04T22:34:23.883Z","pid":37692,"hostname":"Fiacre_DION","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-04T22:34:23.922Z","pid":37692,"hostname":"Fiacre_DION","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-04T22:34:23.930Z","pid":37692,"hostname":"Fiacre_DION","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-04T22:34:23.935Z","pid":37692,"hostname":"Fiacre_DION","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-04T22:34:23.941Z","pid":37692,"hostname":"Fiacre_DION","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-04T22:34:23.945Z","pid":37692,"hostname":"Fiacre_DION","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-04T22:34:23.952Z","pid":37692,"hostname":"Fiacre_DION","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-04T22:34:23.957Z","pid":37692,"hostname":"Fiacre_DION","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-04T22:34:23.964Z","pid":37692,"hostname":"Fiacre_DION","msg":"Changed active context: context=2fafb1af-0f8a-4c51-b0b5-50e9520bf68c"}
+{"level":30,"time":"2026-05-04T22:34:23.965Z","pid":37692,"hostname":"Fiacre_DION","msg":"Changing current active page: page=809e7c44-7d10-4246-b6e7-0b8c31754bf2"}
+{"level":30,"time":"2026-05-04T22:34:23.965Z","pid":37692,"hostname":"Fiacre_DION","msg":"Changed active page"}
+{"level":30,"time":"2026-05-04T22:34:23.977Z","pid":37692,"hostname":"Fiacre_DION","msg":"Start of node method closeContext"}
+{"level":30,"time":"2026-05-04T22:34:23.996Z","pid":37692,"hostname":"Fiacre_DION","msg":"Removed page=54ce461e-5e21-4778-a69b-182951f5e58e from context=2fafb1af-0f8a-4c51-b0b5-50e9520bf68c page stack"}
+{"level":30,"time":"2026-05-04T22:34:24.015Z","pid":37692,"hostname":"Fiacre_DION","msg":"End of node method closeContext"}
+{"level":30,"time":"2026-05-04T22:34:24.023Z","pid":37692,"hostname":"Fiacre_DION","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-04T22:34:24.024Z","pid":37692,"hostname":"Fiacre_DION","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-04T22:34:24.031Z","pid":37692,"hostname":"Fiacre_DION","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2026-05-04T22:34:24.657Z","pid":37692,"hostname":"Fiacre_DION","msg":"Adding browser to stack: chromium, version: 145.0.7632.6"}
+{"level":30,"time":"2026-05-04T22:34:24.657Z","pid":37692,"hostname":"Fiacre_DION","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2026-05-04T22:34:24.657Z","pid":37692,"hostname":"Fiacre_DION","msg":"End of node method newBrowser"}
+{"level":30,"time":"2026-05-04T22:34:24.707Z","pid":37692,"hostname":"Fiacre_DION","msg":"Start of node method newPage"}
+{"level":30,"time":"2026-05-04T22:34:24.707Z","pid":37692,"hostname":"Fiacre_DION","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@da404fb7b407fd71cc7fb486a86371ed\"},\"headless\":false,\"_contextStack\":[],\"id\":\"browser=b2f207fa-0580-4b68-a1bf-ad1b501f86e1\"}"}
+{"level":30,"time":"2026-05-04T22:34:24.813Z","pid":37692,"hostname":"Fiacre_DION","msg":"Setting default timeout for context context=a56c6777-5c43-49f4-ae49-0b9a3068c2cd to 10000"}
+{"level":30,"time":"2026-05-04T22:34:24.813Z","pid":37692,"hostname":"Fiacre_DION","msg":"Changed active context: context=a56c6777-5c43-49f4-ae49-0b9a3068c2cd"}
+{"level":30,"time":"2026-05-04T22:34:25.417Z","pid":37692,"hostname":"Fiacre_DION","msg":"Video path: undefined"}
+{"level":30,"time":"2026-05-04T22:34:25.417Z","pid":37692,"hostname":"Fiacre_DION","msg":"Changed active page"}
+{"level":30,"time":"2026-05-04T22:34:26.747Z","pid":37692,"hostname":"Fiacre_DION","msg":"End of node method newPage"}
+{"level":30,"time":"2026-05-04T22:34:26.758Z","pid":37692,"hostname":"Fiacre_DION","msg":"Start of node method click"}
+{"level":30,"time":"2026-05-04T22:34:26.759Z","pid":37692,"hostname":"Fiacre_DION","msg":"Strict mode is enabled, find Locator with text=Alerts, Frame & Windows in page."}
+{"level":30,"time":"2026-05-04T22:34:28.989Z","pid":37692,"hostname":"Fiacre_DION","msg":"End of node method click"}
+{"level":30,"time":"2026-05-04T22:34:28.999Z","pid":37692,"hostname":"Fiacre_DION","msg":"Strict mode is enabled, find Locator with span:has-text(\"Frames\") >> nth=0 in page."}
+{"level":30,"time":"2026-05-04T22:34:28.998Z","pid":37692,"hostname":"Fiacre_DION","msg":"Start of node method click"}
+{"level":30,"time":"2026-05-04T22:34:29.405Z","pid":37692,"hostname":"Fiacre_DION","msg":"End of node method click"}
+{"level":30,"time":"2026-05-04T22:34:29.430Z","pid":37692,"hostname":"Fiacre_DION","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2026-05-04T22:34:29.431Z","pid":37692,"hostname":"Fiacre_DION","msg":"Strict mode is enabled, find Locator with iframe#frame1 in page."}
+{"level":30,"time":"2026-05-04T22:34:29.541Z","pid":37692,"hostname":"Fiacre_DION","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2026-05-04T22:34:29.556Z","pid":37692,"hostname":"Fiacre_DION","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2026-05-04T22:34:29.556Z","pid":37692,"hostname":"Fiacre_DION","msg":"Strict mode is enabled, find Locator with iframe#frame1 >> internal:control=enter-frame >> text=This is a sample page in page."}
+{"level":30,"time":"2026-05-04T22:34:30.094Z","pid":37692,"hostname":"Fiacre_DION","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2026-05-04T22:34:30.110Z","pid":37692,"hostname":"Fiacre_DION","msg":"Start of node method click"}
+{"level":30,"time":"2026-05-04T22:34:30.111Z","pid":37692,"hostname":"Fiacre_DION","msg":"Strict mode is enabled, find Locator with text=Alerts >> nth=0 in page."}
+{"level":30,"time":"2026-05-04T22:34:30.260Z","pid":37692,"hostname":"Fiacre_DION","msg":"End of node method click"}
+{"level":30,"time":"2026-05-04T22:34:30.295Z","pid":37692,"hostname":"Fiacre_DION","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-04T22:34:30.302Z","pid":37692,"hostname":"Fiacre_DION","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-04T22:34:30.312Z","pid":37692,"hostname":"Fiacre_DION","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-04T22:34:30.321Z","pid":37692,"hostname":"Fiacre_DION","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-04T22:34:30.330Z","pid":37692,"hostname":"Fiacre_DION","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-04T22:34:30.334Z","pid":37692,"hostname":"Fiacre_DION","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-04T22:34:30.346Z","pid":37692,"hostname":"Fiacre_DION","msg":"Start of node method switchBrowser"}
+{"level":30,"time":"2026-05-04T22:34:30.346Z","pid":37692,"hostname":"Fiacre_DION","msg":"End of node method switchBrowser"}
+{"level":30,"time":"2026-05-04T22:34:30.351Z","pid":37692,"hostname":"Fiacre_DION","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-04T22:34:30.384Z","pid":37692,"hostname":"Fiacre_DION","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-04T22:34:30.392Z","pid":37692,"hostname":"Fiacre_DION","msg":"Start of node method switchBrowser"}
+{"level":30,"time":"2026-05-04T22:34:30.392Z","pid":37692,"hostname":"Fiacre_DION","msg":"End of node method switchBrowser"}
+{"level":30,"time":"2026-05-04T22:34:30.403Z","pid":37692,"hostname":"Fiacre_DION","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-04T22:34:30.409Z","pid":37692,"hostname":"Fiacre_DION","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-04T22:34:30.416Z","pid":37692,"hostname":"Fiacre_DION","msg":"Changed active context: context=a56c6777-5c43-49f4-ae49-0b9a3068c2cd"}
+{"level":30,"time":"2026-05-04T22:34:30.416Z","pid":37692,"hostname":"Fiacre_DION","msg":"Changing current active page: page=72089df4-c69e-43a7-b9e8-08e0868f5443"}
+{"level":30,"time":"2026-05-04T22:34:30.416Z","pid":37692,"hostname":"Fiacre_DION","msg":"Changed active page"}
+{"level":30,"time":"2026-05-04T22:34:30.424Z","pid":37692,"hostname":"Fiacre_DION","msg":"Start of node method closeContext"}
+{"level":30,"time":"2026-05-04T22:34:30.527Z","pid":37692,"hostname":"Fiacre_DION","msg":"Removed page=606bda99-acfa-4daa-ae25-d4115faec66e from context=a56c6777-5c43-49f4-ae49-0b9a3068c2cd page stack"}
+{"level":30,"time":"2026-05-04T22:34:30.531Z","pid":37692,"hostname":"Fiacre_DION","msg":"End of node method closeContext"}
+{"level":30,"time":"2026-05-04T22:34:30.542Z","pid":37692,"hostname":"Fiacre_DION","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-04T22:34:30.542Z","pid":37692,"hostname":"Fiacre_DION","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-04T22:34:30.577Z","pid":37692,"hostname":"Fiacre_DION","msg":"Start of node method switchBrowser"}
+{"level":30,"time":"2026-05-04T22:34:30.578Z","pid":37692,"hostname":"Fiacre_DION","msg":"End of node method switchBrowser"}
+{"level":30,"time":"2026-05-04T22:34:30.597Z","pid":37692,"hostname":"Fiacre_DION","msg":"Start of node method newPage"}
+{"level":30,"time":"2026-05-04T22:34:30.597Z","pid":37692,"hostname":"Fiacre_DION","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@da404fb7b407fd71cc7fb486a86371ed\"},\"headless\":false,\"_contextStack\":[],\"id\":\"browser=b2f207fa-0580-4b68-a1bf-ad1b501f86e1\"}"}
+{"level":30,"time":"2026-05-04T22:34:30.616Z","pid":37692,"hostname":"Fiacre_DION","msg":"Setting default timeout for context context=84def150-9e4d-4ef1-94b2-9f56f3c996c7 to 10000"}
+{"level":30,"time":"2026-05-04T22:34:30.616Z","pid":37692,"hostname":"Fiacre_DION","msg":"Changed active context: context=84def150-9e4d-4ef1-94b2-9f56f3c996c7"}
+{"level":30,"time":"2026-05-04T22:34:30.981Z","pid":37692,"hostname":"Fiacre_DION","msg":"Video path: undefined"}
+{"level":30,"time":"2026-05-04T22:34:30.981Z","pid":37692,"hostname":"Fiacre_DION","msg":"Changed active page"}
+{"level":30,"time":"2026-05-04T22:34:32.155Z","pid":37692,"hostname":"Fiacre_DION","msg":"End of node method newPage"}
+{"level":30,"time":"2026-05-04T22:34:32.169Z","pid":37692,"hostname":"Fiacre_DION","msg":"Start of node method click"}
+{"level":30,"time":"2026-05-04T22:34:32.169Z","pid":37692,"hostname":"Fiacre_DION","msg":"Strict mode is enabled, find Locator with text=Alerts, Frame & Windows in page."}
+{"level":30,"time":"2026-05-04T22:34:33.814Z","pid":37692,"hostname":"Fiacre_DION","msg":"End of node method click"}
+{"level":30,"time":"2026-05-04T22:34:33.827Z","pid":37692,"hostname":"Fiacre_DION","msg":"Start of node method click"}
+{"level":30,"time":"2026-05-04T22:34:33.827Z","pid":37692,"hostname":"Fiacre_DION","msg":"Strict mode is enabled, find Locator with text=Alerts >> nth=1 in page."}
+{"level":30,"time":"2026-05-04T22:34:34.228Z","pid":37692,"hostname":"Fiacre_DION","msg":"End of node method click"}
+{"level":30,"time":"2026-05-04T22:34:34.243Z","pid":37692,"hostname":"Fiacre_DION","msg":"Start of node method click"}
+{"level":30,"time":"2026-05-04T22:34:34.243Z","pid":37692,"hostname":"Fiacre_DION","msg":"Strict mode is enabled, find Locator with text=Click me >> nth=1 in page."}
+{"level":30,"time":"2026-05-04T22:34:34.981Z","pid":37692,"hostname":"Fiacre_DION","msg":"End of node method click"}
+{"level":30,"time":"2026-05-04T22:34:35.001Z","pid":37692,"hostname":"Fiacre_DION","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-04T22:34:35.011Z","pid":37692,"hostname":"Fiacre_DION","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-04T22:34:35.016Z","pid":37692,"hostname":"Fiacre_DION","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-04T22:34:35.025Z","pid":37692,"hostname":"Fiacre_DION","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-04T22:34:35.030Z","pid":37692,"hostname":"Fiacre_DION","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-04T22:34:35.034Z","pid":37692,"hostname":"Fiacre_DION","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-04T22:34:35.043Z","pid":37692,"hostname":"Fiacre_DION","msg":"Start of node method switchBrowser"}
+{"level":30,"time":"2026-05-04T22:34:35.043Z","pid":37692,"hostname":"Fiacre_DION","msg":"End of node method switchBrowser"}
+{"level":30,"time":"2026-05-04T22:34:35.053Z","pid":37692,"hostname":"Fiacre_DION","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-04T22:34:35.058Z","pid":37692,"hostname":"Fiacre_DION","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-04T22:34:35.064Z","pid":37692,"hostname":"Fiacre_DION","msg":"Start of node method switchBrowser"}
+{"level":30,"time":"2026-05-04T22:34:35.064Z","pid":37692,"hostname":"Fiacre_DION","msg":"End of node method switchBrowser"}
+{"level":30,"time":"2026-05-04T22:34:35.073Z","pid":37692,"hostname":"Fiacre_DION","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-04T22:34:35.079Z","pid":37692,"hostname":"Fiacre_DION","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-04T22:34:35.089Z","pid":37692,"hostname":"Fiacre_DION","msg":"Changed active context: context=84def150-9e4d-4ef1-94b2-9f56f3c996c7"}
+{"level":30,"time":"2026-05-04T22:34:35.090Z","pid":37692,"hostname":"Fiacre_DION","msg":"Changing current active page: page=e0f39507-33a5-45f2-9f9a-124eda2c61ef"}
+{"level":30,"time":"2026-05-04T22:34:35.090Z","pid":37692,"hostname":"Fiacre_DION","msg":"Changed active page"}
+{"level":30,"time":"2026-05-04T22:34:35.097Z","pid":37692,"hostname":"Fiacre_DION","msg":"Start of node method closeContext"}
+{"level":30,"time":"2026-05-04T22:34:35.166Z","pid":37692,"hostname":"Fiacre_DION","msg":"Removed page=dbb4ba4a-4bd3-4b4d-a861-73b5413b9d7b from context=84def150-9e4d-4ef1-94b2-9f56f3c996c7 page stack"}
+{"level":30,"time":"2026-05-04T22:34:35.191Z","pid":37692,"hostname":"Fiacre_DION","msg":"End of node method closeContext"}
+{"level":30,"time":"2026-05-04T22:34:35.210Z","pid":37692,"hostname":"Fiacre_DION","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-04T22:34:35.210Z","pid":37692,"hostname":"Fiacre_DION","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2026-05-04T22:34:35.228Z","pid":37692,"hostname":"Fiacre_DION","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2026-05-04T22:34:36.237Z","pid":37692,"hostname":"Fiacre_DION","msg":"End of node method closeAllBrowsers"}

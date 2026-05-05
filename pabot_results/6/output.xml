@@ -1,0 +1,855 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.13.5 on win32)" generated="2026-05-05T00:34:17.948714" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="C:\Users\afiac\PycharmProjects\Projet_entreprise2\tests">
+<suite id="s1-s1" name="Ui" source="C:\Users\afiac\PycharmProjects\Projet_entreprise2\tests\ui">
+<suite id="s1-s1-s1" name="testExemple" source="C:\Users\afiac\PycharmProjects\Projet_entreprise2\tests\ui\testExemple.robot">
+<test id="s1-s1-s1-t1" name="Authentification user" line="17">
+<kw name="Run Keywords" owner="BuiltIn" type="SETUP">
+<kw name="Create user and authenticate" owner="userApi">
+<kw name="Create user" owner="userApi">
+<kw name="Create API Session" owner="baseApi">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2026-05-05T00:34:19.525850" level="INFO">Creating Session using : alias=api, url=https://practice.expandtesting.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>api</arg>
+<arg>${BASE_API_URL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2026-05-05T00:34:19.525470" elapsed="0.000722"/>
+</kw>
+<status status="PASS" start="2026-05-05T00:34:19.524890" elapsed="0.001497"/>
+</kw>
+<kw name="Generate User Data" owner="TestDataFactory">
+<kw name="Get Time" owner="BuiltIn">
+<msg time="2026-05-05T00:34:19.527637" level="INFO">${timestamp} = 1777934059</msg>
+<var>${timestamp}</var>
+<arg>epoch</arg>
+<doc>Returns the given time in the requested format.</doc>
+<status status="PASS" start="2026-05-05T00:34:19.527073" elapsed="0.000637"/>
+</kw>
+<kw name="Generate Random String" owner="String">
+<msg time="2026-05-05T00:34:19.528435" level="INFO">${random} = JHWVS</msg>
+<var>${random}</var>
+<arg>5</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2026-05-05T00:34:19.527924" elapsed="0.000566"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-05-05T00:34:19.529636" level="INFO">${email} = user_1777934059_JHWVS@test.com</msg>
+<var>${email}</var>
+<arg>user_${timestamp}_${random}@test.com</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-05-05T00:34:19.528901" elapsed="0.000794"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-05-05T00:34:19.530533" level="INFO">${name} = user_1777934059_JHWVS</msg>
+<var>${name}</var>
+<arg>user_${timestamp}_${random}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-05-05T00:34:19.529940" elapsed="0.000641"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-05-05T00:34:19.531837" level="INFO">${password} = 12345678</msg>
+<var>${password}</var>
+<arg>12345678</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-05-05T00:34:19.531264" elapsed="0.000628"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2026-05-05T00:34:19.533864" level="INFO">${user} = {'email': 'user_1777934059_JHWVS@test.com', 'name': 'user_1777934059_JHWVS', 'password': '12345678'}</msg>
+<var>${user}</var>
+<arg>email=${email}</arg>
+<arg>name=${name}</arg>
+<arg>password=${password}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2026-05-05T00:34:19.532176" elapsed="0.001781"/>
+</kw>
+<return>
+<value>${user}</value>
+<status status="PASS" start="2026-05-05T00:34:19.534115" elapsed="0.000225"/>
+</return>
+<msg time="2026-05-05T00:34:19.534639" level="INFO">${userData} = {'email': 'user_1777934059_JHWVS@test.com', 'name': 'user_1777934059_JHWVS', 'password': '12345678'}</msg>
+<var>${userData}</var>
+<status status="PASS" start="2026-05-05T00:34:19.526647" elapsed="0.008044"/>
+</kw>
+<kw name="POST Request" owner="baseApi">
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2026-05-05T00:34:20.178840" level="INFO">POST Request : url=https://practice.expandtesting.com/notes/api/users/register 
+ path_url=/notes/api/users/register 
+ headers={'User-Agent': 'python-requests/2.33.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '100', 'Content-Type': 'application/json'} 
+ body=b'{"email": "user_1777934059_JHWVS@test.com", "name": "user_1777934059_JHWVS", "password": "12345678"}' 
+ </msg>
+<msg time="2026-05-05T00:34:20.179046" level="INFO">POST Response : url=https://practice.expandtesting.com/notes/api/users/register 
+ status=201, reason=Created 
+ headers={'access-control-allow-origin': '*', 'access-control-allow-credentials': 'true', 'access-control-allow-methods': 'GET, POST, PUT, DELETE, PATCH', 'access-control-allow-headers': 'Origin, X-Requested-With, Authorization, Content-Type, Accept, X-Auth-Token', 'content-type': 'application/json; charset=utf-8', 'content-encoding': 'gzip', 'etag': 'W/"bc-huEIZP7sgVPueZxE4bYGs+Zsje0"', 'set-cookie': 'express:sess=eyJmbGFzaCI6e319; path=/; httponly, express:sess.sig=tdt42nQZiQvICqmrvHQ1_16fHk0; path=/; httponly', 'date': 'Mon, 04 May 2026 22:34:20 GMT', 'connection': 'keep-alive', 'keep-alive': 'timeout=5', 'transfer-encoding': 'chunked'} 
+ body={"success":true,"status":201,"message":"User account created successfully","data":{"id":"69f91eec81124e02985a5f85","name":"user_1777934059_JHWVS","email":"user_1777934059_jhwvs@test.com"}} 
+ </msg>
+<msg time="2026-05-05T00:34:20.179170" level="INFO">C:\Users\afiac\PycharmProjects\Projet_entreprise2\.venv\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'practice.expandtesting.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2026-05-05T00:34:20.179409" level="INFO">${response} = &lt;Response [201]&gt;</msg>
+<var>${response}</var>
+<arg>api</arg>
+<arg>${endpoint}</arg>
+<arg>json=${body}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2026-05-05T00:34:19.535663" elapsed="0.643799"/>
+</kw>
+<return>
+<value>${response}</value>
+<status status="PASS" start="2026-05-05T00:34:20.179617" elapsed="0.000235"/>
+</return>
+<msg time="2026-05-05T00:34:20.180142" level="INFO">${response} = &lt;Response [201]&gt;</msg>
+<var>${response}</var>
+<arg>/notes/api/users/register</arg>
+<arg>${userData}</arg>
+<status status="PASS" start="2026-05-05T00:34:19.535024" elapsed="0.645168"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2026-05-05T00:34:20.181768" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${response.status_code}</arg>
+<arg>201</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2026-05-05T00:34:20.180459" elapsed="0.001435"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${response}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-05-05T00:34:20.182162" elapsed="0.000658"/>
+</kw>
+<return>
+<value>${userData}</value>
+<status status="PASS" start="2026-05-05T00:34:20.182940" elapsed="0.000173"/>
+</return>
+<msg time="2026-05-05T00:34:20.183384" level="INFO">${USER_DATA} = {'email': 'user_1777934059_JHWVS@test.com', 'name': 'user_1777934059_JHWVS', 'password': '12345678'}</msg>
+<var>${USER_DATA}</var>
+<status status="PASS" start="2026-05-05T00:34:19.524298" elapsed="0.659137"/>
+</kw>
+<kw name="Authentification user" owner="userApi">
+<kw name="Create API Session" owner="baseApi">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2026-05-05T00:34:20.185210" level="INFO">Creating Session using : alias=api, url=https://practice.expandtesting.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>api</arg>
+<arg>${BASE_API_URL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2026-05-05T00:34:20.184901" elapsed="0.000554"/>
+</kw>
+<status status="PASS" start="2026-05-05T00:34:20.184390" elapsed="0.001533"/>
+</kw>
+<kw name="POST Request" owner="baseApi">
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2026-05-05T00:34:20.786132" level="INFO">POST Request : url=https://practice.expandtesting.com/notes/api/users/login 
+ path_url=/notes/api/users/login 
+ headers={'User-Agent': 'python-requests/2.33.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '100', 'Content-Type': 'application/json'} 
+ body=b'{"email": "user_1777934059_JHWVS@test.com", "name": "user_1777934059_JHWVS", "password": "12345678"}' 
+ </msg>
+<msg time="2026-05-05T00:34:20.786361" level="INFO">POST Response : url=https://practice.expandtesting.com/notes/api/users/login 
+ status=200, reason=OK 
+ headers={'access-control-allow-origin': '*', 'access-control-allow-credentials': 'true', 'access-control-allow-methods': 'GET, POST, PUT, DELETE, PATCH', 'access-control-allow-headers': 'Origin, X-Requested-With, Authorization, Content-Type, Accept, X-Auth-Token', 'content-type': 'application/json; charset=utf-8', 'content-encoding': 'gzip', 'etag': 'W/"f6-XiItySAvVJatjfr/6vOou1Xit8g"', 'set-cookie': 'express:sess=eyJmbGFzaCI6e319; path=/; httponly, express:sess.sig=tdt42nQZiQvICqmrvHQ1_16fHk0; path=/; httponly', 'date': 'Mon, 04 May 2026 22:34:20 GMT', 'connection': 'keep-alive', 'keep-alive': 'timeout=5', 'transfer-encoding': 'chunked'} 
+ body={"success":true,"status":200,"message":"Login successful","data":{"id":"69f91eec81124e02985a5f85","name":"user_1777934059_JHWVS","email":"user_1777934059_jhwvs@test.com","token":"d6f22a134bb24439a8831d143ae488cbcf0e72407e75419d93fb4bb4cbe44bc7"}} 
+ </msg>
+<msg time="2026-05-05T00:34:20.786541" level="INFO">C:\Users\afiac\PycharmProjects\Projet_entreprise2\.venv\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'practice.expandtesting.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2026-05-05T00:34:20.786921" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>api</arg>
+<arg>${endpoint}</arg>
+<arg>json=${body}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2026-05-05T00:34:20.186843" elapsed="0.600171"/>
+</kw>
+<return>
+<value>${response}</value>
+<status status="PASS" start="2026-05-05T00:34:20.787242" elapsed="0.000312"/>
+</return>
+<msg time="2026-05-05T00:34:20.787993" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>/notes/api/users/login</arg>
+<arg>${user_auth}</arg>
+<status status="PASS" start="2026-05-05T00:34:20.186229" elapsed="0.601885"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2026-05-05T00:34:20.790419" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${response.status_code}</arg>
+<arg>200</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2026-05-05T00:34:20.788518" elapsed="0.002082"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-05-05T00:34:20.794212" level="INFO">${TOKEN} = d6f22a134bb24439a8831d143ae488cbcf0e72407e75419d93fb4bb4cbe44bc7</msg>
+<var>${TOKEN}</var>
+<arg>${response.json()["data"]["token"]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-05-05T00:34:20.790996" elapsed="0.003310"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-05-05T00:34:20.796441" level="INFO">${ID} = 69f91eec81124e02985a5f85</msg>
+<var>${ID}</var>
+<arg>${response.json()["data"]["id"]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-05-05T00:34:20.794716" elapsed="0.001803"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2026-05-05T00:34:20.797676" level="INFO">${TOKEN} = d6f22a134bb24439a8831d143ae488cbcf0e72407e75419d93fb4bb4cbe44bc7</msg>
+<arg>${TOKEN}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2026-05-05T00:34:20.796892" elapsed="0.000853"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>token: ${TOKEN}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-05-05T00:34:20.797957" elapsed="0.000533"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Id: ${ID}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-05-05T00:34:20.798769" elapsed="0.000641"/>
+</kw>
+<arg>${USER_DATA}</arg>
+<status status="PASS" start="2026-05-05T00:34:20.183761" elapsed="0.615810"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2026-05-05T00:34:20.800524" level="INFO">${USER_DATA} = {'email': 'user_1777934059_JHWVS@test.com', 'name': 'user_1777934059_JHWVS', 'password': '12345678'}</msg>
+<arg>${USER_DATA}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2026-05-05T00:34:20.799836" elapsed="0.000779"/>
+</kw>
+<status status="PASS" start="2026-05-05T00:34:19.523587" elapsed="1.277153"/>
+</kw>
+<kw name="Ouvrir le navigateur" owner="navigation">
+<kw name="New Browser" owner="Browser">
+<msg time="2026-05-05T00:34:20.802652" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\afiac\\PycharmProjects\\Projet_entreprise2\\pabot_results\\6\\browser\\traces\\temp\\6d033259-2734-4815-a4a9-5d5dd6940207"}</msg>
+<msg time="2026-05-05T00:34:20.881715" level="INFO">Starting Browser process C:\Users\afiac\PycharmProjects\Projet_entreprise2\.venv\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:50791</msg>
+<msg time="2026-05-05T00:34:24.671788" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\afiac\\PycharmProjects\\Projet_entreprise2\\pabot_results\\6\\browser\\traces\\temp\\6d033259-2734-4815-a4a9-5d5dd6940207"}</msg>
+<arg>${BROWSER}</arg>
+<arg>headless=${HEADLESS}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2026-05-05T00:34:20.801686" elapsed="3.870431"/>
+</kw>
+<status status="PASS" start="2026-05-05T00:34:20.801063" elapsed="3.871323"/>
+</kw>
+<kw name="Ouvrir la page param" owner="navigation">
+<kw name="New Context" owner="Browser">
+<msg time="2026-05-05T00:34:24.676352" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg time="2026-05-05T00:34:24.768035" level="INFO">Successfully created context. </msg>
+<msg time="2026-05-05T00:34:24.768185" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2026-05-05T00:34:24.673521" elapsed="0.095143"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2026-05-05T00:34:31.429514" level="INFO">Successfully initialized new page object and opened url: https://practice.expandtesting.com/notes/app/login</msg>
+<arg>https://practice.expandtesting.com/notes/app/login</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2026-05-05T00:34:24.769495" elapsed="6.660695"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-05-05T00:34:31.431300" level="INFO">Ouverture du navigateur</msg>
+<arg>Ouverture du navigateur</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-05-05T00:34:31.430598" elapsed="0.000798"/>
+</kw>
+<status status="PASS" start="2026-05-05T00:34:24.672773" elapsed="6.758767"/>
+</kw>
+<arg>Create user and authenticate</arg>
+<arg>AND</arg>
+<arg>Ouvrir le navigateur</arg>
+<arg>AND</arg>
+<arg>Ouvrir la page param</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<status status="PASS" start="2026-05-05T00:34:19.522338" elapsed="11.909295"/>
+</kw>
+<kw name="Inject Token In Browser" owner="userApi">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-05T00:34:31.550620" level="INFO">Waited for Element with selector body at state visible</msg>
+<arg>body</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-05T00:34:31.432791" elapsed="0.118160"/>
+</kw>
+<kw name="Evaluate JavaScript" owner="Browser">
+<msg time="2026-05-05T00:34:31.637592" level="INFO">JavaScript executed successfully.</msg>
+<arg>body</arg>
+<arg>window.localStorage.setItem('token', '${token}')</arg>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Executes given javascript on the selected element(s) or on page.</doc>
+<status status="PASS" start="2026-05-05T00:34:31.551420" elapsed="0.087108"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-05T00:34:31.673037" level="INFO">Waited for Element with selector body at state visible</msg>
+<arg>body</arg>
+<arg>visible</arg>
+<arg>timeout=30000</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-05T00:34:31.639164" elapsed="0.034433"/>
+</kw>
+<kw name="Reload" owner="Browser">
+<msg time="2026-05-05T00:34:35.206162" level="INFO">Reloaded page with options: {"waitUntil": "load", "timeout": 10000000}</msg>
+<arg>timeout=10000</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Reloads current active page.</doc>
+<status status="PASS" start="2026-05-05T00:34:31.674531" elapsed="3.532045"/>
+</kw>
+<arg>${TOKEN}</arg>
+<status status="PASS" start="2026-05-05T00:34:31.432031" elapsed="3.775006"/>
+</kw>
+<kw name="Run Keywords" owner="BuiltIn" type="TEARDOWN">
+<kw name="Fermer le navigateur" owner="navigation">
+<kw name="Close Browser" owner="Browser">
+<msg time="2026-05-05T00:34:36.154573" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-05-05T00:34:35.212180" elapsed="0.943073"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-05-05T00:34:36.156814" level="INFO">Fermeture du navigateur</msg>
+<arg>Fermeture du navigateur</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-05-05T00:34:36.155880" elapsed="0.001075"/>
+</kw>
+<status status="PASS" start="2026-05-05T00:34:35.210521" elapsed="0.946691"/>
+</kw>
+<kw name="Delete user" owner="userApi">
+<kw name="Create Authenticated Session" owner="baseApi">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2026-05-05T00:34:36.161743" level="INFO">${headers} = {'x-auth-token': 'd6f22a134bb24439a8831d143ae488cbcf0e72407e75419d93fb4bb4cbe44bc7', 'Content-Type': 'application/json'}</msg>
+<var>${headers}</var>
+<arg>x-auth-token=${token}</arg>
+<arg>Content-Type=application/json</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2026-05-05T00:34:36.160427" elapsed="0.001451"/>
+</kw>
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2026-05-05T00:34:36.163168" level="INFO">Creating Session using : alias=api, url=https://practice.expandtesting.com, headers={'x-auth-token': 'd6f22a134bb24439a8831d143ae488cbcf0e72407e75419d93fb4bb4cbe44bc7', 'Content-Type': 'application/json'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>api</arg>
+<arg>${BASE_API_URL}</arg>
+<arg>headers=${headers}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2026-05-05T00:34:36.162304" elapsed="0.001429"/>
+</kw>
+<arg>${TOKEN}</arg>
+<status status="PASS" start="2026-05-05T00:34:36.159130" elapsed="0.005014"/>
+</kw>
+<kw name="DELETE Request" owner="baseApi">
+<kw name="DELETE On Session" owner="RequestsLibrary">
+<msg time="2026-05-05T00:34:36.467337" level="INFO">DELETE Request : url=https://practice.expandtesting.com/notes/api/users/delete-account 
+ path_url=/notes/api/users/delete-account 
+ headers={'User-Agent': 'python-requests/2.33.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'x-auth-token': 'd6f22a134bb24439a8831d143ae488cbcf0e72407e75419d93fb4bb4cbe44bc7', 'Content-Type': 'application/json', 'Content-Length': '0'} 
+ body=None 
+ </msg>
+<msg time="2026-05-05T00:34:36.467571" level="INFO">DELETE Response : url=https://practice.expandtesting.com/notes/api/users/delete-account 
+ status=200, reason=OK 
+ headers={'access-control-allow-origin': '*', 'access-control-allow-credentials': 'true', 'access-control-allow-methods': 'GET, POST, PUT, DELETE, PATCH', 'access-control-allow-headers': 'Origin, X-Requested-With, Authorization, Content-Type, Accept, X-Auth-Token', 'content-type': 'application/json; charset=utf-8', 'content-encoding': 'gzip', 'etag': 'W/"46-xvIiFl/4e/p/xA8LA+FZxbRy7yU"', 'set-cookie': 'express:sess=eyJmbGFzaCI6e319; path=/; httponly, express:sess.sig=tdt42nQZiQvICqmrvHQ1_16fHk0; path=/; httponly', 'date': 'Mon, 04 May 2026 22:34:36 GMT', 'connection': 'keep-alive', 'keep-alive': 'timeout=5', 'transfer-encoding': 'chunked'} 
+ body={"success":true,"status":200,"message":"Account successfully deleted"} 
+ </msg>
+<msg time="2026-05-05T00:34:36.467741" level="INFO">C:\Users\afiac\PycharmProjects\Projet_entreprise2\.venv\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'practice.expandtesting.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2026-05-05T00:34:36.467989" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>api</arg>
+<arg>${endpoint}</arg>
+<doc>Sends a DELETE request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2026-05-05T00:34:36.165863" elapsed="0.302189"/>
+</kw>
+<return>
+<value>${response}</value>
+<status status="PASS" start="2026-05-05T00:34:36.468215" elapsed="0.000254"/>
+</return>
+<msg time="2026-05-05T00:34:36.468767" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>notes/api/users/delete-account</arg>
+<status status="PASS" start="2026-05-05T00:34:36.164719" elapsed="0.304104"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2026-05-05T00:34:36.470350" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${response.status_code}</arg>
+<arg>200</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2026-05-05T00:34:36.469106" elapsed="0.001359"/>
+</kw>
+<status status="PASS" start="2026-05-05T00:34:36.157700" elapsed="0.313424"/>
+</kw>
+<arg>Fermer le navigateur</arg>
+<arg>AND</arg>
+<arg>Delete user</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<status status="PASS" start="2026-05-05T00:34:35.208211" elapsed="1.263817"/>
+</kw>
+<status status="PASS" start="2026-05-05T00:34:19.520363" elapsed="16.953084"/>
+</test>
+<test id="s1-s1-s1-t2" name="Accéder à la page Profile ui" line="20">
+<kw name="Run Keywords" owner="BuiltIn" type="SETUP">
+<kw name="Create user and authenticate" owner="userApi">
+<kw name="Create user" owner="userApi">
+<kw name="Create API Session" owner="baseApi">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2026-05-05T00:34:36.511035" level="INFO">Creating Session using : alias=api, url=https://practice.expandtesting.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>api</arg>
+<arg>${BASE_API_URL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2026-05-05T00:34:36.510618" elapsed="0.000818"/>
+</kw>
+<status status="PASS" start="2026-05-05T00:34:36.510050" elapsed="0.001596"/>
+</kw>
+<kw name="Generate User Data" owner="TestDataFactory">
+<kw name="Get Time" owner="BuiltIn">
+<msg time="2026-05-05T00:34:36.513910" level="INFO">${timestamp} = 1777934076</msg>
+<var>${timestamp}</var>
+<arg>epoch</arg>
+<doc>Returns the given time in the requested format.</doc>
+<status status="PASS" start="2026-05-05T00:34:36.513222" elapsed="0.000768"/>
+</kw>
+<kw name="Generate Random String" owner="String">
+<msg time="2026-05-05T00:34:36.514718" level="INFO">${random} = 2gsXm</msg>
+<var>${random}</var>
+<arg>5</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2026-05-05T00:34:36.514258" elapsed="0.000518"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-05-05T00:34:36.515946" level="INFO">${email} = user_1777934076_2gsXm@test.com</msg>
+<var>${email}</var>
+<arg>user_${timestamp}_${random}@test.com</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-05-05T00:34:36.515029" elapsed="0.001004"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-05-05T00:34:36.517084" level="INFO">${name} = user_1777934076_2gsXm</msg>
+<var>${name}</var>
+<arg>user_${timestamp}_${random}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-05-05T00:34:36.516409" elapsed="0.000723"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-05-05T00:34:36.517904" level="INFO">${password} = 12345678</msg>
+<var>${password}</var>
+<arg>12345678</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-05-05T00:34:36.517390" elapsed="0.000564"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2026-05-05T00:34:36.519262" level="INFO">${user} = {'email': 'user_1777934076_2gsXm@test.com', 'name': 'user_1777934076_2gsXm', 'password': '12345678'}</msg>
+<var>${user}</var>
+<arg>email=${email}</arg>
+<arg>name=${name}</arg>
+<arg>password=${password}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2026-05-05T00:34:36.518285" elapsed="0.001032"/>
+</kw>
+<return>
+<value>${user}</value>
+<status status="PASS" start="2026-05-05T00:34:36.519449" elapsed="0.000160"/>
+</return>
+<msg time="2026-05-05T00:34:36.519849" level="INFO">${userData} = {'email': 'user_1777934076_2gsXm@test.com', 'name': 'user_1777934076_2gsXm', 'password': '12345678'}</msg>
+<var>${userData}</var>
+<status status="PASS" start="2026-05-05T00:34:36.512476" elapsed="0.007418"/>
+</kw>
+<kw name="POST Request" owner="baseApi">
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2026-05-05T00:34:36.922468" level="INFO">POST Request : url=https://practice.expandtesting.com/notes/api/users/register 
+ path_url=/notes/api/users/register 
+ headers={'User-Agent': 'python-requests/2.33.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '100', 'Content-Type': 'application/json'} 
+ body=b'{"email": "user_1777934076_2gsXm@test.com", "name": "user_1777934076_2gsXm", "password": "12345678"}' 
+ </msg>
+<msg time="2026-05-05T00:34:36.922638" level="INFO">POST Response : url=https://practice.expandtesting.com/notes/api/users/register 
+ status=201, reason=Created 
+ headers={'access-control-allow-origin': '*', 'access-control-allow-credentials': 'true', 'access-control-allow-methods': 'GET, POST, PUT, DELETE, PATCH', 'access-control-allow-headers': 'Origin, X-Requested-With, Authorization, Content-Type, Accept, X-Auth-Token', 'content-type': 'application/json; charset=utf-8', 'content-encoding': 'gzip', 'etag': 'W/"bc-1n230xsLGPNerK2WoKZAA9Q5vNE"', 'set-cookie': 'express:sess=eyJmbGFzaCI6e319; path=/; httponly, express:sess.sig=tdt42nQZiQvICqmrvHQ1_16fHk0; path=/; httponly', 'date': 'Mon, 04 May 2026 22:34:37 GMT', 'connection': 'keep-alive', 'keep-alive': 'timeout=5', 'transfer-encoding': 'chunked'} 
+ body={"success":true,"status":201,"message":"User account created successfully","data":{"id":"69f91efd81124e02985a5f99","name":"user_1777934076_2gsXm","email":"user_1777934076_2gsxm@test.com"}} 
+ </msg>
+<msg time="2026-05-05T00:34:36.922786" level="INFO">C:\Users\afiac\PycharmProjects\Projet_entreprise2\.venv\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'practice.expandtesting.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2026-05-05T00:34:36.923028" level="INFO">${response} = &lt;Response [201]&gt;</msg>
+<var>${response}</var>
+<arg>api</arg>
+<arg>${endpoint}</arg>
+<arg>json=${body}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2026-05-05T00:34:36.521069" elapsed="0.402007"/>
+</kw>
+<return>
+<value>${response}</value>
+<status status="PASS" start="2026-05-05T00:34:36.923233" elapsed="0.000262"/>
+</return>
+<msg time="2026-05-05T00:34:36.923783" level="INFO">${response} = &lt;Response [201]&gt;</msg>
+<var>${response}</var>
+<arg>/notes/api/users/register</arg>
+<arg>${userData}</arg>
+<status status="PASS" start="2026-05-05T00:34:36.520243" elapsed="0.403589"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2026-05-05T00:34:36.925529" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${response.status_code}</arg>
+<arg>201</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2026-05-05T00:34:36.924111" elapsed="0.001545"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${response}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-05-05T00:34:36.925964" elapsed="0.000666"/>
+</kw>
+<return>
+<value>${userData}</value>
+<status status="PASS" start="2026-05-05T00:34:36.926755" elapsed="0.000178"/>
+</return>
+<msg time="2026-05-05T00:34:36.927268" level="INFO">${USER_DATA} = {'email': 'user_1777934076_2gsXm@test.com', 'name': 'user_1777934076_2gsXm', 'password': '12345678'}</msg>
+<var>${USER_DATA}</var>
+<status status="PASS" start="2026-05-05T00:34:36.508562" elapsed="0.418768"/>
+</kw>
+<kw name="Authentification user" owner="userApi">
+<kw name="Create API Session" owner="baseApi">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2026-05-05T00:34:36.930466" level="INFO">Creating Session using : alias=api, url=https://practice.expandtesting.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>api</arg>
+<arg>${BASE_API_URL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2026-05-05T00:34:36.930058" elapsed="0.000663"/>
+</kw>
+<status status="PASS" start="2026-05-05T00:34:36.929449" elapsed="0.001430"/>
+</kw>
+<kw name="POST Request" owner="baseApi">
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2026-05-05T00:34:37.250670" level="INFO">POST Request : url=https://practice.expandtesting.com/notes/api/users/login 
+ path_url=/notes/api/users/login 
+ headers={'User-Agent': 'python-requests/2.33.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '100', 'Content-Type': 'application/json'} 
+ body=b'{"email": "user_1777934076_2gsXm@test.com", "name": "user_1777934076_2gsXm", "password": "12345678"}' 
+ </msg>
+<msg time="2026-05-05T00:34:37.250937" level="INFO">POST Response : url=https://practice.expandtesting.com/notes/api/users/login 
+ status=200, reason=OK 
+ headers={'access-control-allow-origin': '*', 'access-control-allow-credentials': 'true', 'access-control-allow-methods': 'GET, POST, PUT, DELETE, PATCH', 'access-control-allow-headers': 'Origin, X-Requested-With, Authorization, Content-Type, Accept, X-Auth-Token', 'content-type': 'application/json; charset=utf-8', 'content-encoding': 'gzip', 'etag': 'W/"f6-C/Ki99VlrNSRM6wprgB7+5G+orA"', 'set-cookie': 'express:sess=eyJmbGFzaCI6e319; path=/; httponly, express:sess.sig=tdt42nQZiQvICqmrvHQ1_16fHk0; path=/; httponly', 'date': 'Mon, 04 May 2026 22:34:37 GMT', 'connection': 'keep-alive', 'keep-alive': 'timeout=5', 'transfer-encoding': 'chunked'} 
+ body={"success":true,"status":200,"message":"Login successful","data":{"id":"69f91efd81124e02985a5f99","name":"user_1777934076_2gsXm","email":"user_1777934076_2gsxm@test.com","token":"27e877f3e8904c9ead511b49db2bf496e9bc177bb04547cebfe9f8d406a7fba5"}} 
+ </msg>
+<msg time="2026-05-05T00:34:37.251060" level="INFO">C:\Users\afiac\PycharmProjects\Projet_entreprise2\.venv\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'practice.expandtesting.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2026-05-05T00:34:37.251345" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>api</arg>
+<arg>${endpoint}</arg>
+<arg>json=${body}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2026-05-05T00:34:36.931922" elapsed="0.319480"/>
+</kw>
+<return>
+<value>${response}</value>
+<status status="PASS" start="2026-05-05T00:34:37.251550" elapsed="0.000231"/>
+</return>
+<msg time="2026-05-05T00:34:37.252049" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>/notes/api/users/login</arg>
+<arg>${user_auth}</arg>
+<status status="PASS" start="2026-05-05T00:34:36.931207" elapsed="0.320889"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2026-05-05T00:34:37.253580" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${response.status_code}</arg>
+<arg>200</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2026-05-05T00:34:37.252362" elapsed="0.001331"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-05-05T00:34:37.255365" level="INFO">${TOKEN} = 27e877f3e8904c9ead511b49db2bf496e9bc177bb04547cebfe9f8d406a7fba5</msg>
+<var>${TOKEN}</var>
+<arg>${response.json()["data"]["token"]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-05-05T00:34:37.253995" elapsed="0.001431"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-05-05T00:34:37.257210" level="INFO">${ID} = 69f91efd81124e02985a5f99</msg>
+<var>${ID}</var>
+<arg>${response.json()["data"]["id"]}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-05-05T00:34:37.255715" elapsed="0.001614"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2026-05-05T00:34:37.258633" level="INFO">${TOKEN} = 27e877f3e8904c9ead511b49db2bf496e9bc177bb04547cebfe9f8d406a7fba5</msg>
+<arg>${TOKEN}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2026-05-05T00:34:37.257797" elapsed="0.000942"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>token: ${TOKEN}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-05-05T00:34:37.259051" elapsed="0.001165"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Id: ${ID}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-05-05T00:34:37.260531" elapsed="0.000752"/>
+</kw>
+<arg>${USER_DATA}</arg>
+<status status="PASS" start="2026-05-05T00:34:36.927788" elapsed="0.333657"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2026-05-05T00:34:37.262578" level="INFO">${USER_DATA} = {'email': 'user_1777934076_2gsXm@test.com', 'name': 'user_1777934076_2gsXm', 'password': '12345678'}</msg>
+<arg>${USER_DATA}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2026-05-05T00:34:37.261807" elapsed="0.000886"/>
+</kw>
+<status status="PASS" start="2026-05-05T00:34:36.507394" elapsed="0.755466"/>
+</kw>
+<kw name="Ouvrir le navigateur" owner="navigation">
+<kw name="New Browser" owner="Browser">
+<msg time="2026-05-05T00:34:37.265143" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\afiac\\PycharmProjects\\Projet_entreprise2\\pabot_results\\6\\browser\\traces\\temp\\a6263d33-c9e2-4da0-92f9-f043c7aa089b"}</msg>
+<msg time="2026-05-05T00:34:37.898705" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\afiac\\PycharmProjects\\Projet_entreprise2\\pabot_results\\6\\browser\\traces\\temp\\a6263d33-c9e2-4da0-92f9-f043c7aa089b"}</msg>
+<arg>${BROWSER}</arg>
+<arg>headless=${HEADLESS}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2026-05-05T00:34:37.263873" elapsed="0.635118"/>
+</kw>
+<status status="PASS" start="2026-05-05T00:34:37.263229" elapsed="0.636066"/>
+</kw>
+<kw name="Ouvrir la page param" owner="navigation">
+<kw name="New Context" owner="Browser">
+<msg time="2026-05-05T00:34:37.903131" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg time="2026-05-05T00:34:37.918999" level="INFO">Successfully created context. </msg>
+<msg time="2026-05-05T00:34:37.919142" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2026-05-05T00:34:37.900522" elapsed="0.018757"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2026-05-05T00:34:42.110244" level="INFO">Successfully initialized new page object and opened url: https://practice.expandtesting.com/notes/app/login</msg>
+<arg>https://practice.expandtesting.com/notes/app/login</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2026-05-05T00:34:37.919660" elapsed="4.191208"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-05-05T00:34:42.112953" level="INFO">Ouverture du navigateur</msg>
+<arg>Ouverture du navigateur</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-05-05T00:34:42.111609" elapsed="0.001537"/>
+</kw>
+<status status="PASS" start="2026-05-05T00:34:37.899676" elapsed="4.214147"/>
+</kw>
+<arg>Create user and authenticate</arg>
+<arg>AND</arg>
+<arg>Ouvrir le navigateur</arg>
+<arg>AND</arg>
+<arg>Ouvrir la page param</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<status status="PASS" start="2026-05-05T00:34:36.505896" elapsed="5.608199"/>
+</kw>
+<kw name="Inject Token In Browser" owner="userApi">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-05T00:34:42.214214" level="INFO">Waited for Element with selector body at state visible</msg>
+<arg>body</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-05T00:34:42.116481" elapsed="0.098517"/>
+</kw>
+<kw name="Evaluate JavaScript" owner="Browser">
+<msg time="2026-05-05T00:34:42.291547" level="INFO">JavaScript executed successfully.</msg>
+<arg>body</arg>
+<arg>window.localStorage.setItem('token', '${token}')</arg>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Executes given javascript on the selected element(s) or on page.</doc>
+<status status="PASS" start="2026-05-05T00:34:42.215854" elapsed="0.076208"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-05T00:34:42.311873" level="INFO">Waited for Element with selector body at state visible</msg>
+<arg>body</arg>
+<arg>visible</arg>
+<arg>timeout=30000</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-05T00:34:42.292826" elapsed="0.019431"/>
+</kw>
+<kw name="Reload" owner="Browser">
+<msg time="2026-05-05T00:34:44.610123" level="INFO">Reloaded page with options: {"waitUntil": "load", "timeout": 10000000}</msg>
+<arg>timeout=10000</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Reloads current active page.</doc>
+<status status="PASS" start="2026-05-05T00:34:42.312753" elapsed="2.297718"/>
+</kw>
+<arg>${TOKEN}</arg>
+<status status="PASS" start="2026-05-05T00:34:42.114835" elapsed="2.495972"/>
+</kw>
+<kw name="Accéder à page profile" owner="dashboardNoteUi">
+<kw name="Cliquer sur bouton Profile" owner="dashboardNotePage">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-05T00:34:44.651432" level="INFO">Waited for Element with selector css=[data-testid="profile"] at state visible</msg>
+<arg>${bouton_profile}</arg>
+<arg>visible</arg>
+<arg>timeout=10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-05T00:34:44.612933" elapsed="0.038837"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2026-05-05T00:34:44.653546" level="INFO">Clicks the element 'css=[data-testid="profile"]'.</msg>
+<arg>${bouton_profile}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-05-05T00:34:44.652161" elapsed="0.356966"/>
+</kw>
+<status status="PASS" start="2026-05-05T00:34:44.612223" elapsed="0.397369"/>
+</kw>
+<status status="PASS" start="2026-05-05T00:34:44.611257" elapsed="0.398602"/>
+</kw>
+<kw name="Run Keywords" owner="BuiltIn" type="TEARDOWN">
+<kw name="Fermer le navigateur" owner="navigation">
+<kw name="Close Browser" owner="Browser">
+<msg time="2026-05-05T00:34:45.574094" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-05-05T00:34:45.014300" elapsed="0.560010"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-05-05T00:34:45.575060" level="INFO">Fermeture du navigateur</msg>
+<arg>Fermeture du navigateur</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-05-05T00:34:45.574561" elapsed="0.000571"/>
+</kw>
+<status status="PASS" start="2026-05-05T00:34:45.012692" elapsed="0.562532"/>
+</kw>
+<kw name="Delete user" owner="userApi">
+<kw name="Create Authenticated Session" owner="baseApi">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2026-05-05T00:34:45.576858" level="INFO">${headers} = {'x-auth-token': '27e877f3e8904c9ead511b49db2bf496e9bc177bb04547cebfe9f8d406a7fba5', 'Content-Type': 'application/json'}</msg>
+<var>${headers}</var>
+<arg>x-auth-token=${token}</arg>
+<arg>Content-Type=application/json</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2026-05-05T00:34:45.576388" elapsed="0.000509"/>
+</kw>
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2026-05-05T00:34:45.577350" level="INFO">Creating Session using : alias=api, url=https://practice.expandtesting.com, headers={'x-auth-token': '27e877f3e8904c9ead511b49db2bf496e9bc177bb04547cebfe9f8d406a7fba5', 'Content-Type': 'application/json'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>api</arg>
+<arg>${BASE_API_URL}</arg>
+<arg>headers=${headers}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2026-05-05T00:34:45.577054" elapsed="0.000458"/>
+</kw>
+<arg>${TOKEN}</arg>
+<status status="PASS" start="2026-05-05T00:34:45.575963" elapsed="0.001650"/>
+</kw>
+<kw name="DELETE Request" owner="baseApi">
+<kw name="DELETE On Session" owner="RequestsLibrary">
+<msg time="2026-05-05T00:34:46.094652" level="INFO">DELETE Request : url=https://practice.expandtesting.com/notes/api/users/delete-account 
+ path_url=/notes/api/users/delete-account 
+ headers={'User-Agent': 'python-requests/2.33.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'x-auth-token': '27e877f3e8904c9ead511b49db2bf496e9bc177bb04547cebfe9f8d406a7fba5', 'Content-Type': 'application/json', 'Content-Length': '0'} 
+ body=None 
+ </msg>
+<msg time="2026-05-05T00:34:46.094852" level="INFO">DELETE Response : url=https://practice.expandtesting.com/notes/api/users/delete-account 
+ status=200, reason=OK 
+ headers={'access-control-allow-origin': '*', 'access-control-allow-credentials': 'true', 'access-control-allow-methods': 'GET, POST, PUT, DELETE, PATCH', 'access-control-allow-headers': 'Origin, X-Requested-With, Authorization, Content-Type, Accept, X-Auth-Token', 'content-type': 'application/json; charset=utf-8', 'content-encoding': 'gzip', 'etag': 'W/"46-xvIiFl/4e/p/xA8LA+FZxbRy7yU"', 'set-cookie': 'express:sess=eyJmbGFzaCI6e319; path=/; httponly, express:sess.sig=tdt42nQZiQvICqmrvHQ1_16fHk0; path=/; httponly', 'date': 'Mon, 04 May 2026 22:34:46 GMT', 'connection': 'keep-alive', 'keep-alive': 'timeout=5', 'transfer-encoding': 'chunked'} 
+ body={"success":true,"status":200,"message":"Account successfully deleted"} 
+ </msg>
+<msg time="2026-05-05T00:34:46.095658" level="INFO">C:\Users\afiac\PycharmProjects\Projet_entreprise2\.venv\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'practice.expandtesting.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2026-05-05T00:34:46.096173" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>api</arg>
+<arg>${endpoint}</arg>
+<doc>Sends a DELETE request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2026-05-05T00:34:45.578196" elapsed="0.518065"/>
+</kw>
+<return>
+<value>${response}</value>
+<status status="PASS" start="2026-05-05T00:34:46.096446" elapsed="0.000261"/>
+</return>
+<msg time="2026-05-05T00:34:46.097071" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>notes/api/users/delete-account</arg>
+<status status="PASS" start="2026-05-05T00:34:45.577818" elapsed="0.519319"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2026-05-05T00:34:46.099126" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${response.status_code}</arg>
+<arg>200</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2026-05-05T00:34:46.097451" elapsed="0.001987"/>
+</kw>
+<status status="PASS" start="2026-05-05T00:34:45.575427" elapsed="0.524266"/>
+</kw>
+<arg>Fermer le navigateur</arg>
+<arg>AND</arg>
+<arg>Delete user</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<status status="PASS" start="2026-05-05T00:34:45.010732" elapsed="1.089129"/>
+</kw>
+<status status="PASS" start="2026-05-05T00:34:36.498815" elapsed="9.601233"/>
+</test>
+<status status="PASS" start="2026-05-05T00:34:18.053426" elapsed="28.059931"/>
+</suite>
+<status status="PASS" start="2026-05-05T00:34:18.051307" elapsed="28.075886"/>
+</suite>
+<status status="PASS" start="2026-05-05T00:34:17.953749" elapsed="28.174180"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="2" fail="0" skip="0">Tests</stat>
+<stat name="Ui" id="s1-s1" pass="2" fail="0" skip="0">Tests.Ui</stat>
+<stat name="testExemple" id="s1-s1-s1" pass="2" fail="0" skip="0">Tests.Ui.testExemple</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

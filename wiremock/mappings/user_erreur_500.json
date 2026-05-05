@@ -1,0 +1,18 @@
+{
+  "id": "a1b2c3d4-0000-0000-0000-000000000500",
+  "priority": 1,
+  "request": {
+    "method": "GET",
+    "urlPath": "/api/user/1",
+    "headers": {
+      "X-MOCK-STATUS": {
+        "equalTo": "500"
+      }
+    }
+  },
+  "response": {
+    "status": 500,
+    "jsonBody": { "error": "Internal Server Error" },
+    "headers": { "Content-Type": "application/json" }
+  }
+}

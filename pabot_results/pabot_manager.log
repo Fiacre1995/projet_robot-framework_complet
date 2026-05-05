@@ -1,0 +1,64 @@
+[INFO]    Initialized logging in .\pabot_results
+[INFO]    Robot Framework remote server at 127.0.0.1:8270 started.
+[DEBUG]   Storing .pabotsuitenames file
+[DEBUG]   2026-05-05 00:34:17.098529 [PID:39672] [1] [ID:5] EXECUTING Tests.Ui.Test
+[DEBUG]   2026-05-05 00:34:17.098841 [PID:38772] [2] [ID:0] EXECUTING Tests.Api.Test Api
+[DEBUG]   2026-05-05 00:34:17.130589 [PID:34488] [3] [ID:3] EXECUTING Tests.Ui.Connexion Bd
+[DEBUG]   2026-05-05 00:34:17.141782 [PID:38580] [0] [ID:2] EXECUTING Tests.Api.Test Wiremock
+[DEBUG]   2026-05-05 00:34:17.149252 [PID:12360] [4] [ID:6] EXECUTING Tests.Ui.testExemple
+[DEBUG]   2026-05-05 00:34:17.152242 [PID:18032] [6] [ID:1] EXECUTING Tests.Api.Test Api Auth
+[DEBUG]   2026-05-05 00:34:17.186809 [PID:34408] [5] [ID:4] EXECUTING Tests.Ui.Login
+[INFO]    2026-05-05 00:34:18.783769 [PID:38580] [0] [ID:2] PASSED Tests.Api.Test Wiremock in 1.7 seconds
+[DEBUG]   2026-05-05 00:34:22.168145 [PID:38772] [2] [ID:0] still running Tests.Api.Test Api after 5.0s
+[DEBUG]   2026-05-05 00:34:22.200066 [PID:39672] [1] [ID:5] still running Tests.Ui.Test after 5.0s
+[DEBUG]   2026-05-05 00:34:22.201626 [PID:12360] [4] [ID:6] still running Tests.Ui.testExemple after 5.0s
+[DEBUG]   2026-05-05 00:34:22.222330 [PID:18032] [6] [ID:1] still running Tests.Api.Test Api Auth after 5.0s
+[INFO]    2026-05-05 00:34:22.249348 [PID:34488] [3] [ID:3] PASSED Tests.Ui.Connexion Bd in 5.2 seconds
+[DEBUG]   2026-05-05 00:34:22.253229 [PID:34408] [5] [ID:4] still running Tests.Ui.Login after 5.0s
+[INFO]    2026-05-05 00:34:23.492318 [PID:38772] [2] [ID:0] Execution failed in Tests.Api.Test Api with 1 failing test(s)
+==============================================================================
+Tests
+==============================================================================
+Tests.Api
+==============================================================================
+Tests.Api.Test Api
+==============================================================================
+Get All Products                                                      | PASS |
+------------------------------------------------------------------------------
+Create New Post                                                       | FAIL |
+HTTPError: 404 Client Error: Not Found for url: https://practice.expandtesting.com/products/add
+------------------------------------------------------------------------------
+Tests.Api.Test Api                                                    | FAIL |
+2 tests, 1 passed, 1 failed
+==============================================================================
+Tests.Api                                                             | FAIL |
+2 tests, 1 passed, 1 failed
+==============================================================================
+Tests                                                                 | FAIL |
+2 tests, 1 passed, 1 failed
+==============================================================================
+Output:  C:\Users\afiac\PycharmProjects\Projet_entreprise2\pabot_results\0\output.xml
+
+C:\Users\afiac\PycharmProjects\Projet_entreprise2\.venv\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'practice.expandtesting.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+C:\Users\afiac\PycharmProjects\Projet_entreprise2\.venv\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'practice.expandtesting.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+[INFO]    2026-05-05 00:34:24.516763 [PID:18032] [6] [ID:1] PASSED Tests.Api.Test Api Auth in 7.5 seconds
+[DEBUG]   2026-05-05 00:34:33.544021 [PID:34408] [5] [ID:4] still running Tests.Ui.Login after 15.0s
+[DEBUG]   2026-05-05 00:34:33.545081 [PID:39672] [1] [ID:5] still running Tests.Ui.Test after 15.0s
+[DEBUG]   2026-05-05 00:34:33.545482 [PID:12360] [4] [ID:6] still running Tests.Ui.testExemple after 15.0s
+[INFO]    2026-05-05 00:34:36.838906 [PID:39672] [1] [ID:5] PASSED Tests.Ui.Test in 19.6 seconds
+[INFO]    2026-05-05 00:34:37.605850 [PID:34408] [5] [ID:4] PASSED Tests.Ui.Login in 20.5 seconds
+[INFO]    2026-05-05 00:34:46.564643 [PID:12360] [4] [ID:6] PASSED Tests.Ui.testExemple in 29.5 seconds
+[INFO]    13 tests, 12 passed, 1 failed, 0 skipped.
+[INFO]    ===================================================
+[INFO]    Output:  C:\Users\afiac\PycharmProjects\Projet_entreprise2\output.xml
+[INFO]    Log:     C:\Users\afiac\PycharmProjects\Projet_entreprise2\log.html
+[INFO]    Report:  C:\Users\afiac\PycharmProjects\Projet_entreprise2\report.html
+[DEBUG]   Finalizing Pabot execution...
+[DEBUG]   Stopping PabotLib process
+[INFO]    Robot Framework remote server at 127.0.0.1:8270 stopped.
+[DEBUG]   PabotLib process stopped
+[INFO]    Total testing: 1 minute 30.40 seconds
+[INFO]    Elapsed time:  30.67 seconds
+[DEBUG]   Logs flushed successfully.

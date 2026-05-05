@@ -1,0 +1,17 @@
+--suite Tests.Api.Test Api Auth
+--variable ENV:dev
+--variable CALLER_ID:15209b86d9f246f0ba63705017215419
+--variable PABOTLIBURI:127.0.0.1:8270
+--variable PABOTEXECUTIONPOOLID:6
+--variable PABOTISLASTEXECUTIONINPOOL:1
+--variable PABOTNUMBEROFPROCESSES:12
+--variable PABOTQUEUEINDEX:1
+--variable PABOTLASTLEVEL:Tests.Api.Test Api Auth
+--output output.xml
+--log NONE
+--report NONE
+--xunit NONE
+--outputdir .\pabot_results\1
+--consolecolors off
+--consolemarkers off
+.\tests\

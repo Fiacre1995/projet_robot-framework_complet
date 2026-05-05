@@ -1,0 +1,39 @@
+2026-05-05 00:34:18.001376 ==============================================================================
+2026-05-05 00:34:18.051634 Tests
+2026-05-05 00:34:18.051771 ==============================================================================
+2026-05-05 00:34:18.051863 Tests.Ui
+2026-05-05 00:34:18.053574 ==============================================================================
+2026-05-05 00:34:19.485822 Tests.Ui.testExemple
+2026-05-05 00:34:19.519864 ==============================================================================
+2026-05-05 00:34:20.146524 Authentification user                                                 <Response [201]>
+2026-05-05 00:34:20.146524 C:\Users\afiac\PycharmProjects\Projet_entreprise2\.venv\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'practice.expandtesting.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+2026-05-05 00:34:20.183746   warnings.warn(
+2026-05-05 00:34:20.735411 token: d6f22a134bb24439a8831d143ae488cbcf0e72407e75419d93fb4bb4cbe44bc7
+2026-05-05 00:34:20.735411 C:\Users\afiac\PycharmProjects\Projet_entreprise2\.venv\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'practice.expandtesting.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+2026-05-05 00:34:20.799249 Id: 69f91eec81124e02985a5f85
+2026-05-05 00:34:20.799249   warnings.warn(
+2026-05-05 00:34:36.418630 | PASS |
+2026-05-05 00:34:36.418630 C:\Users\afiac\PycharmProjects\Projet_entreprise2\.venv\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'practice.expandtesting.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+2026-05-05 00:34:36.513355 ------------------------------------------------------------------------------
+2026-05-05 00:34:36.513355   warnings.warn(
+2026-05-05 00:34:36.898776 Acc�der � la page Profile ui                                          <Response [201]>
+2026-05-05 00:34:36.898776 C:\Users\afiac\PycharmProjects\Projet_entreprise2\.venv\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'practice.expandtesting.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+2026-05-05 00:34:36.926846   warnings.warn(
+2026-05-05 00:34:37.243758 token: 27e877f3e8904c9ead511b49db2bf496e9bc177bb04547cebfe9f8d406a7fba5
+2026-05-05 00:34:37.243758 C:\Users\afiac\PycharmProjects\Projet_entreprise2\.venv\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'practice.expandtesting.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+2026-05-05 00:34:37.266592 Id: 69f91efd81124e02985a5f99
+2026-05-05 00:34:37.266592   warnings.warn(
+2026-05-05 00:34:46.080180 | PASS |
+2026-05-05 00:34:46.080180 C:\Users\afiac\PycharmProjects\Projet_entreprise2\.venv\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'practice.expandtesting.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+2026-05-05 00:34:46.112574 ------------------------------------------------------------------------------
+2026-05-05 00:34:46.112574   warnings.warn(
+2026-05-05 00:34:46.112667 Tests.Ui.testExemple                                                  | PASS |
+2026-05-05 00:34:46.127065 2 tests, 2 passed, 0 failed
+2026-05-05 00:34:46.127157 ==============================================================================
+2026-05-05 00:34:46.127211 Tests.Ui                                                              | PASS |
+2026-05-05 00:34:46.127934 2 tests, 2 passed, 0 failed
+2026-05-05 00:34:46.127995 ==============================================================================
+2026-05-05 00:34:46.128040 Tests                                                                 | PASS |
+2026-05-05 00:34:46.128429 2 tests, 2 passed, 0 failed
+2026-05-05 00:34:46.128491 ==============================================================================
+2026-05-05 00:34:46.128539 Output:  C:\Users\afiac\PycharmProjects\Projet_entreprise2\pabot_results\6\output.xml
